@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  plan: MyString
+  professeur: MyString
+
+two:
+  plan: MyString
+  professeur: MyString

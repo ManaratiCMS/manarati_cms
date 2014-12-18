@@ -1,0 +1,5 @@
+log/development.log
+log/production.log
+config/database.yml
+public/media/images/
+public/media/flashs/

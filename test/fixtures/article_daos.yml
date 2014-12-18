@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  reference: MyString
+  group: MyString
+  sous_group: MyString
+
+two:
+  reference: MyString
+  group: MyString
+  sous_group: MyString

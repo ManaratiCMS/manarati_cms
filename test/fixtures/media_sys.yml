@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  string: 
+  nom: MyString
+  titre: MyString
+  text_alt: MyString
+  width: 1
+  hight: 1
+  categorie: MyString
+  sous_categorie: MyString
+  type: MyString
+
+two:
+  string: 
+  nom: MyString
+  titre: MyString
+  text_alt: MyString
+  width: 1
+  hight: 1
+  categorie: MyString
+  sous_categorie: MyString
+  type: MyString
