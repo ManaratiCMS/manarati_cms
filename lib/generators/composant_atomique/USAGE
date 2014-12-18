@@ -1,0 +1,10 @@
+Description:
+    composant_atomique générateur crée un composant atomique modéle
+
+
+Examples:
+    ./script/generate composant_atomique cmp_youtube
+
+        This will create two files:
+            Layout:     app/views/layouts/application.rhtml
+            Stylesheet: public/stylesheets/application.css
