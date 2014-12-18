@@ -1,0 +1,14 @@
+<%- content_for :style do -%>
+ <%=stylesheet_link_tag "themes/#{@skin}/pages/composants_atomiques/cmp_form_add_site/add"  %>
+<%-end-%>
+<div class="message_add_site">
+<%- if flash[:notice].blank? -%>
+<div class="message_box"  >
+  <%=flash[:notice]%>
+</div>
+<%-end-%>
+
+<%if @result-%>
+ <%=@message%>
+<%-end-%>
+</div>

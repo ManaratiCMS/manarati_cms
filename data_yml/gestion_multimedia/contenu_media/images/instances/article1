@@ -1,0 +1,6 @@
+--- !ruby/object:Image 
+reference: article1
+nom: article1
+text_alt: Image Descriptiof de l'article1
+reference_image: article_simple
+type_image: jpg

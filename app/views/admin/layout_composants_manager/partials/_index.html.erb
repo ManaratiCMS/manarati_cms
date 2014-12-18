@@ -1,0 +1,101 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion_layout_composant/ajouter" %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/gestion"   %>
+<%=importation_css_articles(articles)-%>
+<%end %>
+<%- content_for :script do -%>
+
+<%=importation_js_articles(articles)%>
+<%-end-%>
+
+
+ 
+<div class="liste-articles">
+<%-if id_parent != 0-%>
+<div  class="bt_ajouter">
+  <a href=<%="/admin/layout_composants_manager/ajouter?id_parent=#{id_parent}&nom_zone=#{nom_zone}&w=#{width}&h=#{height}"%>
+   title="<%=t("GestionArticles.Ajouter.titre")%>">
+    <span><%=t("ajouter")%></span>
+  </a>
+</div>
+
+
+
+<%-end-%>
+
+<%if articles.length > 0%>
+<div class="composant" style="clear: both">
+
+    <%articles.each_with_index  { |article,i|%>
+
+  <div class="article_conteneur" id="article_<%=article.id%>">
+    <div class="action" id="action_article_<%=article.id%>">
+     <% if !traduction %>
+
+      <% if (i!= 0 and articles.length > 1 ) %>
+      <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/admin/layout_composants_manager",
+          :id => article,
+            :id_parent => id_parent},
+          :title=> t("precedent") %>
+      <%end%>
+      <% if (i!= (articles.length()  ) and articles.length > 1  )%>
+      <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/admin/layout_composants_manager",
+          :id => article,
+          :id_parent => id_parent},
+          :title=> t("suivant") %>
+      <%end%>
+
+            <% if article.cmp_article_type.have_form == 1  %>
+      <%= link_to "<span class='editer'> </span>",{
+          :action =>"update" ,
+          :controller=>"/admin/layout_composants_manager",
+          :id => article,
+            :id_parent => id_parent},
+          :rel =>article.id,
+            :class=>"editer", :title=> t("editer") %>
+      <%end%>
+
+  
+      <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"supprimer",
+            :controller=>"/admin/layout_composants_manager" ,
+            :id => article,
+            :id_parent => id_parent},:title=> t("supprimer"), :confirm => t("confirmation_suppresion")
+           %>
+      <%else%>
+          <%= link_to "<span class='editer_#{ref_langue}'> </span>",{
+          :action =>"traduir" ,
+          :controller=>"/admin/layout_composants_manager",
+          :id => article,
+          :ref_langue=>ref_langue,
+            :id_parent => id_parent}, :title=> t("traduir") %>
+      <%end%>
+    </div>
+    <div id="contenu_article_<%=article.id%>">
+
+    <% if !traduction %>
+    <%=cmp_affiche_article_sans_meta_donnees(article)%>
+    <%else%>
+      <% @article_traduit = article.article_traduit(ref_langue)  
+       if @article_traduit.nil?
+      %>
+        <div class="warning_traduction">
+        <%=cmp_affiche_article_sans_meta_donnees(article)%>
+        </div>
+      <%else%>
+       <%=cmp_affiche_article_sans_meta_donnees(@article_traduit)%>
+      <%end%>
+    <%end%>
+    </div>
+    </div>
+<%}%>
+</div>
+<%else%>
+  <div class="articles_vides"></div>
+<%end%>
+</div>

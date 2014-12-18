@@ -1,0 +1,26 @@
+<div class="form_row">
+  <label><strong><%=t("nom")%></strong></label>
+<%= form.text_field :nom %>
+</div>
+<div class="form_row">
+<label><strong><%=t("prenom")%></strong></label>
+<%= form.text_field :prenom %>
+</div>
+<div class="form_row">
+<label><strong><%=t("email")%></strong></label>
+<%= form.text_field :email %>
+</div>
+<div class="form_row">
+<label><strong><%=t("login")%></strong></label>
+<%= form.text_field :login %>
+</div>
+<div class="form_row">
+<label><strong><%=t("mot_de_passe")%></strong></label>
+ 
+<%= form.password_field :password %>
+</div>
+<div class="form_row">
+<label><strong><%=t("password_confirmation")%></strong></label>
+ 
+<%= form.password_field :password_confirmation %>
+</div>

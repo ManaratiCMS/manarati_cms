@@ -1,0 +1,19 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<style type="text/css" >
+  .cmp_data_grid td{
+   padding: 0 6px !important;
+}
+</style>
+<%-end-%>
+
+<div class="ajouter">	
+          <div class="formulaire">
+          <% form_for :theme, @theme, :url => { :action => "update" }, :html => {:class => "formulaire",:multipart => true} do |f| %>
+          <%=render :partial=>"admin/themes_manager/partials/form_theme" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("update") %>
+          </div>
+          <% end %>
+          </div>
+</div>

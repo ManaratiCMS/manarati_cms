@@ -1,0 +1,42 @@
+<a name="<%=obj.id%>"></a>
+<div class="<%=obj.reference%>">
+
+
+<div class="zones">
+<!-- End Header -->
+<!-- Begin Left Column -->
+<div class="zone1">
+  <div class="txt_bg_p1"></div>
+  <div class="txt_bg_p2">
+      <div class="style_bg">
+      <%-articles.each { |article|-%>
+      <%-if article.nom_zone == "zone1"-%>
+      <%=cmp_affiche_article_sans_meta_donnees(article)%>
+      <%-end-%>
+      <%-} unless articles.nil?-%>
+      </div>
+    </div>
+  <div class="txt_bg_p3"></div>
+</div>
+<!-- End Left Column -->
+<!-- Begin Right Column -->
+<div class="zone2">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "zone2"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+ </div>
+<div class="zone3">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "zone3"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+ </div>
+<!-- End Right Column -->
+</div>
+<!-- Begin Footer -->
+<!-- End Footer -->
+ 
+</div>

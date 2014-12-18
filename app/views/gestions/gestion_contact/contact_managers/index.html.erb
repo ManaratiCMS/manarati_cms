@@ -1,0 +1,39 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionContacts.Pages.Index.titre")%></h1>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionContacts.Label.objet")%></td>
+          <td><%=t("GestionContacts.Label.nom")%></td>
+          <td><%=t("GestionContacts.Label.message")%></td>
+           <td style="width: 100px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@contacts.each { |contact|%>
+      <tr>
+        <td><%=contact.objet%></td>
+        <td><%=contact.nom%> </td>
+        <td><%=contact.message%> </td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_contact/contact_managers/edit/<%=contact.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_contact/contact_managers" ,
+            :id=>contact.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionContacts.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

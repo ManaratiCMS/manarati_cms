@@ -1,0 +1,15 @@
+---
+- !ruby/object:ElementPlan
+  lien: /account
+  code: mon_compte
+- !ruby/object:ElementPlan
+  lien: "/account/edit"
+  code: editer_mon_compte
+- !ruby/object:ElementPlan
+  lien: "/users/mes_sites"
+  code: mes_sites_web
+- !ruby/object:ElementPlan
+  lien: /admin
+  code : admin
+
+

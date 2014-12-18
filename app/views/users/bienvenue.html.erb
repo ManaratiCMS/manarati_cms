@@ -1,0 +1,32 @@
+<%- if flash[:notice].blank? -%>
+<div class="message_box"  >
+  <%=flash[:notice]%>
+</div>
+<%-end-%>
+
+<%if @result-%>
+<div class="resultat_creation_site">
+  <div class="site">
+    <p>
+    <strong>Votre site web </strong> : <a href="http://<%=@nom_site%>.manarati.net" ><%=@nom_site%>.manarati.net</a>
+    </p>
+    <p>
+     <p> <strong>Votre Login </strong> : admin</p>
+     <p> <strong>Votre Mot de apsse </strong> : admin</p>
+    </p>
+  </div>
+  <div class="membre">
+    <p>
+    <strong>Votre Compte sur Manarati.net </strong>
+    </p>
+    <p>
+    <p><strong>Login </strong> :  <%=@login%></p>
+    <p><strong>Mot de apsse </strong> :  <%=@password%></p>
+    </p>
+  </div>
+ 
+
+</div>
+
+
+<%-end-%>

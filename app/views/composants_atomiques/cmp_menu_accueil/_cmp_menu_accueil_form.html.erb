@@ -1,0 +1,20 @@
+<div class="formulaire cmp_menu_accueil" id="<%=obj.reference%>">
+<label class="titre">
+   <%=t("CmpComposant.CmpMenuAccueil.titre")%>
+</label >
+<br></br>
+<table>
+  <tr>
+    <td><label> <%=t("CmpComposant.CmpMenuAccueil.texte")%> </label></td>
+    
+      <td>
+        <%=%>
+      <%=select(obj.reference,"texte",liste_menu.collect {|l| [ l.nom, l.id ] }, {:selected => obj.texte, :include_blank => true })%>
+      </td>
+
+
+  </tr>
+</table>
+
+
+</div>

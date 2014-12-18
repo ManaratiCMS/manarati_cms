@@ -1,0 +1,2 @@
+module Bureau::AuthenticationHelper
+end

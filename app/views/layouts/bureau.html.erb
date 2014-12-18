@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title><%=@page.titre%></title>
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+ <link rel="icon" type="image/png" href="/favicon.png" />
+ <meta http-equiv="imagetoolbar" content="no" />
+ <%=stylesheet_link_tag "system/general/reset" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/libs/jquery-ui/jquery.ui.all" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/libs/plugin_jquery/pretty_photo/prettyPhoto" %>
+ <%= yield :style %>
+ <%=stylesheet_link_tag "themes/#{@skin}/general/general_admin" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/general/general" %>
+ <%=javascript_include_tag "jquery-1.6.min"  %>
+ <%=javascript_include_tag "libs/jquery-ui/jquery.ui.core"  %>
+ <%=javascript_include_tag "libs/jquery-ui/jquery.ui.widget"  %>
+ <%=javascript_include_tag "libs/plugin_jquery/pretty_photo/jquery.prettyPhoto"  %>
+ <%=javascript_include_tag "admin/application"  %>
+ <%=javascript_include_tag "general/ajax_utils"  %>
+
+
+ <%= yield :script -%>
+ <script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto({social_tools:''});
+  });
+</script>
+</head>
+<body>
+<div id="header" >
+<div id="header-inside">
+<div id="logo"></div>
+<%=render :partial=>"/layouts/partials/menu_top_utilisateur"%>
+</div><!-- fin de header -->
+<div id="sous_menu">
+<%=menu_site_web%>
+</div>
+</div> <!-- fin de header -->
+<div id="header-sep"><div class="inside">&nbsp;</div></div>
+<div id="global">
+<div id="page" >
+<div id="content-admin">
+<%-if !flash[:notice].blank? -%>
+<div class="message_box"><%= flash[:notice] %></div>
+<%-end-%>
+<%= yield %>
+</div> <!-- fin de content-admin -->
+<div id="zone_droit">
+ <%= yield :zone_droit %>
+</div> 
+<div id="footer">
+<%= yield :footer %>
+</div> <!-- fin de footer -->
+</div> <!-- fin de page -->
+</div> <!-- fin de global -->
+</body>
+</html>
+

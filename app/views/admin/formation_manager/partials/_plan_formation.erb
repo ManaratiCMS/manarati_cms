@@ -1,0 +1,15 @@
+<div class="plan_formation">
+<h2>Plan de formation</h2>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("ajouter_un_element_plan"),"/admin/formation_manager/ajouter_element_plan?id=#{@formation.id}","bt_ajouter"))%>
+
+<div class="gride_plan_formation">
+<ul>
+<%@formation.plan_formation.liste_element_plan.each { |element_plan| %>
+  <li>
+    <%=render :partial=>"admin/formation_manager/partials/afficher_element_plan_recursif" , :locals=>{:element_plan=>element_plan,:formation=>@formation}%>
+  </li>
+<%}%>
+</ul>
+  </div>
+
+</div>

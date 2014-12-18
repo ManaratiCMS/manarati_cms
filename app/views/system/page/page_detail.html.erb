@@ -1,0 +1,10 @@
+<%- content_for :style do -%>
+<%=importation_css_article_page(@page)%>
+<%-end-%>
+<%- content_for :script do -%>
+<%=importation_js_article_page(@page)%>
+<%-end-%>
+<%-@page.cmp_articles.each { |article|-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-} unless @page.cmp_articles.nil?-%>
+ 

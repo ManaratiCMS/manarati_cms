@@ -1,0 +1,24 @@
+<input type="hidden"  name="id"  value="<%=@local_formation.id%>"></input>
+<table class="formulaire">
+   <tr>
+    <td><label><%=t("GestionLocalFormationsG2.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionLocalFormationsG2.Label.telephone")%> </label></td>
+    <td><%= f.text_field :telephone ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionLocalFormationsG2.Label.adresse")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("local_formation","adresse",@local_formation.adresse)%>
+    </td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@local_formation.cmp_photo,{:alt=>false})%></td>
+  </tr>
+
+
+
+</table>

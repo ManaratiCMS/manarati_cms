@@ -1,0 +1,44 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionSites :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout du Site Web
+      erreur de suppression : Erreur lors de suppresion du Site Web
+      supprimer_avec_succes : Site Web supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce site web ?
+      ajouter_avec_succes : Site Web ajouté avec succés
+      editer_avec_succes : Site Web édité avec succés
+      reference_site_existe : Le nom de site que vous avez choisi est déja existe.
+      creation_de_site_suspendu : La création des sites  est temporairement suspendu !
+      login_deja_existe : Login déja existe
+      email_deja_existe : E-Mail déja utilisé
+      send_welcome_email : Envoie de l'email de bienvenue
+      confirmation_send_welcome_email : Êtes-vous sûr de vouloir envoyer l'email de bienvenue ?
+      email_envoye_succes : Email envoyé avec succés
+      erreur_envoie_email_succes : Erreur lors de l'envoie de l'email
+    Ajouter :
+      titre : Ajouter un Site Web
+    Update :
+      titre : Mise à jour 
+    titre_de_gestion : Gestion des Sites Web
+    infoGenerale : Informations Générales
+    Pages:
+      choix_pocesseur_site :
+        titre : Choix de d'administrateur de Site Web
+      New :
+        titre : Ajouter Site Web
+      Index :
+        titre : Sites Web
+      Ajouter:
+        titre : Ajouter un Site Web
+      choix_theme :
+        titre : Choix de Théme
+    Label :
+      nom_site : Nom de Site Web
+      ref_site : Référence
+      description_site : Description
+      logo_site : Logo
+      pack : Pack
+      user : Login Utilisateur
+  

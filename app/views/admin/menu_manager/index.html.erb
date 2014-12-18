@@ -1,0 +1,106 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionMenus.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionMenus.Ajouter.titre"),"/admin/menu_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionMenus.Label.lien")%></td>
+          <td><%=t("GestionMenus.Label.titre")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@menus.each_with_index  { |menu,i|%>
+      <tr>
+        <td><%=menu.lien_page%></td>
+        <td><%=menu.titre%> </td>
+        <td>
+          <div class="action">
+
+             <!-- Edtier les pages multilangue -->
+             <% if @langues_active.length > 1   %>
+                <% @langues_active.each { |ref_langue| %>
+
+                  <%if ref_langue == @langue_principale %>
+                  <%= link_to "<span class='editer_#{ref_langue}'> </span>",{
+                  :action => "edit",
+                  :controller=>"/admin/menu_manager" ,
+                  :id=>menu.id},:title=> t("Gestions.Pages.Index.editer_version_#{ref_langue}")
+                  %>
+             <%else%>
+               <%= link_to "<span class='editer_#{ref_langue}'> </span>",{
+                  :action => "traduir",
+                  :controller=>"/admin/menu_manager" ,
+                  :lg=>"#{ref_langue}",
+                  :id=>menu.id},:title=> t("Gestions.Pages.Index.editer_version_#{ref_langue}")
+                  %>
+             <%end%>
+                 
+                <%}%>
+             <%else%>
+               <a href="/admin/menu_manager/edit/<%=menu.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+              <%end%>
+
+
+
+
+
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/menu_manager" ,
+            :id=>menu.id},:title=> t("supprimer"), :confirm => t("GestionMenus.msg.confirmation_suppresion")
+            %>
+            <%end%>
+          <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/admin/menu_manager",
+          :id => menu.id},
+          :title=> t("precedent") %>
+          <%-end-%>
+          <%- if i < (@menus.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/admin/menu_manager",
+          :id => menu.id},
+          :title=> t("suivant") %>
+          <%-end-%>
+
+
+
+          <% if permitted_to? :setpublic and menu.protection == 0 %>
+              <%= link_to "<span class='private'></span>",{
+              :action =>"setpublic",
+              :controller=>"/admin/menu_manager" ,
+              :id=>menu.id},:title=> t("Gestions.msg.setpublic")
+              %>
+             <%-end-%>
+             <% if permitted_to? :setprivate and menu.protection == 1 %>
+               <%= link_to "<span class='public'> </span>",{
+              :action =>"setprivate",
+              :controller=>"/admin/menu_manager" ,
+              :id=>menu.id},:title=> t("Gestions.msg.setprivate")
+              %>
+             <%end%>
+
+
+
+
+
+           <a target="_blank" href="<%=menu.lien%>" title="<%=t("GestionPages.msg.ouvrir_la_page")%>"><span class="browser"> </span></a>
+
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,50 @@
+<%if @appel_ajax%>
+  <script type="text/javascript">
+  </script>
+  <style type="text/css">
+    .cmp_code_source textarea{
+     height: 222px;
+     width: 469px;
+  }
+  </style>
+<%else%>
+  <%content_for :style do%>
+  <style type="text/css">
+    .cmp_code_source textarea{
+     height: 222px;
+     width: 469px;
+  }
+  </style>
+  <%end%>
+<%end%>
+
+<div class="cmp_code_source cmp" id="<%=obj.reference%>">
+
+  <table class="tformulaire">
+  <tr>
+    <td><label>Type Langage</label></td>
+  </tr>
+  <tr>
+    <td>
+      <select  id="<%=obj.reference%>_texte" name="<%=obj.reference%>[type_langage]">
+      <%=  options_for_select( @langages ,obj.type_langage) %>
+    </select>
+    </td>
+  </tr>
+  <tr>
+
+    <td>
+      <div style="float: left;clear: both">
+        <textarea    id="<%=obj.reference%>_texte" name="<%=obj.reference%>[texte]" ><%=obj.texte%>
+       </textarea>
+      </div>
+    </td>
+  </tr>
+  </table>
+</div>
+   
+
+
+ 
+
+

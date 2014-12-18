@@ -1,0 +1,18 @@
+<%content_for :script do %>
+<%=cmp_composant_add_library("editeur_wysiwyg")%>
+<%end%>
+<input type="hidden"  name="id"  value="<%=@site.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionSites.Label.nom_site")%> </label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionSites.Label.ref_site")%></label></td>
+    <td><%= f.text_field :reference %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionSites.Label.description_site")%> </label></td>
+    <td style="padding: 7px"><%=f.text_area :description ,:size=>"30"%></td>
+  </tr>
+</table>

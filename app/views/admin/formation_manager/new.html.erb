@@ -1,0 +1,40 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+<script type="text/javascript">
+	$(function() {
+		$("#tabs-formulaire").tabs();
+	});
+	</script>
+<%end%>
+<div class="ajouter">
+<h1 class="titre"><%=t("GestionFormations.Ajouter.titre")%></h1>
+<div id="tabs-formulaire">
+	<ul>
+		<li><a href="#tabs-1"><%=t("GestionFormations.infoGenerale")%></a></li>
+	</ul>
+	<div id="tabs-1">
+          <div class="formulaire">
+          <% form_for :formation, @formation, :url => { :action => "create" }, :html => {:class => "formulaire",:multipart => true}  do |f| %>
+         <%if f.error_messages !="" %>
+          <div class="message_box">
+              <%= f.error_messages %>
+          </div>
+           <%end%>
+          <%=render :partial=>"admin/formation_manager/partials/form_formation" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("ajouter") %>
+          </div>
+          <% end %>
+          </div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+ 

@@ -1,0 +1,39 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  Gestions :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout 
+      erreur de suppression : Erreur lors de suppresion 
+      supprimer_avec_succes :  supprission avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ?
+      ajouter_avec_succes :  ajoute avec succés
+      editer_avec_succes :  édition avec succés
+      setpublic : Mettre en Public
+      setprivate : Mettre en Privé
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter 
+      Index :
+        titre : Gestion
+        editer_version_fr : Edtiter la version Française
+        editer_version_en : Edtiter la version Anglais
+        editer_version_es : Edtiter la version Espagnole
+      Ajouter:
+        titre : Ajouter 
+      Update :
+        titre : Mise à jour
+    Label :
+      id : Identificateur
+      action : Action
+
+    Action:
+      editer : éditer
+      supprimer : Supprimer
+      deplacer_en_haut : Déplacer en haut
+      deplacer_en_bas : Déplacer en bas
+
+     
+     
+  

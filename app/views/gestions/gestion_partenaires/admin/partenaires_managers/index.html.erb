@@ -1,0 +1,44 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionPartenaires.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionPartenaires.Pages.Ajouter.titre"),"/gestions/gestion_partenaires/admin/partenaires_managers/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 100px" ></td>
+          <td><%=t("GestionPartenaires.Label.nom")%></td>
+          <td style="width: 100px"><%=t("GestionPartenaires.Label.pays")%></td>
+          <td ><%=t("GestionPartenaires.Label.description")%></td>
+          <td style="width: 100px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@partenaires.each { |partenaire|%>
+      <tr>
+        <td><%=cmp_photo_capture(partenaire.cmp_photo)%></td>
+        <td><%=partenaire.nom%></td>
+        <td><%=partenaire.pays%> </td>
+        <td><%=partenaire.description%> </td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_partenaires/admin/partenaires_managers/edit/<%=partenaire.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_partenaires/admin/partenaires_managers" ,
+            :id=>partenaire.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionPartenaires.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

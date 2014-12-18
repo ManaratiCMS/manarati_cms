@@ -1,0 +1,12 @@
+<a href="/formation/<%=@formation.reference%>/<%=@formation.plan_formation.getPageParNumeroPage(element_plan.numero_page).reference%>#<%=element_plan.code%>" > <%=element_plan.nom%></a>
+<div class="action" style="float: right">
+</div>
+<%if !element_plan.fils.nil?%>
+  <ul>
+  <%element_plan.fils.each { |element_plan| %>
+     <li>
+     <%=render :partial=>"formation/partials/rubrique_plan" , :locals=>{:element_plan=>element_plan}%>
+     </li>
+  <%}%>
+  </ul>
+<%end%>

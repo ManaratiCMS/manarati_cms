@@ -1,0 +1,22 @@
+<input type="hidden"  name="id"  value="<%=@partenaire.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionPartenaires.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionPartenaires.Label.pays")%> </label></td>
+    <td><%= f.text_field :pays %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionPartenaires.Label.description")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("partenaire","description",@partenaire.description)%>
+ 
+    </td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@partenaire.cmp_photo,{:alt=>false})%></td>
+  </tr>
+</table>

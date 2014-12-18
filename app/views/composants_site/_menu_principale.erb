@@ -1,0 +1,12 @@
+<div id="<%=id_menu%>" class="cmp_menu style1">
+  <ul>
+    <%-liste_lien.each_with_index { |lien,i| -%>
+    <li class="<%=(@page.lien == lien.lien_page)?"current_page_item ":""%>page_item<%=(i==0)?" first":""%>">
+      <a href="<%=lien.lien_page%>" title="<%=lien.titre%>"><span><%=lien.nom%></span></a>
+    </li>
+    <% if separateur %>
+      <li class="space">|</li>
+    <% end %>
+  <%-}-%>
+  </ul>
+</div>

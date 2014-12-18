@@ -1,0 +1,29 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionPartenaires :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout du partenaire
+      erreur de suppression : Erreur lors de suppresion du partenaire
+      supprimer_avec_succes : partenaire supprimé avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce partenaire ?
+      ajouter_avec_succes : partenaire ajouté avec succés
+      editer_avec_succes : partenaire édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter un partenaire
+      Index :
+        titre : Gestion des partenaires
+      Ajouter:
+        titre : Ajouter un partenaire
+      Update :
+        titre : Mise à jour
+    Label :
+      nom : Nom
+      description : Description
+      pays :  Pays
+
+ 
+     
+  

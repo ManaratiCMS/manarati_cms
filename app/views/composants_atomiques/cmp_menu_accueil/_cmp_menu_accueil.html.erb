@@ -1,0 +1,15 @@
+<a name="<%=obj.id%>"></a>
+<div class="cmp_menu_accueil">
+<%menu.element_menu_g4.each_with_index { |element,i|%>
+<div class="element_menu">
+  <div class="title">
+    <span><%=element.titre%></span>
+  </div>
+  <p>
+    <%=cmp_photo_sans_lien(element.cmp_photo)%>
+    <%=element.description%>
+  </p>
+  <p class="lien"><a href="<%=element.lien%>" title=""><%=element.titre_lien%></a></p>
+</div>
+<%}%>
+</div>

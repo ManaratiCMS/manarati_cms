@@ -1,0 +1,10 @@
+<%content_for :script do%>
+<%=cmp_composant_add_library("editeur_wysiwyg_simple")%>
+<%end%>
+<div class="cmp_paragraphe cmp input_zone">
+  <div style="float: left;clear: both">
+  <textarea cols="45" rows="10"  name="<%=nom_objet%>[<%=nom_variable%>]" >
+    <%=valeur%>
+  </textarea>
+  </div>
+</div>

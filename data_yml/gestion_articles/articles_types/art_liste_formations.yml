@@ -1,0 +1,16 @@
+--- !ruby/object:ArticleType
+reference : art_liste_formations
+nom : Liste de Formations
+ref_image_capture : 9/window.png
+fichier_css : art_accueil_formation.css
+fichier js :  js_generale.js
+cmp_composants:
+- !ruby/object:CmpListeFormations
+  attributes:
+    reference: art_liste_formations1
+    nom : Liste de Formations
+    type: CmpListeFormations
+    label_form : Formations
+    titre : ""
+
+

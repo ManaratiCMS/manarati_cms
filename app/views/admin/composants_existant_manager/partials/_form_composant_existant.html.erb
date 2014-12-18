@@ -1,0 +1,13 @@
+<input type="hidden"  name="id"  value="<%=@cmp_composants_existant.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionComposantsExistant.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionComposantsExistant.Label.reference")%></label></td>
+    <td><%= f.text_field :reference %></td>
+  </tr>
+
+    
+</table>

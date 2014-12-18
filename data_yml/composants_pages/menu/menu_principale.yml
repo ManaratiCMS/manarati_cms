@@ -1,0 +1,16 @@
+--- 
+- !ruby/object:ElementPlan
+  lien: "/"
+  code: manarati
+#- !ruby/object:ElementPlan
+#  lien: "/formations"
+#  code: formations
+#- !ruby/object:ElementPlan
+#  lien: "/creation-sites-web"
+#  code: creation_sites_web
+#- !ruby/object:ElementPlan
+#  lien: "/contact"
+#  code: contact
+#
+
+

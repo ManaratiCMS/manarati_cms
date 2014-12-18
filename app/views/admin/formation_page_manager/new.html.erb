@@ -1,0 +1,43 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+<script type="text/javascript">
+	$(function() {
+		$("#tabs-formulaire").tabs();
+	});
+
+  // Génération de Référence et Lien de la page à partire de Titre
+  Add_InputText_to_reference("cmp_page_titre", "cmp_page_reference",'_',0);
+  Add_InputText_to_reference("cmp_page_titre", "cmp_page_lien",'/',1);
+</script>
+<%end%>
+<div class="ajouter">
+  <h1 class="titre">
+    <%=link_to t("GestionPagesFormation.msg.edition_de_formation") + ","  + @formation.designation,
+        :action=>"edit",
+        :controller=>"/admin/formation_manager",
+        :id=>@formation.id %> :  <%=t("GestionPagesFormation.Ajouter.titre")%>
+  </h1>
+<div id="tabs-formulaire">
+	<ul>
+		<li><a href="#tabs-1"><%=t("GestionPagesFormation.infoGenerale")%></a></li>
+	</ul>
+	<div id="tabs-1">
+          <div class="formulaire">
+          <% form_for :cmp_page, @cmp_page, :url => { :action => "create" }, :html => {:class => "formulaire"} do |f| %>
+         <%if f.error_messages !="" %>
+          <div class="message_box">
+              <%= f.error_messages %>
+          </div>
+           <%end%>
+          <%=render :partial=>"admin/pages_manager/partials/form_page" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("ajouter") %>
+          </div>
+          <% end %>
+          </div>
+	</div>
+</div>
+</div>

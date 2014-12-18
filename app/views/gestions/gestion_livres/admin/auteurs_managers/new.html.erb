@@ -1,0 +1,25 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%end%>
+<div class="ajouter">
+   <div class="formulaire">
+         <% form_for :auteur, @auteur, :url => { :action => "create" }, :html => {:class => "formulaire",:multipart => true}  do |f| %>
+         <%if f.error_messages !="" %>
+         <div class="message_box">
+              <%= f.error_messages %>
+         </div>
+         <%end%>
+         <%=render :partial=>"gestions/gestion_livres/admin/auteurs_managers/partials/form_auteur" ,:locals=>{:f=>f}%>
+         <div class="submit">
+         <%= submit_tag t("ajouter") %>
+         </div>
+         <% end %>
+   </div>
+</div>
+
+
+
+
+
+
+ 

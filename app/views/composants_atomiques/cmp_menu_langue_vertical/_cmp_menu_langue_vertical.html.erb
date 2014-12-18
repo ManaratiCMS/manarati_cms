@@ -1,0 +1,13 @@
+<div class="cmp_menu_langue_vertical">
+<ul>
+<%pages.each { |page| %>
+  <li class="<%=page.langue%>">
+    <a href="<%=page.lien%>"><%=sys_cmp_photo_origine(CmpLangue.find_by_reference(page.langue).sys_cmp_photo)%></a></li>
+<%}%>
+</ul>
+  </div>
+
+
+
+
+

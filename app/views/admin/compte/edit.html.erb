@@ -1,0 +1,21 @@
+<%content_for :style do %>
+<style type="text/css" >
+  .formulaire label{
+    width:  160px;
+}
+</style>
+<%end%>
+<div class="colone2_large" >
+<h1><%=t("editer_mon_compte")%></h1>
+
+<div class="formulaire">
+
+<% form_for @user, :url => "/admin/compte/update" do |f| %>
+  <%if f.error_messages !="" %>
+  <div class="message_box"><%= f.error_messages %></div>
+  <%end%>
+  <%= render :partial => "form", :object => f %>
+  <%= f.submit "Update" %>
+<% end %>
+</div>
+</div>

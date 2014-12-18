@@ -1,0 +1,13 @@
+<% content_for :style  do   %>
+    <%=stylesheet_link_tag "themes/public_sys/articles/cmp_logo" %>
+<% end %>
+<a name="<%=obj.id%>"></a>
+<div id="logo" class="cmp_logo">
+  <h1><a href="/">
+      <%=obj.texte%>
+    </a>
+  </h1>
+  <h2 id="slogan">
+   <%=obj.nom%>
+  </h2>
+</div>

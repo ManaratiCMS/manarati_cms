@@ -1,0 +1,68 @@
+<input type="hidden"  name="id"  value="<%=@utilisateur.id%>"></input>
+<table class="formulaire">
+
+
+
+
+
+
+
+   <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.prenom")%> </label></td>
+    <td><%= f.text_field :prenom ,:class=>"validate[required] text-input" %></td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.login")%> </label></td>
+    <td><%= f.text_field :login ,:class=>"validate[required] text-input" %></td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.password")%> </label></td>
+    <td><%= f.text_field :password ,:class=>"validate[required] text-input" %></td>
+  </tr>
+     <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.email")%> </label></td>
+    <td><%= f.text_field :email ,:class=>" text-input" %></td>
+  </tr>
+    <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.gsm")%> </label></td>
+    <td><%= f.text_field :gsm ,:class=>"text-input" %></td>
+  </tr>
+      <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.siteweb")%> </label></td>
+    <td><%= f.text_field :siteweb,:class=>"text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.ville")%> </label></td>
+    <td><%= f.text_field :ville,:class=>"text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.pays")%> </label></td>
+    <td><%= f.text_field :pays,:class=>"text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.adresse")%> </label></td>
+    <td>
+     <%=cmp_paragraphe_input("utilisateur","adresse",@utilisateur.adresse)%>
+    </td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.langue")%> </label></td>
+    <td><%= f.text_field :langue,:class=>"text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.facebook")%> </label></td>
+    <td><%= f.text_field :facebook,:class=>"text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionUtilisateurs.Label.twiter")%> </label></td>
+    <td><%= f.text_field :twiter,:class=>"text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@utilisateur.cmp_photo,{:alt=>false})%></td>
+  </tr>
+</table>

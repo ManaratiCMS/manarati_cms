@@ -1,0 +1,15 @@
+<input id="<%=obj_cmp_titre.reference%>_font" type="hidden" value="<%=valeur_font%>" name="<%=obj_cmp_titre.reference%>[font]"></input>
+<div class="cmp_text cmp" id="<%=obj_cmp_titre.reference%>">
+<h2 class="titre">
+   <%=t("CmpComposant.CmpTitre.titre")%>
+</h2>
+  <table class="tformulaire">
+  <tr>
+    <td><input id="<%=obj_cmp_titre.reference%>_texte" type="text" value="<%=obj_cmp_titre.texte%>" name="<%=obj_cmp_titre.reference%>[texte]"></input></td>
+  </tr>
+</table>
+</div>
+<%if @appel_ajax%>
+<script type="text/javascript">
+</script>
+<%end%>

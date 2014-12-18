@@ -1,0 +1,17 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%end%>
+<div class="bar_action">
+  <ul>
+    <li class="supprimer"><%=t("supprimer")%></li>
+    <li class="enregistrer"><%=t("enregistrer")%></li>
+  </ul>
+</div>
+<div class="ajouter">
+<h1 class="titre"> </h1>
+<div class="formulaire">
+<% form_for :membre, @membre, :url => { :action => "add" }, :html => {:class => "formulaire"} do |f| %>
+<%=render :partial=>"admin/membre_manager/partials/form_membre" ,:locals=>{:f=>f,:membre=>@membre}%>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,40 @@
+<div id="menu_principale_admin" class="style1">
+  <ul>
+  <%-menu[0..8].each{ |element_menu| -%>
+    <li class="page_item page_item_1">
+      <a href="<%=element_menu.lien%>"
+         title="<%=element_menu.titre%>">
+            <span><%=element_menu.nom%></span>
+      </a>
+    </li>
+  <%-}-%>
+  </ul>
+</div>
+<%if menu.length > 8 %>
+<div id="menu_principale_admin" class="style1">
+  <ul>
+  <%-menu[9..18].each{ |element_menu| -%>
+    <li class="page_item page_item_1">
+      <a href="<%=element_menu.lien%>"
+         title="<%=element_menu.titre%>">
+            <span><%=element_menu.nom%></span>
+      </a>
+    </li>
+  <%-}-%>
+  </ul>
+</div>
+<%end%>
+<%if menu.length > 18 %>
+<div id="menu_principale_admin" class="style1">
+  <ul>
+  <%-menu[19..28].each{ |element_menu| -%>
+    <li class="page_item page_item_1">
+      <a href="<%=element_menu.lien%>"
+         title="<%=element_menu.titre%>">
+            <span><%=element_menu.nom%></span>
+      </a>
+    </li>
+  <%-}-%>
+  </ul>
+</div>
+<%end%>

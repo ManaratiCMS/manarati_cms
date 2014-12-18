@@ -1,0 +1,9 @@
+<%- if flash[:notice].blank? -%>
+<div class="message_box"  >
+  <%=flash[:notice]%>
+</div>
+<%-end-%>
+
+<%if @result-%>
+ <%=@message%>
+<%-end-%>

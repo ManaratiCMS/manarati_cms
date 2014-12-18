@@ -1,0 +1,76 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "libs/plugin_jquery/ajaxupload"  %>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+	var thumb = $('img#thumb');
+
+alert($("form#newHotnessForm input[name=authenticity_token]").val());
+	new AjaxUpload('imageUpload', {
+		action: $('form#newHotnessForm').attr('action'),
+		name: 'image',
+                data: {
+                            authenticity_token : $("form#newHotnessForm input[name=authenticity_token]").val()
+                           
+                          },
+
+                
+		onSubmit: function(file, extension) {
+			$('div.preview').addClass('loading');
+		},
+		onComplete: function(file, response) {
+			thumb.load(function(){
+				$('div.preview').removeClass('loading');
+				thumb.unbind();
+			});
+			thumb.attr('src', response);
+		}
+	});
+});
+
+</script>
+<%end%>
+
+
+<div class="seven columns">
+  <div class="preview">
+    <img width="100px" height="100px" src="/images/playground/the-fonz.jpg" id="thumb"/>
+  </div>
+
+  <span class="wrap hotness">
+  <%form_tag "/system/multimedia/media_upload",:id=>"newHotnessForm" do %>
+  
+      <label>Upload a Picture of Yourself</label>
+      <input type="file" size="20" id="imageUpload" />
+      <button class="button" type="submit">Save</button>
+  <%end%>
+  </span>
+</div>
+
+<%#*<form action="/system/multimedia/media_upload" id="newHotnessForm">%>
+
+
+
+
+
+
+
+
+
+<div class="bar_action">
+  <ul>
+    <li class="supprimer"><%=t("supprimer")%></li>
+    <li class="enregistrer"><%=t("enregistrer")%></li>
+  </ul>
+</div>
+<div class="ajouter">
+<h1 class="titre"><%=t("GestionMedias")[:Ajouter][:titre_ajouter]%></h1>
+<div class="formulaire">
+<% form_for :media, @media, :url => { :action => "create" }, :html => {:class => "formulaire"} do |f| %>
+<%=render :partial=>"admin/media_manager/partials/form_media" ,:locals=>{:f=>f}%>
+<% end %>
+</div>
+</div>

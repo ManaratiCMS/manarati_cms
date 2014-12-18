@@ -1,0 +1,35 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionContacts :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout du message
+      erreur de suppression : Erreur lors de suppresion de message
+      supprimer_avec_succes : Message supprimé avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce message ?
+      ajouter_avec_succes : Message ajouté avec succés
+      editer_avec_succes : Message édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter un Message
+      Index :
+        titre : Gestion des Contacts
+      Ajouter:
+        titre : Ajouter un Message
+      Update :
+        titre : Mise à jour
+    Label :
+      nom : Nom
+      prenom : Prénom
+      objet : Objet
+      message : Message
+      email : E-mail
+      confirm_email : Confirmation Email
+      envoyer : Envoyer
+      
+
+
+ 
+     
+  

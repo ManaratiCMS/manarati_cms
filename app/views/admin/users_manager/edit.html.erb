@@ -1,0 +1,21 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<style type="text/css" >
+  .cmp_data_grid td{
+   padding: 0 6px !important;
+}
+</style>
+<%-end-%>
+<div class="ajouter">
+  <h1 class="titre"><%=t("GestionUsers.Update.titre")%></h1>
+</div>
+<div class="formulaire">
+          <% form_for :user, @user, :url => { :action => "update" }, :html => {:class => "formulaire"} do |f| %>
+          <%=render :partial=>"admin/users_manager/partials/form_user" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("update") %>
+          </div>
+          <% end %>
+</div>
+
+

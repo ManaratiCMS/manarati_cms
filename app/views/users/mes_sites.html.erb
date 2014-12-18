@@ -1,0 +1,33 @@
+<%content_for :left_area do%>
+<h3>  <%=h @user.login %></h3>
+<div class="left leftmenu">
+    <%=menu_membre%>
+</div>
+<%end%>
+ 
+
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionSites.titre_de_gestion")%></h1>
+</div>
+
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionSites.Label.ref_site")%></td>
+          <td><%=t("GestionSites.Label.description_site")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@sites.each { |site|%>
+      <tr>
+        <td><a  href="http://<%=site.reference%>.manarati.net"><%=site.reference%>.manarati.net</a></td>
+        <td><%=site.description%></td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

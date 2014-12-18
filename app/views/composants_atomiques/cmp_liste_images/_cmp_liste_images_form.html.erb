@@ -1,0 +1,25 @@
+<div class="cmp_liste_objs cmp" id="<%=obj.reference%>">
+<h2 class="titre">
+  <%=t("CmpComposant.CmpListeImages.titre")%>
+</h2>
+
+
+
+
+ <table class="formulaire">
+   <tr>
+    <td><label><%=t("categorie")%> </label></td>
+      <td>
+        <%= select(obj.reference, "categorie", @categories.collect { |cat| [cat.nom,cat.id]  }, {:selected => obj.categorie, :include_blank => true })%>
+    </td>
+  </tr>
+   <tr>
+    <td><label><%=t("sous_categorie")%> </label></td>
+      <td>
+        <%= select(obj.reference, "sous_categorie", @sous_categories.collect { |cat| [cat.nom,cat.id]  }, {:selected => obj.sous_categorie, :include_blank => true })%>
+    </td>
+  </tr>
+  </table>
+
+
+</div>

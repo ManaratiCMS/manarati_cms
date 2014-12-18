@@ -1,0 +1,65 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionMenuG4.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("Gestions.Pages.Ajouter.titre"),"/gestions/gestion_menus/menu_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+         
+          <td><%=t("GestionMenuG4.Label.nom")%></td>
+          <td style="width: 100px"><%=t("GestionMenuG4.Label.description")%></td>
+          <td style="width: 200px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@menus.each_with_index  { |menu,i| %>
+      <tr>
+        
+        <td><%=menu.nom%></td>
+        <td><%menu.description%> </td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_menus/menu_manager/edit/<%=menu.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_menus/menu_manager" ,
+            :id=>menu.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("Gestions.msg.confirmation_suppresion")
+            %>
+            <%end%>
+
+
+           <a href="/gestions/gestion_menus/elements_menu_manager/index/<%=menu.id%>" title="Liens du menu"><span class="plan_formation"> </span></a>
+
+
+
+          <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/gestions/gestion_menus/menu_manager",
+          :id => menu.id},
+          :title=> t("Gestions.Action.deplacer_en_haut") %>
+          <%-end-%>
+          <%- if i < (@menus.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/gestions/gestion_menus/menu_manager",
+          :id => menu.id},
+          :title=> t("Gestions.Action.deplacer_en_bas") %>
+          <%-end-%>
+
+
+
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

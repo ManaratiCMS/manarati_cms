@@ -1,0 +1,69 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionPlanFormation.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionPlanFormation.Pages.Ajouter.titre"),"/gestions/gestion_cours_videos/plan_formation_manager/new/#{@id_formation}","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 100px" ></td>
+        <td style="width: 10px"><%=t("GestionPlanFormation.Label.niveau")%></td>
+          <td><%=t("GestionPlanFormation.Label.titre")%></td>
+          
+          <td style="width: 100px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@plan_formations.each_with_index { |formation,i|%>
+      <tr>
+        <td><%=cmp_photo_capture(formation.cmp_photo)%></td>
+        <td><%=formation.niveau%> </td>
+        <td>
+            <% if  !formation.element_cour_g3.nil?  %>
+          <a href="<%="/video/" + formation.element_cour_g3.reference%>">
+          <%=  "-" * (formation.niveau-1)*2 %><%=formation.titre%></a>
+            <%else%>
+            <%=  "-" * (formation.niveau-1)*2 %><%=formation.titre%>
+            <%end%>
+        </td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_cours_videos/plan_formation_manager/edit/<%=formation.id%>?id_formation=<%=@id_formation%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_cours_videos/plan_formation_manager" ,
+            :id=>formation.id,
+          :id_formation=>@id_formation},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionPlanFormation.msg.confirmation_suppresion")
+            %>
+            <%end%>
+
+
+             <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/gestions/gestion_cours_videos/plan_formation_manager",
+          :id => formation.id},
+          :title=> t("Gestions.Action.deplacer_en_haut") %>
+          <%-end-%>
+          <%- if i < (@plan_formations.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/gestions/gestion_cours_videos/plan_formation_manager",
+          :id => formation.id},
+          :title=> t("Gestions.Action.deplacer_en_bas") %>
+          <%-end-%>
+
+
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

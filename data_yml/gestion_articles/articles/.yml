@@ -1,0 +1,17 @@
+--- !ruby/object:Article 
+id: "14"
+liste_elements_article: 
+- !ruby/object:ElementArticle 
+  nom: Titre
+  reference: "2010-11-27T14:52:39+00:00"
+  type_element: titre
+  valeur: !ruby/object:CmpTitre 
+    texte: hhh
+- !ruby/object:ElementArticle 
+  nom: Paragraphe1
+  reference: "2010-11-27T14:53:16+00:00"
+  type_element: paragraphe
+  valeur: !ruby/object:CmpParagraphe 
+    texte: "hhh\r\n  "
+ref_article_classe: article_type_1
+reference: ""

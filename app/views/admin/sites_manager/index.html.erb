@@ -1,0 +1,48 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionSites.titre_de_gestion")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionSites.Ajouter.titre"),"/admin/sites_manager/choix_pocesseur_site","bt_ajouter"))%>
+<%end%>
+</div>
+
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionSites.Label.ref_site")%></td>
+          <td><%=t("GestionSites.Label.user")%></td>
+          <td><%=t("GestionSites.Label.description_site")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@sites.each { |site|%>
+      <tr>
+        <td><a href="http://<%=site.reference%>.manarati.net" target="_blanck"><%=site.reference%></a></td>
+        <td><%=(site.user.nil?)?"" :site.user.login%></td>
+        <td>
+          <div class="action">
+            <a href="/admin/sites_manager/edit/<%=site.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/sites_manager" ,
+            :id=>site.id},:title=> t("supprimer"), :confirm => t("GestionSites.msg.confirmation_suppresion")
+            %>
+            <%end%>
+            <% if permitted_to? :send_welcome_email %>
+            <%= link_to "<span class='send_email'> </span>",{
+            :action =>"send_welcome_email",
+            :controller=>"/admin/sites_manager" ,
+            :id=>site.id},:title=> t("GestionSites.msg.send_welcome_email"), :confirm => t("GestionSites.msg.confirmation_send_welcome_email")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

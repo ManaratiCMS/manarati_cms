@@ -1,0 +1,38 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionFormationsG2 :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de la formation
+      erreur de suppression : Erreur lors de suppresion de la formation
+      supprimer_avec_succes : Formation supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer la formation ?
+      ajouter_avec_succes : Formation ajoutée avec succés
+      editer_avec_succes : Formation édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter un formation
+      Index :
+        titre : Gestion des formations
+      Ajouter:
+        titre : Ajouter un formation
+      Update :
+        titre : Mise à jour
+    Label :
+      titre : Titre
+      objectif : Objectif
+      reference : Reference
+      public_cible : Public Cible
+      tarif : Tarif
+      prerequis : Prérequis
+      travaux_pratiques : Travaux Pratiques
+      plan_formation : Plan formation
+      nom : Nom
+      duree : Durée
+      PresentationFlash : Présentation Flash
+      categorie : Catégorie
+      detail_duree : Détail durée
+      formateur : Formateur
+
+   

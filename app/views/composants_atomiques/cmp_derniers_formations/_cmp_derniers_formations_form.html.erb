@@ -1,0 +1,12 @@
+<div class="formulaire cmp_derniers_formations" id="<%=obj.reference%>">
+<label class="titre">
+   <%=t("CmpComposant.CmpDerniersFormations.titre")%>
+</label >
+<br></br>
+<table>
+  <tr>
+    <td><label><%=t("GestionFormationsG2.Label.categorie")%></label></td>
+    <td><%=select(obj.reference,"texte",categories.collect {|l| [ l.nom, l.id ] }, { :include_blank => true })%></td>
+  </tr>
+</table>
+</div>

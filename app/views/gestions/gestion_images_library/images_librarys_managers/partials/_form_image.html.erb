@@ -1,0 +1,57 @@
+<input type="hidden"  name="id"  value="<%=@image.id%>"></input>
+<table class="formulaire">
+  <%-if !@image.id.nil?-%>
+  <tr>
+    <td></td>
+    <td><%=cmp_photo_capture(@image)%></td>
+  </tr>
+  <%-end-%>
+   <tr>
+    <td><label><%=t("categorie")%> </label></td>
+      <td>
+
+        <%= select("image", "categorie", @categories.collect { |cat| [cat.nom,cat.id]  }, {:selected => @image.categorie, :include_blank => true })%>
+    </td>
+
+  </tr>
+   <tr>
+    <td><label><%=t("sous_categorie")%> </label></td>
+      <td>
+
+        <%= select("image", "sous_categorie", @sous_categories.collect { |cat| [cat.nom,cat.id]  }, {:selected => @image.sous_categorie, :include_blank => true })%>
+    </td>
+
+  </tr>
+
+
+  <tr>
+    <td><label><%=t("source")%> </label></td>
+    <td><input id="image_photo"  size="31" type="file"  name="image[photo]"></input></td>
+  </tr>
+    <tr>
+    <td><label><%=t("text_alternatif")%> </label></td>
+    <td><input id="image_photo" type="text" value="<%=@image.text_alt%>" name="image[text_alt]"></input></td>
+  </tr>
+      <tr>
+    <td><label><%=t("nom")%> </label></td>
+    <td><input id="image_photo" type="text" value="<%=@image.nom%>" name="image[nom]"></input></td>
+  </tr>
+
+  <tr>
+    <td><label><%=t("width")%> </label></td>
+    <td><input id="image_width" type="text" value="<%=(@image.width== 0)?"":@image.width%>" name="image[width]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("height")%> </label></td>
+    <td><input id="image_height" type="text" value="<%=(@image.height== 0)?"":@image.height%>" name="image[height]"></input></td>
+  </tr>
+
+   <tr>
+    <td><label><%=t("utiliser_image_original")%> </label></td>
+      <td>
+
+        <%= select(@image.reference, "use_original",[[t("oui"), 1],[t("nom"),0]], {:selected => @image.use_original, :include_blank => true })%>
+    </td>
+
+  </tr>
+</table>

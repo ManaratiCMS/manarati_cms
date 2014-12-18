@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: cours_db
+  pool: 5
+  username: root
+  password: admin
+  socket: /var/run/mysqld/mysqld.sock
+ 
+system_db :
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: system_db
+  pool: 5
+  username: root
+  password: admin
+  socket: /var/run/mysqld/mysqld.sock
+

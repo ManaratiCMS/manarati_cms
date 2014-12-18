@@ -1,0 +1,11 @@
+<a name="<%=obj.id%>"></a>
+<div class="cmp_slider_presentation">
+<ul id="cmp_slider_presentation">
+<%liste_source_data.each { |data_source|%>
+  <li>
+    <%=data_source.titre%>
+  <%=data_source.contenue%>
+  </li>
+  <%}%>
+</ul>
+</div>

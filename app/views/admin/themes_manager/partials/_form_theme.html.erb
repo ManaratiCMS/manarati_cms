@@ -1,0 +1,36 @@
+<%content_for :script do %>
+<script type="text/javascript">
+   //Bind_InputText_to_reference("theme_nom", "theme_ref_theme");
+</script>
+
+<%end%>
+<input type="hidden"  name="id"  value="<%=@theme.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionThemes.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionThemes.Label.ref_theme")%></label></td>
+    <td><%= f.text_field :ref_theme %></td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionThemes.Label.layout")%></label></td>
+    <td><%= f.text_field :layout %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionThemes.Label.package")%></label></td>
+    <td><%= f.text_field :package %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=sys_cmp_photo_input(@theme.sys_cmp_photo,{:alt=>false})%></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionThemes.Label.use_system_theme")%></label></td>
+    <td>
+        <%= select("theme", "use_system_theme",[[t("oui"), 1],[t("nom"),0]], { :include_blank => true })%>
+    </td>
+  </tr>
+    
+</table>

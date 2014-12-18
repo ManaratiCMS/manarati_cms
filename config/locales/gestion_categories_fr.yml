@@ -1,0 +1,36 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionCategories :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout  de catégorie
+      erreur de suppression : Erreur lors de suppresion de catégorie
+      supprimer_avec_succes : Catégorie supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce catégorie ?
+      ajouter_avec_succes : Catégorie ajoutée avec succés
+      editer_avec_succes : Catégorie éditée avec succés
+    Ajouter :
+      titre : Ajouter une Catégorie
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    Pages:
+     
+        
+      New :
+        titre : Ajouter Catégorie
+
+      Index :
+        titre : Gestion des Catégories
+        catégorie_favorie : Catégorie Favorie
+      Ajouter:
+        titre : Ajouter un Catégorie
+    Label :
+      nom : Catégorie
+      reference : Reference
+      categorie_parent : Catégorie 
+      sous_categorie : Sous Catégorie
+
+     
+     
+  

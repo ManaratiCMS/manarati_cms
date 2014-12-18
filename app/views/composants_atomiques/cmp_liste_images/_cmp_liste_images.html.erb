@@ -1,0 +1,15 @@
+<div  class="<%=obj.id%> <%=obj.type%> <%=obj.reference%>" >
+  <ul>
+<%images.each { |image| %>
+    <li>
+        <%=cmp_photo_capture(image)%>
+      <span class="nom"><%=image.nom%></span>
+    </li>
+    <%}%>
+    </ul>
+
+</div>
+
+
+
+

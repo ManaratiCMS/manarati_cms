@@ -1,0 +1,26 @@
+<%content_for :script do %>
+<script type="text/javascript">
+   Bind_InputText_to_reference("categorie_nom", "categorie_reference");
+</script>
+<%end%>
+<input type="hidden"  name="id"  value="<%=@categorie.id%>"></input>
+<table class="formulaire">
+
+   <tr>
+    <td><label><%=t("GestionCategories.Label.categorie_parent")%></label></td>
+    <td>
+      <%= select("categorie", "cmp_categorie_id",@categories_parent.collect { |cat|  [cat.nom,cat.id]}, { :include_blank => true })%>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td><label><%=t("GestionCategories.Label.sous_categorie")%> </label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionCategories.Label.reference")%></label></td>
+    <td><%= f.text_field :reference %></td>
+  </tr>
+ 
+    
+</table>

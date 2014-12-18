@@ -1,0 +1,26 @@
+<%content_for :left_area do%>
+<h3>  <%=h @user.login %></h3>
+<div class="left leftmenu">
+    <%=menu_membre%>
+</div>
+<%end%>
+<%content_for :style do %>
+ <%=stylesheet_link_tag "themes/#{@skin}/pages/user/edit" %>
+ 
+<%end%>
+<div class="colone2_large" >
+ 
+
+<div class="formulaire">
+
+<% form_for @user, :url => account_path do |f| %>
+  <%if f.error_messages !="" %>
+  <div class="message_box"><%= f.error_messages %></div>
+  <%end%>
+  <%= render :partial => "form", :object => f %>
+  <%= f.submit "Update" %>
+<% end %>
+</div>
+</div>
+
+ 

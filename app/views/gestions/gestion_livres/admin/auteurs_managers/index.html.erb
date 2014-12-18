@@ -1,0 +1,40 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionAuteurs.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionAuteurs.Pages.Ajouter.titre"),"/gestions/gestion_livres/admin/auteurs_managers/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionAuteurs.Label.nom")%></td>
+          <td><%=t("GestionAuteurs.Label.prenom")%></td>
+          <td><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@auteurs.each { |auteur|%>
+      <tr>
+        <td><%=auteur.nom%></td>
+        <td><%=auteur.prenom%> </td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_livres/admin/auteurs_managers/edit/<%=auteur.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_livres/admin/auteurs_managers" ,
+            :id=>auteur.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionAuteurs.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

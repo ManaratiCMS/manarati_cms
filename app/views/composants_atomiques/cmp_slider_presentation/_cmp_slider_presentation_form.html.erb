@@ -1,0 +1,16 @@
+<div class="formulaire cmp_slider_presentation" id="<%=obj.reference%>">
+<label class="titre">
+   <%=t("CmpComposant.CmpSliderPresentation.titre")%>
+</label >
+<br></br>
+<table>
+  <tr>
+    <td><label> <%=t("CmpComposant.CmpSliderPresentation.source")%> </label></td>
+    <td>
+       
+ 
+      <%= select(obj.reference, "texte", sources.collect {|s| [ s[0], s[1] ] }, { :include_blank => true,:selected=>obj.texte }) %>
+    </td>
+  </tr>
+</table>
+</div>

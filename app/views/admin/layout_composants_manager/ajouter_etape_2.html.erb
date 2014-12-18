@@ -1,0 +1,19 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/articles_manager/ajouter" %>
+       <%=stylesheet_link_tag "themes/#{@skin}/articles/art_generales" %>
+<%end%>
+<%if !@titre.blank? %>
+<h2><%t("GestionArticles.Ajouter.titre")%></h2>
+<%end%>
+<div class="formulaire ajouter_article">
+ <%form_tag("/admin/layout_composants_manager/ajouter_etape_3" , :multipart => true) do%>
+
+ <%=render :partial=>"/admin/article_manager/partials/form_article" ,:locals=>{:ref_langue=>@langue_active,:article=>@article_type}%>
+ <%=hidden_field_tag "ref_art" ,@ref_art%>
+  <%=hidden_field_tag "id_parent" ,@id_parent%>
+  <%=hidden_field_tag "nom_zone" ,@nom_zone%>
+<div class="submit">
+<%=submit_tag t'suivant'%>
+  </div>
+<%end%>
+</div>

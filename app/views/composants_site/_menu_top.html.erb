@@ -1,0 +1,6 @@
+<ul id="<%=id_menu%>">
+<%menu_top.each { |lien| %>
+  <li> <a href="<%=lien.lien%>" title="<%=t(lien.titre)%>"><%=t(lien.nom)%></a> </li>
+ 
+<%}%>
+</ul>

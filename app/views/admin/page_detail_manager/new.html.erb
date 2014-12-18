@@ -1,0 +1,58 @@
+<%content_for :style do %>
+ <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion_pages/ajouter" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/libs/plugin_jquery/validation-engine/validationEngine.jquery" %>
+ 
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/jquery.validationEngine"  %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/lang/jquery.validationEngine-fr"  %>
+
+ 
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#tabs-formulaire").tabs();
+	});
+</script>
+<script>
+jQuery(document).ready(function(){
+			// binds form submission and fields to the validation engine
+			jQuery("#ajouter_page_form").validationEngine();
+		});
+</script>
+<script type="text/javascript">
+  <%unless @init_page%>
+    Bind_InputText_to_reference("cmp_page_titre", "cmp_page_reference");
+    Bind_InputText_to_Reference_With_Prefixe("cmp_page_titre", "cmp_page_lien","/");
+    <%end%>
+</script>
+<%end%>
+<div class="ajouter">
+<div class="header_gestion">
+<h1 class="titre"><%=t("GestionPages.Ajouter.titre")%></h1>
+</div>
+<div id="tabs-formulaire">
+	<ul>
+		<li><a href="#tabs-1"><%=t("GestionPages.infoGenerale")%></a></li>
+	</ul>
+	<div id="tabs-1">
+          <div class="formulaire">
+          <% form_for :cmp_page, @cmp_page, :url => { :action => "create" }, :html => {:id=>"ajouter_page_form",:class => "formulaire"} do |f| %>
+         <%if f.error_messages !="" %>
+          <div class="message_box">
+              <%= f.error_messages %>
+          </div>
+           <%end%>
+          <%=render :partial=>"admin/page_detail_manager/partials/form_page" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("ajouter") %>
+          </div>
+          <% end %>
+          </div>
+           
+	</div>
+</div>
+</div>

@@ -1,0 +1,74 @@
+<%content_for :script do %>
+  <%= javascript_include_tag 'libs/jquery/plugin/jquery.jcarousel.min' %>
+<%end%>
+<%content_for :style do %>
+  <%= stylesheet_link_tag "skins/default/public/composants/ticker/ticker_product"  %>
+  <%= stylesheet_link_tag "skins/default/public/jquery_plugin/jcarousel/skins/omni/skin"  %>
+<%end%>
+
+<script type="text/javascript">
+  function mycarousel_initCallback(carousel){
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+      carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+      carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+      carousel.stopAuto();
+    }, function() {
+      carousel.startAuto();
+    });
+  };
+
+  jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+      auto: 2,
+      scroll:2,
+      animation:12000,
+      wrap: 'circular',
+      initCallback: mycarousel_initCallback
+      /*
+            hoverPause:true,
+      visible: 2,
+      scroll:2,
+      auto:10,
+      speed:10000,
+initCallback: mycarousel_initCallback*/
+    });
+
+
+    $('.jcarousel-skin-tango li').click(function(){
+     
+      document.location.href= $(this).attr('id') ;
+    });
+
+  });
+</script>
+<ul class="jcarousel-skin-tango" id="mycarousel">
+  <%@products.each do |product|%>
+    <li class="main-box fich_product_ticker" id="<%=url_to_url_lang(product.url_detail)%>">
+      <div class="photo">
+        <%=image_xys_tag(first_photo_by_owner(product.reference),{:format=>'medium'},{:alt=>"#{product.category_expression} #{product.marque_expression} #{product.modele_expression}"})%>
+      </div>
+      <div class="detail">
+        <div class="classification">
+          <div class="titre_marque_niveau_2"> <%= truncate( product.marque_expression, 10,"..")    %></div>
+          <div class="titre_marque_niveau_1"> <%=truncate( product.modele_expression, 17,"..") %></div>
+        </div>
+        <div class="prix">
+          <% if product.details_price[1]=="0" %>
+            <div class="produit_prix">
+              <div class="prix1"><%=price_with_currecy(product.price,product.details_price[0])%></div>
+              <div  class="prix2"><%=price_with_currecy(product.price*@product_config['taux_de_change_euro_>>_usd'].to_f,@text['price']['USD'])%></div>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    </li>
+  <%end%>
+</ul>

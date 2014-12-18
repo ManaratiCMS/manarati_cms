@@ -1,0 +1,66 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+
+<div class="header_gestion">
+<h1><%=t("GestionElementMenuG4.Pages.Index.titre")%></h1>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("Gestions.Pages.Ajouter.titre"),"/gestions/gestion_menus/elements_menu_manager/new/#{@id_menu}","bt_ajouter"))%>
+
+</div>
+
+
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td style="width: 100px" ></td>
+          <td><%=t("GestionElementMenuG4.Label.titre_lien")%></td>
+          <td><%=t("GestionElementMenuG4.Label.lien")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%-@element_menus.each_with_index  { |menu,i|-%>
+      <tr>
+        <td><%=cmp_photo_capture(menu.cmp_photo)%></td>
+        <td><%=menu.titre_lien%></td>
+        <td><%=menu.lien%></td>
+        <td>
+          <div class="action">
+
+
+      
+
+           <a href="/gestions/gestion_menus/elements_menu_manager/edit/<%=menu.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_menus/elements_menu_manager" ,
+            :id=>menu.id},:title=> t("supprimer"), :confirm => t("GestionElementCours.msg.confirmation_suppresion")
+           %>
+
+
+          <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/gestions/gestion_menus/elements_menu_manager",
+          :id => menu.id},
+          :title=> t("Gestions.Action.deplacer_en_haut") %>
+          <%-end-%>
+          <%- if i < (@element_menus.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/gestions/gestion_menus/elements_menu_manager",
+          :id => menu.id},
+          :title=> t("Gestions.Action.deplacer_en_bas") %>
+          <%-end-%>
+          
+
+           
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

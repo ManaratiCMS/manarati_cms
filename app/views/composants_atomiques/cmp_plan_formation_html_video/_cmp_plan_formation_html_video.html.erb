@@ -1,0 +1,60 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+	$("#red").treeview({
+		animated: "fast",
+		collapsed: true,
+		unique: true,
+		toggle: function() {
+			window.console && console.log("%o was toggled", this);
+		}
+	});
+        $(".selected").parents("ul, li").show();
+});
+
+</script>
+
+<div id="cadre-menu"><div id="bouton-menu">
+  </div>
+	<div id="bordure-menu">
+		 <a name="<%=obj.id%>"></a>
+<div id="cmp_plan_formation" class="cmp_plan_formation_html_video">
+<a href="/formation/<%=formation.reference%>"><%=formation.titre%></a>
+<ul id="red" class="treeview-black">
+  <%-
+   niveau_precedent = 0
+   niveau_actuel = 0
+   plan_formations.each_with_index { |element,i|
+   niveau_actuel =  element.niveau
+   -%>
+   <%- if niveau_precedent < niveau_actuel  -%>
+   <ul>
+   <%-end-%>
+   <%- if niveau_precedent == niveau_actuel and i!=0 -%>
+   </li>
+   <%-end-%>
+   <%- if niveau_precedent > niveau_actuel  -%>
+   </li></ul>
+   <%-end-%>
+   <li><span><%if element.element_cour_g3.nil?%>
+           <%=element.titre%>
+          <%else%>
+
+                <a class="<%=(selected_element_cour != 0 and !element.element_cour_g3.nil? and element.element_cour_g3.id == selected_element_cour )? "selected":"" %>" href="/video<%=element.element_cour_g3.reference%>"><%=element.titre%></a>
+
+
+          <%end%></span>
+  <%-
+   niveau_precedent =  element.niveau
+   }
+  -%>
+    <%- while  niveau_actuel > 0  -%>
+</li>
+</ul>
+<%-
+niveau_actuel = niveau_actuel -1
+end
+-%>
+</div>
+	
+    </div>
+</div>

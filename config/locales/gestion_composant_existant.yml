@@ -1,0 +1,29 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionComposantsExistant :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout du Composant
+      erreur de suppression : Erreur lors de suppresion du composant
+      supprimer_avec_succes : Composant supprimé avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce composant ?
+      ajouter_avec_succes : Composant ajouté avec succés
+      editer_avec_succes : Composant édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter Composant
+      Index :
+        titre : Gestion des Composants
+      Ajouter:
+        titre : Ajouter un composant
+      Update :
+        titre : Mise à jour
+    Label :
+      nom : Nom
+      reference : Type de Composant
+
+
+
+     
+  

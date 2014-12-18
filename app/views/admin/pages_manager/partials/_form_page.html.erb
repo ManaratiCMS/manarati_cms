@@ -1,0 +1,74 @@
+<%content_for :script do %>
+
+<%end%>
+<input type="hidden"  name="id"  value="<%=@cmp_page.id%>"></input>
+
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("titre")%> </label></td>
+    <td><%= f.text_field :titre ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("reference")%> </label></td>
+    <td><%= f.text_field :reference ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+   <td><label><%=t("lien")%></label></td>
+   <td>
+      <%if @init_page %>
+     <input type="text" disabled="true" value="<%=@cmp_page.lien%>" ></input>
+     <%= f.hidden_field :lien  %>
+      <%else%>
+      <%= f.text_field :lien ,:class=>"validate[required] text-input" %>
+     <%end%>
+   </td>
+  </tr>
+  <%unless @liste_layout.nil?%>
+  <tr>
+    <td><label><%=t("GestionPages.Label.layout")%></label></td>
+    <td>
+        <ul class="fichette">
+                <%@liste_layout.each { |article_type| %>
+                <%if article_type.role.blank? or (!article_type.role.blank? and has_role?(article_type.role.to_sym) )  %>
+                <li>
+                  
+                     <%=sys_cmp_photo_capture_avec_origin(article_type.sys_cmp_photo)%>
+                   <div class="nom_layout">
+                     <input type="radio"  class="validate[required] radio" id="layout_page" name="layout_page" value="<%=article_type.reference%>" />
+                      <%=article_type.nom%>
+                   </div>
+                </li>
+                <%end%>
+                <%}%>
+
+               
+
+
+
+
+           </ul>
+    </td>
+  </tr>
+  <%end%>
+  <tr>
+   <td><label><%=t("description")%></label></td>
+   <td><%= f.text_area(:description,:size=>"30*10") %></td>
+  </tr>
+  <tr>
+   <td><label><%=t("mots_cle")%></label></td>
+   <td><%= f.text_area(:mots_cle,:size=>"30*10") %></td>
+  </tr>
+  <%if  current_user.roles == "super_admin"%>
+  <tr>
+    <td><%=t("proprietaire")%></td>
+
+    <td>
+        <%= select("cmp_page", "user_id", @proporietaires_sous_sites.collect {|u| [ u.nom, u.id ] }, { :include_blank => true,:value=>@cmp_page.user_id })%>
+    </td>
+  </tr>
+  <%end%>
+</table>
+
+
+  
+

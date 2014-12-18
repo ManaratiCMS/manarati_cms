@@ -1,0 +1,32 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/libs/plugin_jquery/validation-engine/validationEngine.jquery" %>
+<style type="text/css" >
+  .cmp_data_grid td{
+   padding: 0 6px !important;
+}
+</style>
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/jquery.validationEngine"  %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/lang/jquery.validationEngine-fr"  %>
+<script>
+jQuery(document).ready(function(){
+			// binds form submission and fields to the validation engine
+			jQuery("#ajouter_langue_form").validationEngine();
+		});
+</script>
+<%end%>
+
+ 
+
+<div class="ajouter">	
+          <div class="formulaire">
+          <% form_for :langue, @langue, :url => { :action => "update" }, :html => {:id=>"ajouter_langue_form",:class => "formulaire",:multipart => true} do |f| %>
+          <%=render :partial=>"/admin/langues_manager/partials/form_langue" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("update") %>
+          </div>
+          <% end %>
+          </div>
+</div>

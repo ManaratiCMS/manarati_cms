@@ -1,0 +1,37 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionThemes :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de théme
+      erreur de suppression : Erreur lors de suppresion de theme
+      supprimer_avec_succes : Théme supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce théme ?
+      ajouter_avec_succes : Théme ajouté avec succés
+      editer_avec_succes : Théme édité avec succés
+    Ajouter :
+      titre : Ajouter un Théme
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    Pages:
+     
+        
+      New :
+        titre : Ajouter Théme
+
+      Index :
+        titre : Gestion des Thémes
+        theme_favorie : Théme Favorie
+      Ajouter:
+        titre : Ajouter un Théme
+    Label :
+      nom : Nom 
+      ref_theme : Référence
+      image : Description
+      layout : Layout
+      use_system_theme : Utilisation de theme System
+      package : Package
+     
+     
+  

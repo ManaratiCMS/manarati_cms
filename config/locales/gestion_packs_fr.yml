@@ -1,0 +1,31 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionPacks :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de Pack
+      erreur de suppression : Erreur lors de suppresion de Pack
+      supprimer_avec_succes : Pack supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce Pack ?
+      ajouter_avec_succes : Pack ajouté avec succés
+      editer_avec_succes : Pack édité avec succés
+    Ajouter :
+      titre : Ajouter un Pack
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter Pack
+      Index :
+        titre : Gestion des Packs
+      Ajouter:
+        titre : Ajouter un Pack
+    Label :
+      nom : Nom 
+      reference : Référence
+      image : Description
+      roles : Rôles
+     
+     
+  

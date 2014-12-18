@@ -1,0 +1,32 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionSites.Pages.choix_theme.titre")%></h1>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionThemes.Label.nom")%></td>
+          <td><%=t("GestionThemes.Label.ref_theme")%></td>
+          <td><%=t("GestionThemes.Label.image")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@themes.each { |theme|%>
+      <tr>
+        <td><%=theme.nom%></td>
+        <td><%=theme.ref_theme%> </td>
+        <td><%=cmp_photo_capture(theme.cmp_photo)%></td>
+        <td>
+          <div class="action">
+            <a href="/admin/themes_manager/edit/<%=theme.id%>" title="<%=t("ajouter")%>"><span class="add_site"> </span></a>
+          </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,36 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/libs/plugin_jquery/validation-engine/validationEngine.jquery" %>
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/jquery.validationEngine"  %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/lang/jquery.validationEngine-fr"  %>
+<script>
+jQuery(document).ready(function(){
+			// binds form submission and fields to the validation engine
+			jQuery("#ajouter_image_form").validationEngine();
+		});
+</script>
+<%end%>
+<div class="ajouter">
+   <div class="formulaire">
+         <% form_for :image, @image, :url => { :action => "create" }, :html => {:id=>"ajouter_image_form",:class => "formulaire",:multipart => true}  do |f| %>
+         <%if f.error_messages !="" %>
+         <div class="message_box">
+              <%= f.error_messages %>
+         </div>
+         <%end%>
+         <%=render :partial=>"gestions/gestion_images_library/images_librarys_managers/partials/form_image" ,:locals=>{:f=>f}%>
+         <div class="submit">
+         <%= submit_tag t("ajouter") %>
+         </div>
+         <% end %>
+   </div>
+</div>
+
+
+
+
+
+
+ 

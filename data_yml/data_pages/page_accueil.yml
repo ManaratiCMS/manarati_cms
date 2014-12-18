@@ -1,0 +1,25 @@
+--- !ruby/object:CmpPage 
+attributes: 
+  reference: page_accueil
+  created_at: 2010-12-18 14:31:38
+  updated_at: 2010-12-18 18:00:26
+  id: "5"
+  titre: Manarati Formation
+  description: Manarati est un Centre de formation Professionel
+  lien: /
+attributes_cache: {}
+
+cmp_articles: 
+- !ruby/object:CmpArticle 
+  attributes: 
+    reference: accueil_formation
+    group: 
+    created_at: 2010-12-18 14:32:59
+    updated_at: 2010-12-18 14:32:59
+    ref_article_classe: accueil_formation
+    id: "60"
+    sous_group: 
+    date_creation: 
+    ref_pocesseur: CmpPage_5
+  attributes_cache: {}
+

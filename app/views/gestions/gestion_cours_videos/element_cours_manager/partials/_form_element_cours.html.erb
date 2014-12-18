@@ -1,0 +1,39 @@
+<%content_for :script do %>
+
+<%end%>
+<input type="hidden"  name="id"  value="<%=@element_cour.id%>"></input>
+
+<table class="formulaire">
+
+    
+
+  <tr>
+    <td><label><%=t("titre")%> </label></td>
+    <td><%= f.text_field :titre ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("reference")%> </label></td>
+    <td><%= f.text_field :reference ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+   <td><label><%=t("lien")%></label></td>
+   <td>
+     
+      <%= f.text_field :lien ,:class=>"validate[required] text-input" %>
+   
+   </td>
+  </tr>
+  <tr>
+   <td><label><%=t("description")%></label></td>
+   <td><%= f.text_area(:description,:size=>"30*10") %></td>
+  </tr>
+  <tr>
+   <td><label><%=t("mots_cle")%></label></td>
+   <td><%= f.text_area(:mots_cle,:size=>"30*10") %></td>
+  </tr>
+  <input type="hidden" value="<%=@formation.id%>" name="element_cour[formation_g2_id]"></input>
+</table>
+
+
+  
+

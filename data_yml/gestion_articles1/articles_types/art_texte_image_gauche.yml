@@ -1,0 +1,25 @@
+--- !ruby/object:ArticleType
+reference : art_texte_image_gauche
+nom : Texte - Image Gauche
+ref_image_capture : 6/texte_image_gauche.png
+fichier_css : art_generale.css
+fichier js :  js_generale.js
+cmp_composants:
+- !ruby/object:CmpPhoto
+  attributes:
+    reference: image_gauche
+    nom : Image
+    type: CmpPhoto
+    label_form : Source1
+    texte : ""
+    text_alt : ""
+    width : 340
+    height: 260
+- !ruby/object:CmpParagraphe
+  attributes:
+    nom : Texte
+    type: CmpParagraphe
+    reference: texte_gauche
+    texte : ""
+    text_alt : ""
+

@@ -1,0 +1,16 @@
+<%content_for :style do -%>
+ <%=stylesheet_link_tag "themes/#{@skin_public}/articles/art_layout1"   %>
+<%end %>
+<label class="titre"><%=obj.nom%></label >
+<div class="formulaire layout1">
+  
+  <div class="zone1">
+    <%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue,(obj.cmp_article.nil?)?0:obj.cmp_article.id,"zone1",500)%>
+  </div>
+  <div class="zone2">
+    <%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue,(obj.cmp_article.nil?)?0:obj.cmp_article.id,"zone2",400)%>
+  </div>
+  <div class="zone3">
+    <%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue,(obj.cmp_article.nil?)?0:obj.cmp_article.id,"zone3",400)%>
+  </div>
+</div>

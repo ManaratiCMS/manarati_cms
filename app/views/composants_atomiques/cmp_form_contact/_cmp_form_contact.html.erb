@@ -1,0 +1,44 @@
+<%content_for :script do%>
+<script>
+jQuery(document).ready(function(){
+			jQuery("#formID").validationEngine();
+		});
+</script>
+<%end%>
+<div class="cmp_form_contact">
+  <form id="formID" action="/composants_atomiques/cmp_form_contact/ajouter_contact" method="post">
+    <input type="hidden" value="<%=@page.reference%>" name="reference_page" ></input>
+    <div class="form_row">
+   <label><strong><%=t("GestionContacts.Label.objet")%>:</strong></label>
+   <input type="text" value="<%=@objet%>" class="validate[required] text-input" data-prompt-position="topRight:-50"  name="objet" id="objet"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("GestionContacts.Label.nom")%>:</strong></label>
+   <input type="text" value="<%=@nom%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   name="nom"  id="nom" ></input>
+ </div>
+  <div class="form_row">
+   <label><strong><%=t("GestionContacts.Label.prenom")%>:</strong></label>
+   <input type="text" value="<%=@prenom%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   name="prenom"  id="prenom" ></input>
+ </div>
+
+ <div class="form_row">
+   <label><strong><%=t("GestionContacts.Label.email")%>:</strong></label>
+   <input type="text" value="<%=@email%>" class="validate[required,custom[email]] text-input" data-prompt-position="topRight:-50"   name="email" id="email"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("GestionContacts.Label.confirm_email")%>:</strong></label>
+   <input type="text" value="<%=@confirm_email%>" class="validate[required,custom[email],equals[email]] text-input" data-prompt-position="topRight:-50" name="confirm_email" id="confirm_email"></input>
+ </div>
+  <div class="form_row">
+   <label><strong><%=t("GestionContacts.Label.message")%>:</strong></label>
+   <%=cmp_paragraphe_input("contact","message",@message)%>
+  <!-- <input type="text" value="<%=@message%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   name="message"  id="message" ></input>-->
+ </div>
+ <div class="right">
+   <input class="submit" type="submit" value="<%=t("GestionContacts.Label.envoyer")%>"/>
+ </div>
+</form>
+</div>
+
+
+ 

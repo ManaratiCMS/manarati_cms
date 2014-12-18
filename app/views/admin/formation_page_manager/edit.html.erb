@@ -1,0 +1,46 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<style type="text/css" >
+  .cmp_data_grid td{
+   padding: 0 6px !important;
+}
+</style>
+<%-end-%>
+<%content_for :script do -%>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+ <script type="text/javascript">
+	$(function() {
+		$("#tabs-formulaire").tabs();
+	});
+ </script>
+<%-end-%>
+
+<div class="ajouter">
+  <h1 class="titre">
+    <%=link_to @formation.designation,
+      :action=> "edit",
+      :controller=>"/admin/formation_manager" ,
+      :id=>@formation.id %>
+    <br></br>
+    <%=t("GestionPagesFormation.Update.titre")%> : <%=@cmp_page.titre%>
+  </h1>
+<div id="tabs-formulaire">
+	<ul>
+            <li><a href="#tabs-2"><%=t("GestionPages.contenu_page")%></a></li>
+            <li><a href="#tabs-1"><%=t("GestionPages.infoGenerale")%></a></li>
+	</ul>
+  	<div id="tabs-2">
+          <%=module_edition_articles(@cmp_page.id)%>
+	</div>
+	<div id="tabs-1">
+          <div class="formulaire">
+          <% form_for :page, @cmp_page, :url => { :action => "update" }, :html => {:class => "formulaire"} do |f| %>
+          <%=render :partial=>"admin/pages_manager/partials/form_page" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("update") %>
+          </div>
+          <% end %>
+          </div>
+	</div>
+</div>
+</div>

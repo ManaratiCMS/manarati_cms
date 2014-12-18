@@ -1,0 +1,8 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "skins/default/public/composants_atomique/retour/retour"   %>
+<%end %>
+ 
+<div id="com_retour">
+  <button id="button-retrour" onclick="javascript:history.go(-1)"></button>
+<label id="label-form-retour"><%=arg["nom"]%></label>
+</div>

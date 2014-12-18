@@ -1,0 +1,29 @@
+<%content_for :script do %>
+<script type="text/javascript">
+  // Bind_InputText_to_reference("pack_nom", "pack_reference");
+</script>
+<%=cmp_composant_add_library("editeur_wysiwyg_simple")%>
+<%end%>
+<input type="hidden"  name="id"  value="<%=@pack.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionPacks.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionPacks.Label.reference")%></label></td>
+    <td><%= f.text_field :reference %></td>
+  </tr>
+  <tr>
+    <td><label>Description</label></td>
+    <td>
+      <%= f.text_area :description %>
+       
+    </td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@pack.cmp_photo,{:alt=>false})%></td>
+  </tr>
+    
+</table>

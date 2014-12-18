@@ -1,0 +1,17 @@
+<% if liste_lien.length >= 1 %>
+<div id="<%=id_menu%>" class="cmp_menu style1">
+  <div class="bg_p1"></div>
+  <div class="bg_p2">
+    <ul>
+    <%-liste_lien.each{ |lien| -%>
+      <li class="page_item">
+        <a href="<%=lien.lien_page%>" title="<%=lien.titre%>">
+          <span><%=lien.nom%></span>
+        </a>
+      </li>
+    <%-}-%>
+    </ul>
+  </div>
+  <div class="bg_p3"></div>
+</div>
+<%end%>

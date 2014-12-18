@@ -1,0 +1,2 @@
+module Admin::PageDetailManagerHelper
+end

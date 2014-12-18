@@ -1,0 +1,41 @@
+<% content_for :style  do   %>
+    <%=stylesheet_link_tag "themes/public_sys/articles/cmp_formation_slider" %>
+<% end %>
+<a name="<%=obj.id%>"></a>
+<div class="cmp_formation_slider">
+  <ul id="formation_slider">
+    <%formations.each { |formation|  %>
+    <li>
+      <div class="formation">
+      <h2 class="titre">
+        <a href="/formation/<%=formation.reference%>">
+        <%=formation.titre%>
+        </a>
+      </h2>
+        <a href="/formation/<%=formation.reference%>">
+      <%=cmp_photo_capture_sans_lien(formation.cmp_photo)%>
+          </a>
+      <div class="detail">
+         <div class="tarif">
+          <p >
+            <span>Prix :</span>  <%=formation.tarif%> DH
+          </p>
+         </div>
+        <div class="session">
+          <%if !formation.prochaine_session.nil?%>
+          <p> Début de Formation : <%=formation.prochaine_session.Date_Fin_Inscription%></p>
+          <%end%>
+        </div>
+        <div class="local">
+          <%if !formation.prochaine_session.nil?%>
+          <div><p> Lieu :</p> <%=formation.prochaine_session.local_formation_g2.adresse%></div>
+          <%end%>
+        </div>
+      </div>
+     
+      
+      </div>
+    </li>
+    <%}%>
+  </ul>
+</div>

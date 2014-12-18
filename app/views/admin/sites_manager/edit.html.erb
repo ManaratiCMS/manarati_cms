@@ -1,0 +1,42 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<style type="text/css" >
+  .cmp_data_grid td{
+   padding: 0 6px !important;
+}
+</style>
+<%-end-%>
+<%content_for :script do -%>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+ <script type="text/javascript">
+	$(function() {
+		$("#tabs-formulaire").tabs();
+	});
+
+      
+ </script>
+ 
+
+<%-end-%>
+<div class="ajouter">
+ 
+<div id="tabs-formulaire">
+	<ul>
+            <% if permitted_to? :update %>
+              <li><a href="#tabs-1"><%=t("GestionFormations.infoGenerale")%></a></li>
+            <%end%>
+	</ul>
+        <% if permitted_to? :update %>
+	<div id="tabs-1">
+          <div class="formulaire">
+          <% form_for :site, @site, :url => { :action => "update" }, :html => {:class => "formulaire",:multipart => true} do |f| %>
+          <%=render :partial=>"admin/sites_manager/partials/form_site" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("update") %>
+          </div>
+          <% end %>
+          </div>
+	</div>
+        <% end %>
+</div>
+</div>

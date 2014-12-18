@@ -1,0 +1,44 @@
+<%content_for :script do%>
+<script>
+jQuery(document).ready(function(){
+			jQuery("#form_ajouter_utilisateur").validationEngine();
+		});
+</script>
+<%end%>
+
+<div class="formulaire cmp_form_ajouter_utilisateur" id="<%=obj.reference%>">
+ <form id="form_ajouter_utilisateur" action="/composants_atomiques/cmp_form_ajouter_utilisateur/ajouter" method="post">
+    <input type="hidden" value="<%=@page.reference%>" name="reference_page" ></input>
+ <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.nom")%>:</strong></label>
+   <input type="text" value="<%=@nom%>" class="validate[required] text-input" data-prompt-position="topRight:-50"  name="nom" id="nom"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.prenom")%>:</strong></label>
+   <input type="text" value="<%=@prenom%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   name="prenom"  id="prenom" ></input>
+ </div>
+  <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.ville")%>:</strong></label>
+   <input type="text" value="<%=@ville%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   name="ville"  id="ville" ></input>
+ </div>
+
+ <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.email")%>:</strong></label>
+   <input type="text" value="<%=@email%>" class="validate[required,custom[email]] text-input" data-prompt-position="topRight:-50"   name="email" id="email"></input>
+ </div>
+   <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.login")%>:</strong></label>
+   <input type="text" value="<%=@login%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   name="login"  id="login" ></input>
+ </div>
+   <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.password")%>:</strong></label>
+   <input type="password" value="<%=@password%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   name="password"  id="password" ></input>
+ </div>
+ <div class="right">
+   <input class="submit" type="submit" value="<%=t("GestionContacts.Label.envoyer")%>"/>
+ </div>
+</form>
+</div>
+
+
+

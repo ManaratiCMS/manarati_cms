@@ -1,0 +1,44 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionArticlesType.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionArticlesType.Pages.Ajouter.titre"),"/admin/article_type_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionArticlesType.Label.nom")%></td>
+          <td><%=t("GestionArticlesType.Label.image")%></td>
+          <td><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@cmp_article_types.each { |cmp_article_type|%>
+      <tr>
+        <td><%=cmp_article_type.nom%></td>
+        <td><%=sys_cmp_photo_capture(cmp_article_type.sys_cmp_photo)%></td>
+        <td>
+          <div class="action">
+            <a href="/admin/article_type_manager/edit/<%=cmp_article_type.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+
+            <a href="/admin/article_type_manager/change_etat1/<%=cmp_article_type.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="etat_1"> </span></a>
+
+            
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/article_type_manager" ,
+            :id=>cmp_article_type.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionArticlesType.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

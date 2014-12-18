@@ -1,0 +1,63 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<style type="text/css" >
+  .cmp_data_grid td{
+   padding: 0 0px !important;
+}
+</style>
+
+<%-end-%>
+<%content_for :script do -%>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+<script type="text/javascript">
+    Bind_InputText_to_reference("page_titre", "page_reference");
+    Bind_InputText_to_Reference_With_Prefixe("page_titre", "page_lien","/");
+</script>
+<%-end-%>
+
+<div class="header_gestion">
+  <%=gestion_page_titre%>
+  <div class="action" >
+
+             <% if @langues_active.length > 1   %>
+                <% @langues_active.each { |langue| %>
+                  <%if langue.reference == @langue_principale %>
+                  <%= link_to "<span class='editer_#{langue.reference}'> </span>",{
+                  :action => "edit",
+
+                  :controller=>"/admin/page_detail_manager" ,
+                  :id=>@cmp_page.id},:title=> t("Gestions.Pages.Index.editer_version_#{langue.reference}")
+                  %>
+             <%else%>
+               <%= link_to "<span class='editer_#{langue.reference}'> </span>",{
+                  :action => "traduir",
+                  :controller=>"/admin/page_detail_manager" ,
+                  :lg=>"#{langue.reference}",
+                  :edit_seo=>"1",
+                  :id=>@cmp_page.id},:title=> t("Gestions.Pages.Index.editer_version_#{langue.reference}")
+                  %>
+             <%end%>
+    <%}%>
+    <%end%>
+  </div>
+</div>
+
+
+
+
+<div class="ajouter">
+
+  
+
+
+          <div class="formulaire">
+          <% form_for :cmp_page, @cmp_page, :url => { :action => "update" }, :html => {:class => "formulaire"} do |f| %>
+          <%=render :partial=>"admin/page_detail_manager/partials/form_page" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("update") %>
+          </div>
+          <% end %>
+          </div>
+	
+
+</div>

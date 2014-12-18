@@ -1,0 +1,26 @@
+<input type="hidden"  name="id"  value="<%=@contact.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionContacts.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionContacts.Label.prenom")%> </label></td>
+    <td><%= f.text_field :prenom ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionContacts.Label.objet")%> </label></td>
+    <td><%= f.text_field :objet ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionContacts.Label.email")%> </label></td>
+    <td><%= f.text_field :email ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionContacts.Label.message")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("contact","message",@contact.message)%>
+ 
+    </td>
+  </tr>
+</table>

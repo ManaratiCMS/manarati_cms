@@ -1,0 +1,42 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionPacks.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionPacks.Ajouter.titre"),"/admin/packs_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionPacks.Label.nom")%></td>
+          <td><%=t("GestionPacks.Label.reference")%></td>
+          <td><%=t("GestionPacks.Label.image")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@packs.each { |pack|%>
+      <tr>
+        <td><%=pack.nom%></td>
+        <td><%=pack.reference%> </td>
+        <td><%=cmp_photo_capture(pack.cmp_photo)%></td>
+        <td>
+          <div class="action">
+            <a href="/admin/packs_manager/edit/<%=pack.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/packs_manager" ,
+            :id=>pack.id},:title=> t("supprimer"), :confirm => t("GestionPacks.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

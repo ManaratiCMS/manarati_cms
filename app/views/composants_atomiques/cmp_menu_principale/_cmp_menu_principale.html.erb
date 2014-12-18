@@ -1,0 +1,15 @@
+<div id="menucontainer">
+<div id="menu_princiaple">
+<ul>
+<%menu_liens.liste_liens.each{ |lien|%>
+  <% if reference_page_active == lien.reference %>
+  <li class="page_item page_active">
+    <a href="<%=lien.lien%>" title="<%=t(lien.titre)%>"><span><%=t(lien.designation)%></span></a>
+  </li>
+  <%else%>
+  <li class="page_item page_item_1"><a href="<%=lien.lien%>" title="<%=t(lien.titre)%>"><span><%=t(lien.designation)%></span></a></li>
+  <%end%>
+<%}%>
+</ul>
+</div>
+</div>

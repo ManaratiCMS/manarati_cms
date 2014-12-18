@@ -1,0 +1,71 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionThemes.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionThemes.Ajouter.titre"),"/admin/themes_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionThemes.Label.nom")%></td>
+          <%- if permitted_to? :editer -%>
+          <td><%=t("GestionThemes.Label.ref_theme")%></td>
+          <%-end-%>
+          <td><%=t("GestionThemes.Label.image")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@themes.each { |theme|%>
+      <tr>
+        <td><%=theme.nom%></td>
+        <%- if permitted_to? :editer -%>
+        <td><%=theme.ref_theme%> </td>
+        <%-end-%>
+        <td><%=sys_cmp_photo_capture(theme.sys_cmp_photo)%></td>
+        <td>
+          <div class="action">
+            <% if permitted_to? :setpublic and theme.protection == 0 %>
+              <%= link_to "<span class='private'></span>",{
+              :action =>"setpublic",
+              :controller=>"/admin/themes_manager" ,
+              :id=>theme.id},:title=> t("Gestions.msg.setpublic")
+              %>
+             <%-end-%>
+             <% if permitted_to? :setprivate and theme.protection == 1 %>
+               <%= link_to "<span class='public'> </span>",{
+              :action =>"setprivate",
+              :controller=>"/admin/themes_manager" ,
+              :id=>theme.id},:title=> t("Gestions.msg.setprivate")
+              %>
+             <%end%>
+           
+            <% if permitted_to? :activer %>
+            <%- if theme.ref_theme == @theme_active -%>
+            <a href="#" title="<%=t("GestionThemes.Pages.Index.theme_favorie")%>"><span class="favorie"> </span></a>
+            <%-else-%>
+            <a href="/admin/themes_manager/activer/<%=theme.id%>" title="<%=t("activer")%>"><span class="activer"> </span></a>
+            <%-end-%>
+            <%end%>
+
+            <% if permitted_to? :edit %>
+            <a href="/admin/themes_manager/edit/<%=theme.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+            <%end%>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/themes_manager" ,
+            :id=>theme.id},:title=> t("supprimer"), :confirm => t("GestionThemes.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,39 @@
+<div class="formulaire cmp_photo cmp" id="<%=obj.reference%>">
+<label class="titre"><%=obj.nom%> </label>
+<table>
+  <%-if !obj.id.nil?-%>
+  <tr>
+    <td></td>
+    <td><%=cmp_photo_capture(obj)%></td>
+  </tr>
+  <%-end-%>
+  <tr>
+    <td><label><%=t("titre")%> </label></td>
+    <td><input id="<%=obj.reference%>_nom" size="31" type="text"  name="<%=obj.reference%>[nom]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("source")%> </label></td>
+    <td><input id="<%=obj.reference%>_photo" size="31" type="file"  name="<%=obj.reference%>[photo]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("width")%> </label></td>
+    <td><input id="<%=obj.reference%>_width" type="text" value="<%=(obj.width== 0)?"":obj.width%>" name="<%=obj.reference%>[width]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("height")%> </label></td>
+    <td><input id="<%=obj.reference%>_height" type="text" value="<%=(obj.height== 0)?"":obj.height%>" name="<%=obj.reference%>[height]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("text_alternatif")%> </label></td>
+    <td><input id="<%=obj.reference%>_photo" type="text" value="<%=obj.text_alt%>" name="<%=obj.reference%>[text_alt]"></input></td>
+  </tr>
+   <tr>
+    <td><label><%=t("utiliser_image_original")%> </label></td>
+      <td>
+
+        <%= select(obj.reference, "use_original",[[t("oui"), 1],[t("nom"),0]], {:selected => obj.use_original, :include_blank => true })%>
+    </td>
+
+  </tr>
+</table>
+</div>

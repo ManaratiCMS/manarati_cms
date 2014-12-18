@@ -1,0 +1,24 @@
+<div class="formulaire cmp_animation_flash" id="<%=obj.reference%>">
+<label class="titre">
+   <%=t("CmpComposant.CmpAnimationFlash.titre")%>
+</label >
+<br></br>
+<table class="tformulaire">
+  <tr>
+    <td><label><%=t("source")%> </label></td>
+    <td><input id="<%=obj.reference%>_flash" size="31" type="file"  name="<%=obj.reference%>[flash]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("width")%> </label></td>
+    <td><input id="<%=obj.reference%>_width" type="text" value="<%=(obj.width== 0)?"":obj.width%>" name="<%=obj.reference%>[width]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("height")%> </label></td>
+    <td><input id="<%=obj.reference%>_height" type="text" value="<%=(obj.height== 0)?"":obj.height%>" name="<%=obj.reference%>[height]"></input></td>
+  </tr>
+  <tr>
+    <td><label><%=t("text_alternatif")%> </label></td>
+    <td><input id="<%=obj.reference%>_photo" type="text" value="<%=obj.text_alt%>" name="<%=obj.reference%>[text_alt]"></input></td>
+  </tr>
+</table>
+</div>

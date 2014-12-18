@@ -1,0 +1,40 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionComposantsExistant.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionComposantsExistant.Pages.Ajouter.titre"),"/admin/composants_existant_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionComposantsExistant.Label.nom")%></td>
+          <td><%=t("GestionComposantsExistant.Label.reference")%></td>
+          <td><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@cmp_composants_existants.each { |cmp_composants_existant|%>
+      <tr>
+        <td><%=cmp_composants_existant.nom%></td>
+        <td><%=cmp_composants_existant.reference%> </td>
+        <td>
+          <div class="action">
+            <a href="/admin/composants_existant_manager/edit/<%=cmp_composants_existant.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/composants_existant_manager" ,
+            :id=>cmp_composants_existant.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionComposantsExistant.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

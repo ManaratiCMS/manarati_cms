@@ -1,0 +1,24 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag_cmp_article(@skin_public,"art_layout2_colone")%>
+<%=stylesheet_link_tag "themes/#{@skin}/articles_form/art_layout_form"   %>
+<%end %>
+<%-unless obj.nom.blank? -%><label class="titre"><%=obj.nom%></label ><%-end-%>
+<div class="formulaire layout2c">
+  <div class="header_zone color_layout1 zone zone_layout" style="min-height: 100px">
+<%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue,(obj.cmp_article.nil?)?0:obj.cmp_article.id,"header_zone",config["header_zone"]["width"],config["header_zone"]["height"])%>
+</div>
+
+<div class="leftcolumn_zone color_layout2 zone zone_layout" style="min-height: 200px">
+<%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue,(obj.cmp_article.nil?)?0:obj.cmp_article.id,"leftcolumn_zone",config["leftcolumn_zone"]["width"],config["leftcolumn_zone"]["height"])%>
+</div>
+
+<div class="rightcolumn_zone color_layout3 zone zone_layout" style="min-height: 200px">
+<%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue,(obj.cmp_article.nil?)?0:obj.cmp_article.id,"rightcolumn_zone",config["rightcolumn_zone"]["width"],config["rightcolumn_zone"]["height"])%>
+ </div>
+
+<div class="footer_zone color_layout4 zone zone_layout" style="min-height: 100px">
+<%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue,(obj.cmp_article.nil?)?0:obj.cmp_article.id,"footer_zone",config["footer_zone"]["width"],config["footer_zone"]["height"])%>
+</div>
+
+
+</div>

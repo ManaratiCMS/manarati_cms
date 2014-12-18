@@ -1,0 +1,20 @@
+<div  class="<%=obj.type%> <%=obj.reference%>" >
+  <div class="titre"><%=obj.titre%></div>
+  <ul class="formations">
+    <%formations.each { |formation| %>
+      <li class="formation">
+        <%=cmp_photo_capture(formation.cmp_photo)%>
+        <dl class="detail">
+          <dt>Formation</dt>
+          <dd><%=formation.designation%></dd>
+          <dt>Formateur</dt>
+          <dd><%=formation.professeur%></dd>
+        </dl>
+        <ul class="menu">
+          <li>Inscription</li>
+          <li><a href="/formation/<%=formation.reference%>">Consultation</a></li>
+        </ul>
+      </li>
+    <%}%>
+  </ul>
+</div>

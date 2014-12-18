@@ -1,0 +1,38 @@
+--- 
+- !ruby/object:ElementPlan
+  lien: /admin/pages_manager
+  code : page_manager
+- !ruby/object:ElementPlan
+  lien: /admin/formation_manager
+  code : gestion_formation
+- !ruby/object:ElementPlan
+  lien: /admin/users_manager
+  code : gestion_membre
+- !ruby/object:ElementPlan
+  lien: /admin/sites_manager
+  code : gestion_sites
+- !ruby/object:ElementPlan
+  lien: /admin/themes_manager
+  code : gestion_themes
+- !ruby/object:ElementPlan
+  lien: /admin/menu_manager
+  code : gestion_menu
+
+- !ruby/object:ElementPlan
+  lien: /admin/bureau/system
+  code : menu_system
+- !ruby/object:ElementPlan
+  lien: /admin/compte/edit
+  code : edition_de_compte
+- !ruby/object:ElementPlan
+  lien: /gestions/gestion_partenaires/admin/partenaires_managers
+  code : gestion_partenaire
+- !ruby/object:ElementPlan
+  lien: /admin/langues_manager
+  code : gestion_langues
+- !ruby/object:ElementPlan
+  lien: /
+  code : manarati
+
+
+

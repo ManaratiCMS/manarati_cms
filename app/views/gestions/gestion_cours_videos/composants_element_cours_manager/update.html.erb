@@ -1,0 +1,29 @@
+<%if @appel_ajax%>
+  <script type="text/javascript">
+  chargement_css("<%="/stylesheets/themes/#{@skin}/general/formulaire_composant.css"%>");
+  chargement_css("<%="/stylesheets/themes/#{@skin}/articles/art_generales.css"%>");
+  </script>
+<% else %>
+  <%content_for :style do%>
+  <%=stylesheet_link_tag "themes/#{@skin}/articles/art_generales" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/general/formulaire_composant.css" %>
+  <%end%>
+  <%content_for :script do%>
+  <%end%>
+<%end%>
+
+
+<div class="formulaire_cmp">
+<%form_tag("/gestions/gestion_cours_videos/composants_element_cours_manager/update/",:multipart=>true,:id=>"form_cmp") do%>
+<%=render :partial=>"/admin/article_manager/partials/form_composant" ,:locals=>{:ref_langue=>@ref_langue,:composant=>@cmp_composant}%>
+<%=hidden_field_tag "cmp_composant[id]",@cmp_composant.id%>
+<% if !@ref_langue.nil? %>
+<%=hidden_field_tag "ref_langue",@ref_langue%>
+<%end%>
+<div class="submit">
+  <div class="center">
+<%=submit_tag t'ok'%>
+    </div>
+</div>
+<%end%>
+</div>

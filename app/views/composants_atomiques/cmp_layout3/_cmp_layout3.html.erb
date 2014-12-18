@@ -1,0 +1,41 @@
+<a name="<%=obj.id%>"></a>
+
+<div id="headerPan">
+  <div id="headerPanleft">
+     <%-articles.each { |article|-%>
+    <%-if article.nom_zone == "headerleft"-%>
+    <%=cmp_affiche_article_sans_meta_donnees(article)%>
+    <%-end-%>
+    <%-} unless articles.nil?-%>
+  </div>
+   <div id="headerPanRigh">
+    <%-articles.each { |article|-%>
+    <%-if article.nom_zone == "headerright"-%>
+    <%=cmp_affiche_article_sans_meta_donnees(article)%>
+    <%-end-%>
+    <%-} unless articles.nil?-%>
+  </div>
+</div>
+<div id="bodyPan">
+  <div id="leftPan">
+    <%-articles.each { |article|-%>
+    <%-if article.nom_zone == "leftZone"-%>
+    <%=cmp_affiche_article_sans_meta_donnees(article)%>
+    <%-end-%>
+    <%-} unless articles.nil?-%>
+  </div>
+  <div id="rightPan">
+    <%-articles.each { |article|-%>
+    <%-if article.nom_zone == "rightZone"-%>
+    <%=cmp_affiche_article_sans_meta_donnees(article)%>
+    <%-end-%>
+    <%-} unless articles.nil?-%>
+  </div>
+</div>
+
+
+
+
+
+
+

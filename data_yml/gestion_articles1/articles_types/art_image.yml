@@ -1,0 +1,22 @@
+--- !ruby/object:ArticleType
+reference : art_image
+nom : Image
+article_type : image1
+ref_image_capture : 3/image.png
+fichier_css : art_generale.css
+fichier js :  js_generale.js
+cmp_composants:
+- !ruby/object:CmpPhoto
+  attributes:
+    reference: photo1
+    nom : Photo
+    type: CmpPhoto
+    label_form : Source
+    texte : ""
+    text_alt : ""
+    width : 690
+    height: 450
+
+
+
+

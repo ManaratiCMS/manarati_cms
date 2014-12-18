@@ -1,0 +1,7 @@
+<% content_for :style  do   %>
+    <%=stylesheet_link_tag "themes/public_sys/articles/cmp_youtube" %>
+<% end %>
+<a name="<%=obj.id%>"></a>
+<div class="cmp_youtube">
+  <iframe width="<%=obj.width%>" height="<%=obj.height%>" src="//www.youtube.com/embed/<%=obj.nom%>?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>

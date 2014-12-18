@@ -1,0 +1,36 @@
+--- !ruby/object:ArticleType
+reference : art_liste_produit
+nom : Liste de Produits
+article_type : image1
+ref_image_capture : 4/liste_produit.png
+fichier_css : art_liste_produit.css
+fichier js :  art_liste_produit.js
+cmp_composants:
+- !ruby/object:CmpPhoto
+  attributes:
+    reference: photo1
+    nom : Photo
+    type: CmpPhoto
+    label_form : Source
+    texte : ""
+    text_alt : ""
+- !ruby/object:CmpPhoto
+  attributes:
+    reference: photo2
+    nom : Photo
+    type: CmpPhoto
+    label_form : Source
+    texte : ""
+    text_alt : ""
+- !ruby/object:CmpPhoto
+  attributes:
+    reference: photo3
+    nom : Photo
+    type: CmpPhoto
+    label_form : Source
+    texte : ""
+    text_alt : ""
+
+
+
+

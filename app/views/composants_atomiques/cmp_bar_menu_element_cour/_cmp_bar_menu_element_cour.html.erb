@@ -1,0 +1,31 @@
+<a name="<%=obj.id%>"></a>
+<div class="cmp_bar_menu_element_cour">
+
+
+
+<nav class="tabs">
+	<div class="wrap">
+		<a href="#" rel="/system/page/pajax?ref_obj=<%=element_cour.reference%>&tp_cmp=CmpElementCourHtml" id=".cmp_element_cour_html"   class="info active bajax">Support de Cour</a>
+                <a href="#" rel="/system/page/pajax?ref_obj=<%=element_cour.formation_g2.reference%>&tp_cmp=CmpDetailFormation" id=".cmp_element_cour_html" class="bajax iconic iconic-list ">Sommaire</a>
+
+                <%if !element_cour.lien_suivant.blank? %>
+                   <div class="right next">
+                     <a href="/cours<%=element_cour.lien_suivant%>" class="right next ">
+                       Chapitre suivant
+                     </a>
+
+                   </div>
+                <%end%>
+                <%if !element_cour.lien_precedent.blank? %>
+		   <div class="right prev">
+                     <a href="/cours<%=element_cour.lien_precedent%>">
+                    Chapitre précédent
+                     </a>
+                     </div>
+                <%end%>
+
+			</div>
+</nav>
+</div>
+
+ 

@@ -1,0 +1,15 @@
+<input type="hidden"  name="id"  value="<%=@langue.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionLangues.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom ,:class=>"validate[required] text-input" %></td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionLangues.Label.reference")%> </label></td>
+    <td><%= f.text_field :reference ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionLangues.Label.photo")%></label></td>
+    <td><%=sys_cmp_photo_input(@langue.sys_cmp_photo,{:alt=>false})%></td>
+  </tr>
+</table>

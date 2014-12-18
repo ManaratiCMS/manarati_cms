@@ -1,0 +1,30 @@
+## YAML Template. Local.msg.editer_avec_succes
+---
+fr:
+  GestionComposantsElementCours :
+    titre_de_gestion : Gestion des Composants d'un element de Cours
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout  du composant
+      erreur_de_suppression : Erreur lors de suppresion  du composant
+      supprimer_avec_succes : Composant supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer  le composant ?
+      ajouter_avec_succes : Composant ajouté avec succés
+      editer_avec_succes : Composant édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter un composant
+      Index :
+        titre : Gestion des composants
+      Ajouter:
+        titre : Ajouter un composant
+      Update :
+        titre : Mise à jour
+    Label :
+      layout : Template
+      titre : Titre
+      lien : Lien 
+
+     
+
+   

@@ -1,0 +1,145 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  inscription : Inscription
+  traduir : Traduir
+  utiliser_image_original : Utiliser l'orginal
+  oui : Oui
+  password_confirmation: Confirmation  
+  composants : Composants
+  activer : Activer
+  proprietaire : propriétaire
+  page_suivant : Page Suivante
+  page_precedent : Page Précédente
+  support_de_cours : Support de cours
+  source : Source
+  theme : Théme
+  consultation: Consultation
+  precedent : Précédent
+  formateur : Formateur
+  image : Image
+  login : Login
+  roles : Rôle
+  mots_cle : Keywords
+  update : Mise à jour
+  mot_de_passe : Mot de passe
+  rester_connecte : Rester connecté
+  inscrivez_vous : Inscrivez-vous
+  identification : Identification
+  connexion : Connexion
+  mon_compte : Mon Compte
+  deconnexion : Déconnexion
+  text_alternatif : Texte Alternatif
+  photo : Photo
+  editer_mon_compte : Editer Mon Compte
+# Cette Méthode il ma poser une exceotion de nil.[]
+  PlanSite :
+    editer_mon_compte:
+      nom : 
+      titre : 
+    mes_formation:
+      nom : 
+      titre :
+
+#  Plan de de sire
+  nom_editer_mon_compte : Editer Mon Compte
+  titre_editer_mon_compte : Editer Mon Compte User
+  nom_mes_formation : Mes Formations
+  titre_mes_formation : Mes formations Dans Manarati
+  nom_mon_compte : Mom Compte
+  titre_mon_compte : Mon Compte Utilisateur
+
+  confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ?
+  Inscription:
+    msg:
+      compte_cree_avec_succes : Compte Crée avec succés
+  MonCompte:
+    msg :
+      confirmation_deconnexion : Êtes-vous sûr de vouloir vous déconnecter ?
+
+  GestionMedias:
+    titre_index: Gestion de Media
+    titre_button_ajouter : Ajouter un Media
+    type_media : Type Media
+    Ajouter :
+      titre_ajouter : Ajouter un Media
+  prix : Prix
+  hello: "Hello world"
+  categorie: Categorie
+  sous_categorie : Sous Categorie
+  text_alt : Text Alternatif
+  texte : Texte
+  width : Largeur
+  height : Hauteur
+  mot_de_passe : Mot de passe
+  accueil: Accueil
+  haut : haut
+  ajouter_un_element plan de formation : Ajouter un element dans le  plan de formation
+  ajouter_un_element_plan : Ajouter un element de plan
+  bas : bas
+  gauche : gauche
+  droit : droit
+  editer : Editer
+  lien : Lien Http
+  parametre : Parametre
+  gestion_de_pages : Gestion de Pages
+  enregistrer : Enregistrer
+  pages : Pages
+  titre_lien_page_manager : Gestion de Pages
+  titre_button_ajouter_page : titre_button_ajouter_page
+  plan : plan
+  formation: Formation
+  contact: Contact
+  inscription : Inscription
+  nom : Nom
+  prenom : Prénom
+  email : E-Mail
+  ajouter : Ajouter
+  designation : Action
+  professeur : Professeur
+  description : Description
+  action : action
+  modifier : Modifier
+  supprimer : Supprimer
+  presentation: presentation
+  administration : administration
+  ok : OK
+  suivant : Suivant
+  gestion_des_article: Gestion des Article (Diapo)
+  information_generale : Information Générale
+  reference_article : Référence Article
+  reference : Référence
+  #Menu Principale
+  titre_accueil_menu_principale : titre_accueil_menu_principale
+  titre_formation_menu_principale : titre_formation_menu_principale
+  titre_contact_menu_principale : titre_contact_menu_principale
+  titre_inscription_menu_principale: titre_inscription_menu_principale
+  titre_presentation_menu_principale: titre_presentation_menu_principale
+  titre_page_admin: titre_page_admin
+  #Page Titre et Description des Page
+  titre_page_inscription_membre: Inscription Membre
+  description_page_inscription_membre: Inscription de Membre dans la Solution Manarati
+  description_page_accueil : La Page Accueil de Site Essarraj Fouad Pour La formation en ligne
+  titre_page_presentation : titre_page_presentation
+  description_page_presentation : description_page_presentation
+#  Menu Administration
+  bureau: bureau
+  titre_lien_bureau_admin: titre_lien_bureau_admin
+  gestion_de_formation: Gestion de Formation
+  titre_lien_gestion_produit: titre_lien_gestion_produit
+  gestion_des_articles: Gestion des articles
+  titre_lien_gestion_articles: titre_lien_gestion_articles
+  gestion_des_membres: Gestion des membres
+  titre_lien_gestion_membres: titre_lien_gestion_membres
+  
+# Gestion de Produit : Formation
+  gestion_de_roduit : Gestion de Formation
+  titre_button_ajouter_objet : Ajouter une Formation
+  modification_de_produit : Modification de la formation 
+  ajouter_un_produit : Ajouter Une Formation
+ # Composants_Atomique
+ #Cmpt Titre
+  titre : Titre
+  texte_alternatif : Texte Alternatif
+  valeur : Valeur

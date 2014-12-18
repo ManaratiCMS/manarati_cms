@@ -1,0 +1,44 @@
+<%content_for :script do %>
+
+<%end%>
+<input type="hidden"  name="id"  value="<%=@element_menu.id%>"></input>
+
+<table class="formulaire">
+
+    
+
+  <tr>
+    <td><label><%=t("titre")%> </label></td>
+    <td><%= f.text_field :titre ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionElementMenuG4.Label.titre_lien")%> </label></td>
+    <td><%= f.text_field :titre_lien ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+   <td><label><%=t("lien")%></label></td>
+   <td>
+     
+      <%= f.text_field :lien ,:class=>"validate[required] text-input" %>
+   
+   </td>
+  </tr>
+  <tr>
+   <td><label><%=t("description")%></label></td>
+   <td>
+        
+
+      <%=cmp_paragraphe_input("element_menu","description",@element_menu.description)%>
+   </td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@element_menu.cmp_photo,{:alt=>false})%></td>
+  </tr>
+  
+  <input type="hidden" value="<%=@menu.id%>" name="element_menu[menu_g4_id]"></input>
+</table>
+
+
+  
+

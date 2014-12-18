@@ -1,0 +1,8 @@
+<a name="<%=obj.id%>"></a>
+<% if !obj.font.nil?  and obj.font == "image"  %>
+<h2 class="art_titre">
+  <img class="<%=obj.type%> <%=obj.reference%>" <%-if !obj.text_alt.blank? -%>alt="<%=obj.text_alt%>"<%-end-%> src="<%=chemin_titre  %>" />
+</h2>
+<%else%>
+  <h2 class="<%=obj.type_composant%> <%=obj.reference%>" ><%=obj.texte%></h2>
+<%end%>

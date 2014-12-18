@@ -1,0 +1,44 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+
+<div class="header_gestion">
+<h1><%=t("GestionMembres.titre_de_gestion")%></h1>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionMembres.Ajouter.titre"),"/admin/membre_manager/new","bt_ajouter"))%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("nom")%></td>
+          <td><%=t("prenom")%></td>
+          <td><%=t("login")%></td>
+          <td><%=t("email")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@membres.each { |membres|%>
+      <tr>
+        <td><%=membres.nom%></td>
+        <td><%=membres.prenom%></td>
+        <td><%=membres.login%></td>
+        <td><%=membres.email%></td>
+        <td>
+          <div class="action">
+            <a href="/admin/membre_manager/edit/<%=membres.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/membre_manager" ,
+            :id=>id},:title=> t("supprimer"), :confirm => t("GestionMembres.msg.confirmation_suppresion")
+           %>
+
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>
+
+ 

@@ -1,0 +1,84 @@
+<input type="hidden"  name="id"  value="<%=@formation.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionFormationsG2.Label.titre")%> </label></td>
+    <td><%= f.text_field :titre ,:class=>"validate[required] text-input" %></td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionFormationsG2.Label.reference")%> </label></td>
+    <td><%= f.text_field :reference ,:class=>"validate[required] text-input" %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionFormationsG2.Label.nom")%></label></td>
+    <td><%=select("formation","local_formation_g2_id",@locaux.collect {|l| [ l.nom, l.id ] }, { :include_blank => true })%></td>
+ 
+  </tr>
+   <tr>
+    <td><label><%=t("GestionFormationsG2.Label.categorie")%></label></td>
+    <td><%=select("formation","menu_g4_id",@categories.collect {|l| [ l.nom, l.id ] }, { :include_blank => true })%></td>
+
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@formation.cmp_photo,{:alt=>false})%></td>
+  </tr>
+
+   
+  <tr>
+    <td><label><%=t("GestionFormationsG2.Label.objectif")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("formation","objectif",@formation.objectif)%>
+    </td>
+  </tr>
+
+   <tr>
+    <td><label><%=t("GestionFormationsG2.Label.public_cible")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("formation","public_cible",@formation.public_cible)%>
+    </td>
+  </tr>
+
+   <tr>
+    <td><label><%=t("GestionFormationsG2.Label.prerequis")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("formation","prerequis",@formation.prerequis)%>
+    </td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionFormationsG2.Label.travaux_pratiques")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("formation","travaux_pratiques",@formation.travaux_pratiques)%>
+    </td>
+  </tr>
+ <tr>
+    <td><label><%=t("GestionFormationsG2.Label.plan_formation")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("formation","plan_formation",@formation.plan_formation)%>
+    </td>
+  </tr>
+
+  <tr>
+    <td><label><%=t("GestionFormationsG2.Label.PresentationFlash")%></label></td>
+    <td><%=cmp_animation_flash_input(@formation.cmp_animation_flash,{:alt=>false})%></td>
+  </tr>
+ <tr>
+    <td><label><%=t("GestionFormationsG2.Label.duree")%> </label></td>
+    <td><%= f.text_field :duree  %></td>
+  </tr>
+    <tr>
+    <td><label><%=t("GestionFormationsG2.Label.detail_duree")%> </label></td>
+    <td><%= f.text_field :detail_duree  %></td>
+  </tr>
+     <tr>
+    <td><label><%=t("GestionFormationsG2.Label.tarif")%> </label></td>
+    <td><%= f.text_field :tarif  %></td>
+  </tr>
+
+  <%- if has_role?(:super_admin) -%>
+  <tr>
+    <td><label><%=t("GestionFormationsG2.Label.formateur")%></label></td>
+    <td><%=select("formation","formateur_id",@formateurs.collect {|i| [ i.nom, i.id ] }, { :include_blank => true })%></td>
+  </tr>
+  <%- end-%>
+
+</table>

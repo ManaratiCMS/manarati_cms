@@ -1,0 +1,9 @@
+  Vous êtes connecté en temps que : <%= @current_utilisateur.nom %>
+ 
+
+<div id="menu_top">
+  <ul>
+    <li><%= link_to "Profile", "/bureau/authentication/account_settings" %></li>
+    <li><%= link_to t("deconnexion"), "/bureau/authentication/signed_out", :method => :delete, :confirm => t("MonCompte")[:msg][:confirmation_deconnexion] %></li>
+  </ul>
+</div>

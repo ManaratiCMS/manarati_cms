@@ -1,0 +1,156 @@
+--- 
+- !ruby/object:ElementPlan
+  nom: 1er_page
+  titre: titrez_lien_1er_page
+  lien: /accueil
+  code : accueil
+- - !ruby/object:ElementPlan
+    nom: vehicules_occasions_et_neufs
+    titre: titre_lien_vehicules_occasions_et_neufs
+    lien: /vehicules-occasions-neufs
+    code : vehicule_occasions_pro_et_particuliers
+  - - !ruby/object:ElementPlan
+      nom: vehicule_occasions_pro_et_particuliers
+      titre: titre_lien_vehicule_occasions_pro_et_particuliers
+      lien: /vehicules/occasions
+      code : vehicule_occasions_pro_et_particuliers
+    - !ruby/object:ElementPlan
+      nom: toutes_les_annonces
+      titre: titre_lien_toutes_les_annonces_occasions
+      lien: /vehicules/occasions
+      code : vehicule_occasions_pro_et_particuliers
+    - !ruby/object:ElementPlan
+      nom: annonces_des_professionnels
+      titre: titre_lien_annonces_des_professionnels_occasions
+      lien: /vehicules/occasions/professionnels
+      code : annonces_des_professionnels_occasion
+    - !ruby/object:ElementPlan
+      nom: annonces_des_particulier
+      titre: titre_lien_annonces_des_particulier_occasions
+      lien: /vehicules/occasions/particuliers
+      code : annonces_des_particulier_occasions
+    - !ruby/object:ElementPlan
+      nom: catalogue_de_nos_partenaire
+      titre: titre_lien_catalogue_de_nos_partenaire_occasions
+      lien: /vehicules/occasions/catalogue-partenaire
+      code : catalogue_de_nos_partenaire_occasions
+    - !ruby/object:ElementPlan
+      nom: opportunites
+      titre: titre_lien_annonaces_opportunites_occasions
+      lien: /vehicules/occasions/opportunites
+      code : annonaces_opportunites_occasions
+
+
+
+  - - !ruby/object:ElementPlan
+      nom: vehicules_neufs
+      titre: titre_lien_vehicules_neufs
+      lien: /vehicules/neufs
+      code : vehicules_neufs
+    - !ruby/object:ElementPlan
+      nom: toutes_les_annonces
+      titre: titre_lien_toutes_les_annonces_neufs
+      lien: /vehicules/neufs
+      code : vehicules_neufs
+    - !ruby/object:ElementPlan
+      nom: annonces_des_professionnels
+      titre: titre_lien_annonces_des_professionnels_neufs
+      lien: /vehicules/neufs/professionnels
+      code : annonces_des_professionnels_neufs
+    - !ruby/object:ElementPlan
+      nom: annonces_des_particulier
+      titre: titre_lien_annonces_des_particulier_neufs
+      lien: /vehicules/neufs/particuliers
+      code : annonces_des_particulier_neufs
+    - !ruby/object:ElementPlan
+      nom: catalogue_de_nos_partenaire
+      titre: titre_lien_catalogue_de_nos_partenaire_neufs
+      lien: /vehicules/neufs/catalogue-partenaire
+      code : catalogue_de_nos_partenaire_neufs
+    - !ruby/object:ElementPlan
+      nom: opportunites
+      titre: titre_lien_annonaces_opportunites_neufs
+      lien: /vehicules/neufs/opportunites
+      code : annonaces_opportunites_neufs
+
+  - - !ruby/object:ElementPlan
+      nom: location_de_vehicule
+      titre: titre_lien_location_de_vehicule
+      lien: /vehicules/location
+      code : location_de_vehicule
+    - !ruby/object:ElementPlan
+      nom: toutes_les_annonces
+      titre: titre_lien_toutes_les_annonces_occasions
+      lien: /vehicules/occasions
+      code : vehicule_occasions_pro_et_particuliers
+    - !ruby/object:ElementPlan
+      nom: annonces_des_professionnels
+      titre: titre_lien_annonces_des_professionnels_occasions
+      lien: /vehicules/occasions/professionnels
+      code : annonces_des_professionnels_occasion
+    - !ruby/object:ElementPlan
+      nom: annonces_des_particulier
+      titre: titre_lien_annonces_des_particulier_occasions
+      lien: /vehicules/occasions/particuliers
+      code : annonces_des_particulier_occasions
+    - !ruby/object:ElementPlan
+      nom: catalogue_de_nos_partenaire
+      titre: titre_lien_catalogue_de_nos_partenaire_occasions
+      lien: /vehicules/occasions/catalogue-partenaire
+      code : catalogue_de_nos_partenaire_occasions
+    - !ruby/object:ElementPlan
+      nom: opportunites
+      titre: titre_lien_annonaces_opportunites_occasions
+      lien: /vehicules/occasions/opportunites
+      code : annonaces_opportunites_occasions
+
+
+
+
+  - - !ruby/object:ElementPlan
+      nom: location_longue_duree
+      titre: titre_lien_location_longue_duree
+      lien: /vehicules-location-longue-duree
+      code : location_longue_duree
+- !ruby/object:ElementPlan
+  nom: pieces_et_accessoires
+  titre: titre_lien_pieces_et_accessoires
+  lien: /pieces_et_accessoires
+  code : pieces_et_accessoires
+- !ruby/object:ElementPlan
+  nom: services
+  titre: titre_lien_services
+  lien: /services
+  code : services
+- !ruby/object:ElementPlan
+  nom: prmotion
+  titre: titre_lien_promotion
+  lien: /promotion
+  code : promotion
+- !ruby/object:ElementPlan
+  nom: evenements_et_actualites
+  titre: titre_lien_evenements_et_actualites
+  lien: /evenements_et_actualites
+  code : evenements_et_actualites
+- !ruby/object:ElementPlan
+  nom: pratiques
+  titre: titre_lien_pratiques
+  lien: /pratiques
+  code : pratiques
+- !ruby/object:ElementPlan
+  nom: demmandes
+  titre: titre_lien_demmandes
+  lien: /demmandes
+  code : demmandes
+- - !ruby/object:ElementPlan 
+    code: accueil
+    lien: /accueil
+    nom: Accueil
+  - !ruby/object:ElementPlan 
+    code: vehicules-occasions-neufs
+    lien: /vehicules-occasions-neufs
+    nom: Vehicules Occasions Neufs
+- !ruby/object:ElementPlan 
+  code: accueil
+  lien: /accueil
+  nom: Accueil

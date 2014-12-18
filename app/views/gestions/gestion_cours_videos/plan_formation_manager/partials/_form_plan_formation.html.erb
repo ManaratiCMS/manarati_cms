@@ -1,0 +1,31 @@
+<input type="hidden"  name="id"  value="<%=@plan_formation.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionPlanFormation.Label.titre")%> </label></td>
+    <td><%= f.text_field :titre ,:class=>"validate[required] text-input" %></td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionPlanFormation.Label.niveau")%> </label></td>
+    <td><%= f.text_field :niveau ,:class=>"validate[required] text-input" %></td>
+  </tr>
+
+   <tr>
+    <td><label><%=t("GestionPlanFormation.Label.element_cour")%> </label></td>
+    <td><%=select("plan_formation","element_cour_g3_id",@element_cours.collect {|l| [ l.titre, l.id ] }, { :include_blank => true })%></td>
+  </tr>
+
+  <tr>
+    <td><label><%=t("description")%></label></td>
+    <td>
+      <%=cmp_paragraphe_input("plan_formation","description",@plan_formation.description)%>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@plan_formation.cmp_photo,{:alt=>false})%></td>
+  </tr>
+
+
+  <input type="hidden" name="id_formation" value="<%=@id_formation%>"/>
+</table>

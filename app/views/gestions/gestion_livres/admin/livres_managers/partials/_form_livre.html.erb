@@ -1,0 +1,42 @@
+<%content_for :script do %>
+<script type="text/javascript">
+   Bind_InputText_to_reference("livre_nom", "livre_reference");
+</script>
+ <%=javascript_include_tag "libs/calendar" %>
+ <%=stylesheet_link_tag "libs/calendar" %>
+<%end%>
+<input type="hidden"  name="id"  value="<%=@livre.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionLivres.Label.titre")%> </label></td>
+    <td><%= f.text_field :titre %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionLivres.Label.auteur")%></label></td>
+    <td>
+        <%= select("livre", "auteur_g1_id", @auteurs.collect {|a| [ a.nom, a.id ] }, { :include_blank => true })%>
+    </td>
+  </tr>
+    <tr>
+    <td><label><%=t("GestionLivres.Label.date_sortie")%></label></td>
+    <td>
+      <%= f.text_field :date_sortie %>
+      <input type="text" value="%d %B %Y"
+        onfocus="this.select();calendar_open(this, {format:'%d/%m/%y'})"
+        onclick="event.cancelBubble=true;this.select(); calendar_open(this,{format:'%d/%m/%y'})"
+      />
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionLivres.Label.description")%></label></td>
+    <td><%= f.text_field :description %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@livre.cmp_photo,{:alt=>false})%></td>
+  </tr>
+    
+</table>

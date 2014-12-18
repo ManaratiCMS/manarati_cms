@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="author" content="www.manarati.net" />
+<meta name="description" content="<%=@page.description%>" />
+<meta name="keywords" content="<%=@page.mots_cle%>" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<title><%=@page.titre%></title>
+<%=stylesheet_link_tag "themes/#{@skin}/general/general"  %>
+<%=yield :style -%>
+ <%=javascript_include_tag "jquery-1.6.min"  %>
+<%= yield :script -%>
+</head>
+<body>
+	<div class="wrap background">
+               <!--
+		<div id="search">
+			<form action="">
+				<fieldset>
+					<input type="text" class="field" value="Recherche .." />
+					<input type="submit" class="button" value="" />
+				</fieldset>
+			</form>
+		</div>
+                -->
+               
+                 <%=menu_site_web%>
+		<div class="clear"></div>
+                 <%-if flash[:notice] -%>
+
+                                <div class="message_box">
+                                  <div class="message">
+                                <p><%= flash[:notice] %></p>
+                                </div>
+                                </div>
+
+                 <%-end-%>
+                <div class="content">
+                <%- if instance_variable_defined?('@content_for_left_area')   -%>
+                <div class="left_area" >
+                <%=yield :left_area%>
+                </div>
+                <%-end-%>
+                <%= yield %>
+                <%- if instance_variable_defined?('@content_for_zone_droit')   -%>
+                <div id="zone_droit">
+                <%= yield :zone_droit %>
+                </div>
+                <%-end-%>
+                </div>
+	</div>
+	<div id="promo">
+		<div class="wrap">
+			<div class="col">
+				<!--<img id="featured" src="images/featured.gif" alt="Featured Image" />-->
+			</div>
+                        <!--
+			<div class="col">
+				<h2>About TangerFormation</h2>
+				<p> Tanger formation est un centre de formation</p>
+			</div>
+			<div class="col last">
+				<h2>aaa</h2>
+				<p>
+                                  bbb.</p>
+			</div>
+                        -->
+			<div id="footer">
+				 <p>Copyright &copy; 2012 , <a title="Manarati Solution" href="http://www.manarati.net/">Manarati</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

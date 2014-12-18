@@ -1,0 +1,39 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion"   %>
+<%end %>
+
+
+<h1><%=t("GestionMedias")[:titre_index]%></h1>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionMedias")[:titre_button_ajouter],"/admin/media_manager/new","bt_ajouter"))%>
+
+<div class="cmp_data_grid">
+
+<ul class="titre">
+  <li><%=t("reference")%></li>
+  <li><%=t("nom")%></li>
+  <li><%=t("categorie")%></li>
+  <li><%=t("sous_categorie")%></li>
+</ul>
+
+<ul class="lignes">
+<%@medias.each { |media|%>
+  <li>
+    <ul>
+        <li><%=media.reference%></li>
+        <li><%=media.nom%></li>
+        <li><%=media.categorie%></li>
+        <li><%=media.sous_categorie%></li>
+        <li class="action">
+          <ul>
+            <li><%= link_to t("modifier"), :action =>"update" , :id => media %></li>
+            <li><%= link_to t("supprimer"), :action =>"delete" , :id => media  %></li>
+           </ul>
+        </li>
+
+    </ul>
+  </li>
+<%}%>
+</ul>
+
+
+</div>

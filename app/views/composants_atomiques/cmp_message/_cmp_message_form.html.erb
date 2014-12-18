@@ -1,0 +1,34 @@
+<%if @appel_ajax%>
+<script type="text/javascript" >
+       $(document).ready(function() {
+          $("#<%=obj.reference%>_texte").cleditor({width : 450});
+      });
+</script>
+<% else %>
+ <%content_for :style do%>
+   <%=stylesheet_link_tag "themes/#{@skin}/libs/plugin_jquery/cleeditor/jquery.cleditor" %>
+  <%end%>
+  <%content_for :script do%>
+    <%=javascript_include_tag "libs/plugin_jquery/cleeditor/jquery.cleditor.min"  %>
+<script type="text/javascript">
+  $(document).ready(function() {
+  $("#<%=obj.reference%>_texte").cleditor();
+  });
+</script>
+  <%end%>
+<%end%>
+
+<div class="cmp_message" id="<%=obj.reference%>">
+<h2 class="titre">
+   <%=t("CmpComposant.CmpMessage.titre")%>
+</h2>
+<table>
+  <tr>
+    <td>
+        <textarea cols="45" rows="10"  id="<%=obj.reference%>_texte" name="<%=obj.reference%>[texte]" >
+  <%=obj.texte%>
+  </textarea>
+    </td>
+  </tr>
+</table>
+</div>

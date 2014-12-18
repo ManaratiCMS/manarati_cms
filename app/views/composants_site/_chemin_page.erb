@@ -1,0 +1,6 @@
+<%   @chemin_page.each { |page| %>
+<a href="<%=page[:lien]%>" itemprop="url" class="">
+                          <span itemprop="title"><%=page[:nom]%></span>
+ </a>
+<%  }  if @chemin_page %>
+ 

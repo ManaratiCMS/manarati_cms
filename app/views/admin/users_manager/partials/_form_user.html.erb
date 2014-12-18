@@ -1,0 +1,33 @@
+<input type="hidden"  name="id"  value="<%=@user.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("nom")%> </label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("prenom")%> </label></td>
+    <td><%= f.text_field :prenom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("login")%> </label></td>
+    <td><%= f.text_field :login %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("email")%> </label></td>
+    <td><%= f.text_field :email %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionPacks.Label.roles")%></label></td>
+    
+     <td>
+       <ul>
+        <% @roles.each do |role| %>
+        <li>
+          <%= check_box_tag 'roles_name[]', role.reference, (@user.user_roles.collect { |r| r.nom  }.include?(role.reference)) -%>
+          <%=h role.nom -%>
+        </li>
+        <% end %>
+       </ul>
+    </td>
+  </tr>
+</table>

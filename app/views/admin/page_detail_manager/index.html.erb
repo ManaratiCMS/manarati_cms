@@ -1,0 +1,69 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+
+<div class="header_gestion">
+<h1><%=t("GestionPages.titre_de_gestion")%></h1>
+<% if   permitted_to? :init_ordre  %>
+<%=cmp_button(CmpButton.new(t("GestionPages.Index.init_ordre"), t("GestionPages.Index.init_ordre"),"/admin/page_detail_manager/init_ordre","bt_ajouter"))%>
+<%end%>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionPages.Ajouter.titre"),"/admin/page_detail_manager/new","bt_ajouter"))%>
+
+</div>
+
+
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionPages.Label.titre")%></td>
+          <td><%=t("GestionPages.Label.lien")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%-@pages.each_with_index  { |page,i|-%>
+      <tr>
+        <td><%=page.titre%></td>
+        <td><%=page.lien%></td>
+        <td>
+          <div class="action">
+            <%unless page.get_cmp_layout.nil?%>
+            <a href="/admin/article_manager/update/<%=page.get_cmp_layout.id%>" title="<%=t("GestionPages.Action.editer_contenu")%>"><span class="editer_contenu"> </span></a>
+            <%end%>
+
+           
+           <a href="/admin/page_detail_manager/edit/<%=page.id%>" title="<%=t("GestionPages.Action.editer")%>"><span class="editer"> </span></a>
+
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/page_detail_manager" ,
+            :id=>page.id},:title=> t("supprimer"), :confirm => t("GestionPages.msg.confirmation_suppresion")
+           %>
+
+          <% if   permitted_to? :move_up  %>
+          <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/admin/page_detail_manager",
+          :id => page.id},
+          :title=> t("Gestions.Action.deplacer_en_haut") %>
+          <%-end-%>
+          <%- if i < (@pages.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/admin/page_detail_manager",
+          :id => page.id},
+          :title=> t("Gestions.Action.deplacer_en_bas") %>
+          <%-end-%>
+          <%end%>
+
+              <a target="_blank" href="<%=page.lien%>" title="<%=t("GestionPages.msg.ouvrir_la_page")%>"><span class="browser"> </span></a>
+
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

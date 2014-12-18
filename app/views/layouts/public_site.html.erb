@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title><%=@page.titre%></title>
+ <meta name="description" content="<%=@page.description%>" />
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+ <link rel="icon" type="image/png" href="/favicon.png" />
+ <meta name="keywords" content="<%=@page.mots_cle%>" />
+ <meta http-equiv="imagetoolbar" content="no" />
+ <%=stylesheet_link_tag "system/general/reset" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/general/general"  %>
+<%=yield :style -%>
+ <%=javascript_include_tag "jquery-1.6.min"  %>
+<%= yield :script -%>
+</head>
+<body>
+<div id="header">
+<div id="header-inside">
+<div id="logo"></div>
+<%=render :partial=>"/layouts/partials/menu_top"%>
+</div><!-- fin de header-inside -->
+<div id="sous_menu">
+<%=menu_site_web(@page)%>
+</div>
+</div><!-- fin de header -->
+<div id="header-sep"><div class="inside">&nbsp;</div></div>
+<div id="global">
+<div id="page" >
+<%- if instance_variable_defined?('@content_for_left_area')   -%>
+<div class="left_area" >
+<%=yield :left_area%>
+</div>
+<%-end-%>
+<div id="content">
+<%-if flash[:notice] -%>
+<div class="message_box">
+<p><%= flash[:notice] %></p>
+</div>
+<%-end-%>
+<%= yield %>
+</div><!-- fin de content -->
+<%- if instance_variable_defined?('@content_for_zone_droit')   -%>
+<div id="zone_droit">
+<%= yield :zone_droit %>
+</div>
+<%-end-%>
+<div id="footer">
+</div> <!-- fin de footer -->
+</div> <!-- fin de page -->
+</div> <!-- fin de global -->
+</body>
+</html>
+

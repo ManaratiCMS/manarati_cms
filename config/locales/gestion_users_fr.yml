@@ -1,0 +1,18 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionUsers :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de Membre
+      erreur de suppression : Erreur lors de suppresion du Membre
+      supprimer_avec_succes : Membre supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ?
+      ajouter_avec_succes : Membre ajoutée avec succés
+      editer_avec_succes : Membre édité avec succés
+    Ajouter :
+      titre : Ajouter un Membre
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    titre_de_gestion : Gestion des Membres
+    

@@ -1,0 +1,46 @@
+<%=default_zones%>
+<%content_for :style do %>
+     <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+     <%=stylesheet_link_tag "themes/#{@skin}/generale/formulaire" %>
+     <%=stylesheet_link_tag "themes/#{@skin}/admin/formation_manager/modifier" %>
+<%end%>
+<%content_for :script do %>
+  <%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+<script type="text/javascript">
+	$(function() {
+		$("#tabs-formulaire").tabs();
+	});
+	</script>
+<%end%>
+<h1><%=t("modification_de_produit")%></h1>
+
+
+<div id="tabs-formulaire">
+	<ul>
+		<li><a href="#tabs-1"><%=t("GestionFormations")[:plan_formation]%></a></li>
+		<li><a href="#tabs-2"><%=t("GestionFormations")[:formation]%></a></li>
+	</ul>
+	<div id="tabs-1">
+          <%=render :partial=>"admin/formation_manager/partials/plan_formation"%>
+         
+         </div>
+
+	<div id="tabs-2">
+          <%=render :partial=>"admin/formation_manager/partials/form_produit"%>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

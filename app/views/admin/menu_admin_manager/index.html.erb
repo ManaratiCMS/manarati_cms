@@ -1,0 +1,62 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionMenus.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionMenus.Ajouter.titre"),"/admin/menu_admin_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionMenus.Label.nom")%></td>
+          <td><%=t("GestionMenus.Label.lien")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@menus.each_with_index  { |menu,i|%>
+      <tr>
+        <td><%=menu.nom%></td>
+        <td><%=menu.lien%> </td>
+        <td>
+          <div class="action">
+
+            
+
+            <a href="/admin/menu_admin_manager/edit/<%=menu.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+ 
+
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/menu_admin_manager" ,
+            :id=>menu.id},:title=> t("supprimer"), :confirm => t("GestionMenus.msg.confirmation_suppresion")
+            %>
+            <%end%>
+             <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/admin/menu_admin_manager",
+          :id => menu.id},
+          :title=> t("precedent") %>
+          <%-end-%>
+          <%- if i < (@menus.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/admin/menu_admin_manager",
+          :id => menu.id},
+          :title=> t("suivant") %>
+          <%-end-%>
+           <a target="_blank" href="<%=menu.lien%>" title="<%=t("GestionPages.msg.ouvrir_la_page")%>"><span class="browser"> </span></a>
+
+
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

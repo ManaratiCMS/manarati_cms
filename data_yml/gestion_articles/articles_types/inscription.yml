@@ -1,0 +1,15 @@
+--- !ruby/object:ArticleType
+reference : inscription
+nom : Inscription
+article_type : image1
+ref_image_capture : 9/window.png
+fichier_css : art_generale.css
+fichier js :  js_generale.js
+cmp_composants:
+- !ruby/object:CmpContact
+  attributes:
+    reference: contact1
+    nom : Contact
+    type: CmpContact
+    label_form : Contact
+    titre : ""

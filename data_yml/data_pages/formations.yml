@@ -1,0 +1,38 @@
+--- !ruby/object:CmpPage 
+attributes: 
+  reference: formations
+  created_at: 2010-12-18 18:47:20
+  updated_at: 2010-12-18 18:56:59
+  id: "6"
+  titre: Formations Disponible Dans le clube Manarati
+  description: Les different formations disponible de clube Manarati
+  lien: /formations
+attributes_cache: {}
+
+cmp_articles: 
+- !ruby/object:CmpArticle 
+  attributes: 
+    reference: formations_disponible
+    group: 
+    created_at: 2010-12-18 18:56:20
+    updated_at: 2010-12-18 18:56:20
+    ref_article_classe: accueil_formation
+    id: "63"
+    sous_group: 
+    date_creation: 
+    ref_pocesseur: CmpPage_6
+  attributes_cache: {}
+
+- !ruby/object:CmpArticle 
+  attributes: 
+    reference: article_type_1
+    group: 
+    created_at: 2010-12-18 19:00:09
+    updated_at: 2010-12-18 19:00:09
+    ref_article_classe: article_type_1
+    id: "64"
+    sous_group: 
+    date_creation: 
+    ref_pocesseur: CmpPage_6
+  attributes_cache: {}
+

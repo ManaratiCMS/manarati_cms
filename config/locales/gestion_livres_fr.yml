@@ -1,0 +1,51 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionLivres :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout du livre
+      erreur de suppression : Erreur lors de suppresion du livre
+      supprimer_avec_succes : Livre supprimé avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce livre ?
+      ajouter_avec_succes : Livre ajouté avec succés
+      editer_avec_succes : Livre édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter Livre
+      Index :
+        titre : Gestion des Livres
+      Ajouter:
+        titre : Ajouter un livre
+      Update :
+        titre : Mise à jour
+    Label :
+      titre : Titre
+      auteur : Auteur
+      date_sortie : Date de sortie
+      description : Description
+
+  GestionAuteurs :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de l'auteur
+      erreur de suppression : Erreur lors de suppresion de l'auteur
+      supprimer_avec_succes : Auteur supprimé avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer cet auteur ?
+      ajouter_avec_succes : Auteur ajouté avec succés
+      editer_avec_succes : Auteur édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter Auteur
+      Index :
+        titre : Gestion des Auteurs
+      Ajouter:
+        titre : Ajouter un auteur
+      Update :
+        titre : Mise à jour
+    Label :
+      nom : Nom
+      prenom : Prénom
+
+     
+ 

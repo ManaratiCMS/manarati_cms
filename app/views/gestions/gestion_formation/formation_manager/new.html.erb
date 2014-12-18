@@ -1,0 +1,40 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/libs/plugin_jquery/validation-engine/validationEngine.jquery" %>
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/jquery.validationEngine"  %>
+<%=javascript_include_tag "libs/plugin_jquery/validation-engine/lang/jquery.validationEngine-fr"  %>
+<script>
+jQuery(document).ready(function(){
+			// binds form submission and fields to the validation engine
+			jQuery("#ajouter_formation_form").validationEngine();
+		});
+
+
+ Bind_InputText_to_reference("formation_titre", "formation_reference");
+</script>
+
+<%end%>
+<div class="ajouter">
+   <div class="formulaire">
+         <% form_for :formation, @formation, :url => { :action => "create" }, :html => {:id=>"ajouter_formation_form",:class => "formulaire",:multipart => true}  do |f| %>
+         <%if f.error_messages !="" %>
+         <div class="message_box">
+              <%= f.error_messages %>
+         </div>
+         <%end%>
+         <%=render :partial=>"gestions/gestion_formation/formation_manager/partials/form_formation" ,:locals=>{:f=>f}%>
+         <div class="submit">
+         <%= submit_tag t("ajouter") %>
+         </div>
+         <% end %>
+   </div>
+</div>
+
+
+
+
+
+
+ 

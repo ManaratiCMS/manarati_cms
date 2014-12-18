@@ -1,0 +1,66 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+
+<div class="header_gestion">
+<h1><%=t("GestionElementCours.titre_de_gestion")%></h1>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionElementCours.Pages.Ajouter.titre"),"/gestions/gestion_cours_videos/element_cours_manager/new/#{@id_formation}","bt_ajouter"))%>
+
+</div>
+
+
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionElementCours.Label.titre")%></td>
+          <td><%=t("GestionElementCours.Label.lien")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%-@element_cours.each_with_index  { |page,i|-%>
+      <tr>
+        <td><%=page.titre%></td>
+        <td><%=page.lien%></td>
+        <td>
+          <div class="action">
+
+
+            <a href="/gestions/gestion_cours_videos/composants_element_cours_manager/index/<%=page.id%>?tc=html" title="<%=t("GestionElementCours.Pages.Index.editer_contenu")%>"><span class="editer_contenu"> </span></a>
+           <a href="/gestions/gestion_cours_videos/composants_element_cours_manager/index/<%=page.id%>?tc=video" title="<%=t("GestionElementCours.Pages.Index.editer_contenu_video")%>"><span class="editer_contenu"> </span></a>
+
+
+           <a href="/gestions/gestion_cours_videos/element_cours_manager/edit/<%=page.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_cours_videos/element_cours_manager" ,
+            :id=>page.id},:title=> t("supprimer"), :confirm => t("GestionElementCours.msg.confirmation_suppresion")
+           %>
+
+
+          <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/gestions/gestion_cours_videos/element_cours_manager",
+          :id => page.id},
+          :title=> t("Gestions.Action.deplacer_en_haut") %>
+          <%-end-%>
+          <%- if i < (@element_cours.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/gestions/gestion_cours_videos/element_cours_manager",
+          :id => page.id},
+          :title=> t("Gestions.Action.deplacer_en_bas") %>
+          <%-end-%>
+          
+
+           
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

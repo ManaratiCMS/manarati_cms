@@ -1,0 +1,75 @@
+
+<%content_for :script do%>
+<script>
+ 
+jQuery(document).ready(function(){
+			// binds form submission and fields to the validation engine
+			jQuery("#formID").validationEngine();
+		});
+
+
+ Bind_InputText_to_Div_With_Suffix("nom_site","nom_site_a_cree",".manarati.net");
+
+</script>
+<%end%>
+<a name="<%=obj.id%>"></a>
+<div class="cmp_form_add_site">
+<% if  false  %>
+<div class="message_box"  >
+</div>
+<%end%>
+  <div  ><p id="nom_site_a_cree"></p></div>
+  <form id="formID" action="/composants_atomiques/cmp_form_add_site/add" method="post">
+      <input type="hidden" value="<%=@page.reference%>" name="reference_page" ></input>
+    <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.nom_site")%>:</strong></label>
+   <input type="text" value="<%=@nom_site%>" class="validate[required,minSize[3],custom[onlyLowerCaseLetterNumber]] text-input" name="nom_site" id="nom_site"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.login")%>:</strong></label>
+   <input type="text" value="<%=@login%>"  class="validate[required,minSize[4]] text-input" data-prompt-position="topRight:-0"   name="login"  id="login" ></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.mo_de_passe")%>:</strong></label>
+   <input type="password" value="<%=@mo_de_passe%>" class="validate[required,minSize[6]] text-input"  name="mo_de_passe" id="mo_de_passe"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.confirm_mot_de_pass")%>:</strong></label>
+   <input type="password" value="<%=@confirm_mot_de_pass%>" class="validate[required,minSize[6],equals[mo_de_passe]] text-input" data-prompt-position="topRight:-1 " name="confirm_mot_de_pass" id="confirm_mot_de_pass"></input>
+ </div>
+
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.email")%>:</strong></label>
+   <input type="text" value="<%=@email%>" class="validate[required,custom[email]] text-input"   name="email" id="email"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.confirm_email")%>:</strong></label>
+   <input type="text" value="<%=@confirm_email%>" class="validate[required,custom[email],equals[email]] text-input" name="confirm_email" id="confirm_email"></input>
+ </div>
+ <div class="right">
+   <input class="submit" type="submit" value="<%=t("CmpFormAddSite.Label.cree_compte")%>"/>
+ <!--  <button   class="submit" type="submit"><%=t("CmpFormAddSite.Label.cree_compte")%></button>-->
+ </div>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

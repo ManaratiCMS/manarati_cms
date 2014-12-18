@@ -1,0 +1,27 @@
+<%content_for :style do -%>
+
+<%=stylesheet_link_tag_cmp_article(@skin_public,"art_layout3")%>
+
+<%=stylesheet_link_tag "themes/#{@skin}/articles_form/art_layout_form"   %>
+<%end %>
+<%-unless obj.nom.blank? -%><label class="titre"><%=obj.nom%></label ><%-end-%>
+ 
+
+
+
+<div class="<%=obj.reference%>" id="headerPan">
+  <div id="headerPanleft">
+   <%=layout_composants_zone_manager((obj.cmp_article.nil?)?0:obj.cmp_article.id,"headerleft",config["headerleft"]["width"],config["headerleft"]["height"])%>
+  </div>
+   <div id="headerPanRigh">
+   <%=layout_composants_zone_manager((obj.cmp_article.nil?)?0:obj.cmp_article.id,"headerright",config["headerright"]["width"],config["headerright"]["height"])%>
+  </div>
+</div>
+<div id="bodyPan">
+  <div id="leftPan">
+  <%=layout_composants_zone_manager((obj.cmp_article.nil?)?0:obj.cmp_article.id,"leftZone",config["leftZone"]["width"],config["leftZone"]["height"])%>
+  </div>
+  <div id="rightPan">
+   <%=layout_composants_zone_manager((obj.cmp_article.nil?)?0:obj.cmp_article.id,"rightZone",config["rightZone"]["width"],config["rightZone"]["height"])%>
+  </div>
+</div>

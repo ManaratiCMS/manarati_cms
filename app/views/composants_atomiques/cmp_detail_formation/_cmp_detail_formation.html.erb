@@ -1,0 +1,116 @@
+<a name="<%=obj.id%>"></a>
+<div class="cmp_detail_formation">
+
+
+  <div class="title title-sommaire"><span>Objectif</span></div>
+  <div class="objectif">
+    <%=formation.objectif%>
+  </div>
+  <%if !formation.public_cible.blank? %>
+  <div class="title title-sommaire"><span>Public cible</span></div>
+  <div class="objectif">
+    <%=formation.public_cible%>
+  </div>
+  <%end%>
+
+    <%if !formation.prerequis.blank? %>
+  <div class="title title-sommaire"><span>Prérequis</span></div>
+  <div class="objectif">
+    <%=formation.prerequis%>
+  </div>
+  <%end%>
+
+
+
+
+  <div class="title title-sommaire"><span>Plan de formation</span></div>
+
+  <div class="plan_formation">
+ 
+<ul>
+  <%-
+   niveau_precedent = 0
+   niveau_actuel = 0
+   plan_formations.each_with_index { |element,i|
+   niveau_actuel =  element.niveau
+   -%>
+   <%- if niveau_precedent < niveau_actuel  -%>
+   <ul class="niv<%=niveau_actuel%>">
+   <%-end-%>
+
+   <%- if niveau_precedent == niveau_actuel and i!=0 -%>
+   </li>
+   <%-end-%>
+
+   <%- if niveau_precedent > niveau_actuel  -%>
+   </li></ul>
+   <%-end-%>
+  
+   <li class="niv<%=niveau_actuel%>">
+     <span>
+          <%if element.element_cour_g3.nil?%>
+          <%=element.titre%>
+          <%else%>
+                <a class="<%=(selected_element_cour != 0 and !element.element_cour_g3.nil? and element.element_cour_g3.id == selected_element_cour )? "selected":"" %>" href="/cours<%=element.element_cour_g3.reference%>"><%=element.titre%></a>
+          <%end%>
+     </span>
+  <%-
+   niveau_precedent =  element.niveau
+   }
+  -%>
+<%- while  niveau_actuel > 0  -%>
+</li>
+</ul>
+<%-
+niveau_actuel = niveau_actuel -1
+end
+-%>
+</div>
+
+  <%if !formation.tarif.nil?  %>
+  <div class="title title-sommaire"><span>Prix</span></div>
+  <div class="objectif">
+    <%=formation.tarif%> DH
+  </div>
+  <%end%>
+
+ <%if !session_formations.nil? and session_formations.length > 0 %>
+  <div class="title title-sommaire"><span>Sessions de formation</span></div>
+  <div class="objectif">
+
+
+    <div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 150px" >Début de formation</td>
+          <td style="width: 100px"><%=t("GestionSessionFormationG2.Label.local")%></td>
+          <td ><%=t("GestionLocalFormationsG2.Label.adresse")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%session_formations.each { |session_formation|%>
+      <tr>
+          <td><%=session_formation.Date_Fin_Inscription%> </td>
+          <td><%=(session_formation.local_formation_g2.nil?)?"":session_formation.local_formation_g2.nom%></td>
+          <td><%=(session_formation.local_formation_g2.nil?)?"":session_formation.local_formation_g2.adresse%></td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>
+
+
+
+  </div>
+  <%end%>
+
+</div>
+
+
+
+
+
+ 
+
+ 

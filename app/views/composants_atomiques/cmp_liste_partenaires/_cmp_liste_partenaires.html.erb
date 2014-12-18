@@ -1,0 +1,23 @@
+<div  class="<%=obj.id%> <%=obj.type%> <%=obj.reference%>" >
+  <ul>
+    <%partenaires.each { |partenaire| %>
+    <li>
+      <div class="photo">
+        <%=cmp_photo_capture(partenaire.cmp_photo)%>
+      </div>
+      <div class="detail">
+        <div class="nom"><%=partenaire.nom%></div>
+        <div class="pays"><%=partenaire.pays%></div>
+       
+        </div>
+       <div class="description"> <%=partenaire.description%></div>
+        
+       
+   </li>
+    <%}%>
+</ul>
+</div>
+
+
+
+

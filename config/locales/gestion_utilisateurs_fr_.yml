@@ -1,0 +1,48 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionUtilisateurs :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de l'utilisateur
+      erreur de suppression : Erreur lors de suppresion de l'utilisateur
+      supprimer_avec_succes : Utilisateur supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer l'utilisateur ?
+      ajouter_avec_succes : Utilisateur ajoutée avec succés
+      editer_avec_succes : Utilisateur édité avec succés
+    Ajouter :
+      titre : Ajouter un utilisateur
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    titre_de_gestion : Gestion des utilisateurs
+    plan_formation : Plan de Utilisateur
+    pages : Pages
+    Pages:
+      Index : 
+        titre : Gestion des utilisateurs
+      Ajouter:
+        titre_ajouter_une_page : Ajouter une Pages à la utilisateur
+        titre : Ajouter un utilisateur
+      Afficher:
+        titre_liste_page : Pages de la utilisateur
+    profile :
+      deconnection : Vous avez déconnecté
+      erreur_connexion : Utilisateur inconnue, changez votre nom d'utilisateur ou mot de passe
+    Label:
+      nom : Nom
+      login : Login
+      password : Mot de passe
+      prenom : Prénom
+      adresse : Adresse
+      email : E-mail
+      gsm : GSM
+      tel : Téléphone
+      siteweb : Site Web
+      ville : Ville
+      pays : Pays
+      langue : Langue
+      facebook : Page FaceBook
+      twiter : Page Twiter
+      cmp_photo : Photo
+      
+   

@@ -1,0 +1,52 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<%=cmp_button(CmpButton.new(t("ajouter"),t("GestionFormations.Pages.Ajouter.titre"),"/admin/formation_page_manager/new?id_formation=#{id_formation}","bt_ajouter"))%>
+</div>
+
+<%if @pages.length > 0 -%>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 250px"><%=t("titre")%></td>
+          <td><%=t("description")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%-@pages.each_with_index { |page,i| -%>
+      <tr>
+        <td><a href="<%=page.lien%>"  target="_blank" ><%=page.titre%></a></td>
+        <td><%=page.description%></td>
+        <td>
+          <div class="action">
+          <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_page_up" ,
+          :controller=>"/admin/formation_page_manager",
+          :id => page.id},
+          :title=> t("precedent") %>
+          <%-end-%>
+          <%- if i < (@pages.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_page_down" ,
+          :controller=>"/admin/formation_page_manager",
+          :id => page.id},
+          :title=> t("suivant") %>
+          <%-end-%>
+            <a href="/admin/formation_page_manager/edit/<%=page.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/formation_page_manager" ,
+            :id=>page.id},:title=> t("supprimer"), :confirm => t("GestionPages.msg.confirmation_suppresion")
+           %>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>
+<%end%>

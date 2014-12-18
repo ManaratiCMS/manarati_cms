@@ -1,0 +1,40 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionFormations :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de la formation
+      erreur de suppression : Erreur lors de suppresion de la formation
+      supprimer_avec_succes : Formation supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer la formation ?
+      ajouter_avec_succes : Formation ajoutée avec succés
+      editer_avec_succes : Formation édité avec succés
+    Ajouter :
+      titre : Ajouter une Formation
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    titre_de_gestion : Gestion des formations
+    plan_formation : Plan de Formation
+    pages : Pages
+    Pages:
+      Ajouter:
+        titre_ajouter_une_page : Ajouter une Pages à la formation
+        titre : Ajouter une Page à la formation
+      Afficher:
+        titre_liste_page : Pages de la formation
+  GestionPagesFormation :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de la page à la formation
+      supprimer_avec_succes : Page supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer la page de la formation ?
+      ajouter_avec_succes : Page ajoutée à la formation avec succés
+      editer_avec_succes : Page édité avec succés
+      edition_de_formation : Edition de formation
+    Ajouter :
+      titre : Ajouter une Page 
+    Update :
+      titre : Page
+    infoGenerale : Informations Générales
+    titre_de_gestion : Gestion des Pages de la formation 
+    

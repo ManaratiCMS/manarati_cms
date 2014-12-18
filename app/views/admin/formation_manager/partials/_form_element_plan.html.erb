@@ -1,0 +1,12 @@
+<% form_for :element_plan, @element_plan, :url => { :action => "modifier_element_plan" }, :html => {:class => "form_inscription formulaire"} do |f| %>
+  <ul>
+    <li><label><%=t("nom")%> </label><%= f.text_field :nom %></li>
+    <li><label><%=t("reference")%> </label><%= f.text_field :code %></li>
+    <li><label><%=t("titre")%></label><%= f.text_field :titre %></li>
+ 
+    <li><%= submit_tag "ok" %></li>
+  </ul>
+  <input type="hidden"  name="id_formation"  value="<%=@id_formation%>"></input>
+  <%=hidden_field_tag "ref_element_frere" ,@ref_element_frere %>
+  <%=hidden_field_tag "ref_element" ,@ref_element %>
+<% end %>

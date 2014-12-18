@@ -1,0 +1,7 @@
+<div id="<%=id_menu%>" class="cmp_menu<%=(style.nil?)?"":" #{style}"%>">
+  <ul>
+  <%-menu.each{ |lien| -%>
+    <li class="page_item page_item_1"><a href="<%=lien.lien%>" title="<%=t("PangesElementPlan.#{lien.code}.titre")%>"><span><%=t("PangesElementPlan.#{lien.code}.nom")%></span></a></li>
+  <%-}-%>
+  </ul>
+</div>

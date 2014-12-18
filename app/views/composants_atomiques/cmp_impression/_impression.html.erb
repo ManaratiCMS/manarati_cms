@@ -1,0 +1,9 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "skins/#{@skin}/public/composants/impression/impression"   %>
+<%end %>
+
+<%content_for :style do %>
+ <%#= stylesheet_link_tag "skins/default/home/menu_produit"  %>
+<%end%>
+
+<a href="#" onclick="window.print()" class="impression"><%=t 'imprimer'%></a>

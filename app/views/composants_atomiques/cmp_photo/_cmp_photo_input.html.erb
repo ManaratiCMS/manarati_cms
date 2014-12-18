@@ -1,0 +1,29 @@
+<div class="formulaire cmp_photo cmp" id="<%=obj.reference%>">
+  <input type="hidden" id="<%=obj.reference%>_reference" name="<%=obj.reference%>[reference]" value="<%=obj.reference%>"></input>
+<table>
+  <%-if !obj.id.nil?-%>
+  <tr>
+    <td><%=cmp_photo_capture(obj)%></td>
+  </tr>
+  <%-end-%>
+  <tr>
+    <td><input id="<%=obj.reference%>_photo" size="31" type="file"  name="<%=obj.reference%>[photo]"></input></td>
+  </tr>
+ <tr>
+    <td>
+      <label><%=t("width")%> </label>
+      <input class="width" id="<%=obj.reference%>_width" type="text" value="<%=(obj.width== 0)?"":obj.width%>" name="<%=obj.reference%>[width]"></input>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label><%=t("height")%> </label>
+      <input class="height" id="<%=obj.reference%>_height" type="text" value="<%=(obj.height== 0)?"":obj.height%>" name="<%=obj.reference%>[height]"></input></td>
+  </tr>
+  <%-if args[:alt].nil? or  ( !args[:alt].nil? && args[:alt] == true ) -%>
+  <tr>
+    <td><input id="<%=obj.reference%>_photo" type="text" value="<%=obj.text_alt%>" name="<%=obj.reference%>[text_alt]"></input></td>
+  </tr>
+  <%-end-%>
+</table>
+</div>

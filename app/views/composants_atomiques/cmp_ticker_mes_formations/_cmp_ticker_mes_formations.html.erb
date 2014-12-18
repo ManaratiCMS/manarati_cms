@@ -1,0 +1,36 @@
+<%content_for :script do%>
+<script type="text/javascript">
+$(function() {
+    $(".<%=obj.reference%>").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        visible : 2,
+        circular: true
+    });
+});
+</script>
+<%end%>
+ 
+<!-- <a class="prev" href="#">&nbsp;</a>-->
+<div  class="<%=obj.type%> <%=obj.reference%>" >
+  <div class="titre"><%=obj.titre%></div>
+  <ul class="formations">
+    <%formations.each { |formation| %>
+      <li class="formation">
+        <%=cmp_photo_capture(formation.cmp_photo)%>
+        <dl class="detail">
+          <dt>Formation</dt>
+          <dd><%=formation.designation%></dd>
+          <dt>Formateur</dt>
+          <dd><a target="_blank"  href="/<%=formation.user.ref_site%>"><%=formation.professeur%></a></dd>
+        </dl>
+        <div class="menu">
+          <a href="/formation/<%=formation.reference%>"><%=t("support_de_cours")%></a>
+        </div>
+      </li>
+    <%}%>
+  </ul>
+</div>
+<%-if formations.size > 2-%>
+<a class="next" href="#">&nbsp;</a>
+<%-end-%>

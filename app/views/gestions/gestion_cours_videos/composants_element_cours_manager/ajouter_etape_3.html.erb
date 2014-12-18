@@ -1,0 +1,75 @@
+
+
+
+
+
+
+  <script type="text/javascript">
+    <%
+   liste_css  = chemins_css_composants(@cmp_composant)
+   liste_css.each { |chemin_css|
+     %>
+ 
+   chargement_css("<%=chemin_css%>");
+    <%
+   }
+    %>
+   
+  
+  </script>
+ <%- content_for :script do -%>
+<%=importation_js_article_type(@cmp_composant)%>
+<%-end-%>
+
+
+
+
+  <div class="article_conteneur" id="article_<%=@cmp_composant.id%>">
+    <div class="action" id="action_article_<%=@cmp_composant.id%>">
+
+
+
+      <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager",
+          :id => @cmp_composant
+           },
+          :title=> t("precedent") %>
+
+
+
+      <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager",
+          :id => @cmp_composant},
+          :title=> t("suivant") %>
+
+
+      <% if @cmp_composant.cmp_article_type.have_form == 1  %>
+      <%= link_to "<span class='editer'> </span>",{
+          :action =>"update" ,
+          :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager",
+          :id => @cmp_composant},
+          :rel =>@cmp_composant.id,
+            :class=>"editer", :title=> t("editer") %>
+      <%end%>
+
+
+      <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager" ,
+            :id => @cmp_composant,
+            :tc=> @type_contenu },
+            :class=>"supprimer",
+            :rel =>@cmp_composant.id,
+            :title=> t("supprimer"), :confirm => t("confirmation_suppresion")
+           %>
+
+    </div>
+    <div id="contenu_article_<%=@cmp_composant.id%>">
+
+
+    <%=cmp_affiche_composant(@cmp_composant)%>
+
+    </div>
+    </div>

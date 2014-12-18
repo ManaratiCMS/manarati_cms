@@ -1,0 +1,36 @@
+<%content_for :script do %>
+<%=cmp_composant_add_library("editeur_wysiwyg")%>
+<script type="text/javascript">
+   Bind_InputText_to_reference("formation_designation", "formation_reference");
+</script>
+
+<%end%>
+<%content_for :style do %>
+
+<%end%>
+<input type="hidden"  name="id"  value="<%=@formation.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("nom")%> </label></td>
+    <td><%= f.text_field :designation %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("reference")%></label></td>
+    <td><%= f.text_field :reference %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("description")%> </label></td>
+    <td style="padding: 7px"><%=f.text_area :description ,:size=>"30"%></td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@formation.cmp_photo,{:alt=>false})%></td>
+  </tr>
+    <tr>
+    <td><label><%=t("formateur")%></label></td>
+    <td>
+      
+        <%= select("formation", "user_id", @formateurs.collect {|f| [ f.nom, f.id ] }, { :include_blank => true })%>
+    </td>
+  </tr>
+</table>

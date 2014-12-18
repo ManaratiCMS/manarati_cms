@@ -1,0 +1,10 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  UserSession :
+    pages:
+      new :
+        titre : Identification
+        description : Identification
+
+    

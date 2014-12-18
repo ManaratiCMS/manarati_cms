@@ -1,0 +1,22 @@
+<%content_for :script do %>
+<script type="text/javascript">
+  // Bind_InputText_to_reference("auteur_nom", "auteur_reference");
+</script>
+
+<%end%>
+<input type="hidden"  name="id"  value="<%=@auteur.id%>"></input>
+<table class="formulaire">
+  <tr>
+    <td><label><%=t("GestionAuteurs.Label.nom")%> </label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("GestionAuteurs.Label.prenom")%></label></td>
+    <td><%= f.text_field :prenom %></td>
+  </tr>
+  <tr>
+    <td><label><%=t("image")%></label></td>
+    <td><%=cmp_photo_input(@auteur.cmp_photo,{:alt=>false})%></td>
+  </tr>
+    
+</table>

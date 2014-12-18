@@ -1,0 +1,16 @@
+system_db :
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: system_db
+  pool: 5
+  username: root
+  password: ****
+production:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: manarati_db
+  pool: 5
+  username: root
+  password: ****

@@ -1,0 +1,59 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionCategories.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionCategories.Ajouter.titre"),"/admin/categories_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("GestionCategories.Label.nom")%></td>
+          <td><%=t("GestionCategories.Label.reference")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@categories.each { |categorie|%>
+      <tr>
+        <td><%=(categorie.cmp_categorie.nil?)?"": categorie.cmp_categorie.nom + ":" %> <%=categorie.nom%> </td>
+        <td><%=categorie.reference%> </td>
+   
+
+        <td>
+          <div class="action">
+            <% if permitted_to? :setpublic and categorie.protection == 0 %>
+              <%= link_to "<span class='private'></span>",{
+              :action =>"setpublic",
+              :controller=>"/admin/categories_manager" ,
+              :id=>categorie.id},:title=> t("Gestions.msg.setpublic")
+              %>
+             <%-end-%>
+             <% if permitted_to? :setprivate and categorie.protection == 1 %>
+               <%= link_to "<span class='public'> </span>",{
+              :action =>"setprivate",
+              :controller=>"/admin/categories_manager" ,
+              :id=>categorie.id},:title=> t("Gestions.msg.setprivate")
+              %>
+             <%end%>
+            
+            <% if permitted_to? :edit %>
+            <a href="/admin/categories_manager/edit/<%=categorie.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+            <%end%>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/categories_manager" ,
+            :id=>categorie.id},:title=> t("supprimer"), :confirm => t("GestionCategories.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

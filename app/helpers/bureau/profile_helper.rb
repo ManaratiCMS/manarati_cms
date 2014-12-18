@@ -1,0 +1,2 @@
+module Bureau::ProfileHelper
+end

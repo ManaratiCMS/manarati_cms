@@ -1,0 +1,47 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionSessionFormationG2.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionSessionFormationG2.Pages.Ajouter.titre"),"/gestions/gestion_formation/session_formation_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+        
+           <td><%=t("GestionSessionFormationG2.Label.formation")%></td>
+        <td><%=t("GestionSessionFormationG2.Label.Dates_Debut_Inscription")%></td>
+          <td><%=t("GestionSessionFormationG2.Label.Date_Fin_Inscription")%></td>
+       
+          <td><%=t("GestionSessionFormationG2.Label.local")%></td>
+          <td style="width: 100px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@session_formations.each { |session_formation|%>
+      <tr>
+
+          <td><%=session_formation.formation_g2.titre%></td>
+          <td><%=session_formation.Dates_Debut_Inscription%> </td>
+          <td><%=session_formation.Date_Fin_Inscription%> </td>
+          <td><%=(session_formation.local_formation_g2.nil?)?"":session_formation.local_formation_g2.nom%></td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_formation/session_formation_manager/edit/<%=session_formation.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_formation/session_formation_manager" ,
+            :id=>session_formation.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionSessionFormationG2.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,7 @@
+<div class="article <%=article.ref_article_classe%>" >
+<div class="data_creation">Date de Creation : <%=article.date_creation.to_s%></div>
+<%article.cmp_composants.each { |composant|  %>
+  <%=eval(StringManager.nom_fichier_class(composant.type) + "(composant)")%>
+  <%#=render :partial=>"/composants_atomiques/" +  StringManager.nom_fichier_class(composant.type) + "/" + StringManager.nom_fichier_class(composant.type) , :locals=>{:obj=>composant}  %>
+<%}%>
+</div>

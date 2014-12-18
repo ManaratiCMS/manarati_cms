@@ -1,0 +1,18 @@
+<div id="menu_top">
+  <ul>
+    <%- if !current_user -%>
+    <%- if has_role?(:gestion_membre)-%>
+    <li><%= link_to t("inscrivez_vous"), new_account_path %></li>
+    <%-end-%>
+
+    <li><%= link_to t("connexion"), new_user_session_path %></li>
+    <%- else -%>
+
+    <%- if has_role?(:gestion_membre)-%>
+    <li><%= link_to t("mon_compte"), "/account" %></li>
+    <%end%>
+    
+    <li><%= link_to t("deconnexion"), user_session_path, :method => :delete, :confirm => t("MonCompte")[:msg][:confirmation_deconnexion] %></li>
+    <%- end -%>
+  </ul>
+</div>

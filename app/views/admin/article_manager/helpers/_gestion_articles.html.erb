@@ -1,0 +1,60 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/gestion"   %>
+<%end %>
+
+<%if !titre_liste_article.blank? %>
+<h1 class="titre"><%=titre_liste_article%></h1>
+<%end%>
+
+<div class="liste-articles">
+<%=cmp_button(CmpButton.new(t("ajouter"),titre_button_ajouter,"/admin/article_manager/ajouter?sender_id=#{sender_id}&sender_url=#{sender_url}&ref_possecceur=#{@ref_possecceur}&titre=#{titre_formulaire_ajouter_article}","bt_ajouter"))%>
+<%if @articles.length > 0 -%>
+<div id="datagrid_article" class="cmp_data_grid" style="clear: both">
+
+<table>
+<thead>
+<tr>
+  <td><%=t("reference")%></td>
+  <td><%=t("description")%></td>
+  <td><%=t("action")%></td>
+</tr>
+</thead>
+<tbody>
+<%@articles.each { |article|%>
+
+<tr>
+  <td><%=article.reference%></td>
+  <td><%=article.description%></td>
+  <td class="action">
+
+
+
+
+    <div class="action">
+            
+   
+      <%= link_to "<span class='editer'> </span>",
+          :action =>"update" ,
+          :controller=>"/admin/article_manager",
+          :id => article,
+          :sender_id=>sender_id,
+          :sender_url=>sender_url,
+          :ref_pocesseur=>@ref_pocesseur  %>
+      
+      <%= link_to "<span class='supprimer'> </span>",
+            :action =>"supprimer",
+            :controller=>"/admin/article_manager" ,
+            :sender_id=>sender_id,
+            :sender_url=>sender_url,
+            :id => article,
+            :ref_pocesseur=>@ref_pocesseur
+           %>
+    </div>
+    </td>
+</tr>
+<%}%>
+</tbody>
+</table>
+</div>
+<%end-%>
+  </div>

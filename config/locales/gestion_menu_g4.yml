@@ -1,0 +1,24 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionMenuG4 :
+    Pages:
+      Index :
+        titre : Gestion des Catégories
+    Label :
+      nom : Libellé
+      reference : Reference
+      nom : Nom
+      description : Description
+  GestionElementMenuG4 :
+    Pages:
+      Index :
+        titre : Gestion des Liens
+    Label :
+      titre : titre
+      lien : Lien
+      titre_lien : Titre du lien
+      description : Description
+      titre_lien : Titre de Lien
+
+   

@@ -1,0 +1,10 @@
+fr:
+  CmpFormAddSite :
+    Label :
+      login : Votre Login
+      mo_de_passe : Votre mot de passe
+      confirm_mot_de_pass : Confirmer votre mot de passe
+      nom_site : Un nom pour votre premier site
+      email : Indiquez votre adresse mail
+      confirm_email : Confirmez votre adresse mail
+      cree_compte : Créer le Compte

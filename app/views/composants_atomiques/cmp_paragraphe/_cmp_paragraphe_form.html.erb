@@ -1,0 +1,63 @@
+<%if @appel_ajax%>
+<script type="text/javascript" >
+    
+     init_paragraphe();
+</script>
+<% else %>
+  <%content_for :script do%>
+   <%=cmp_composant_add_library("editeur_wysiwyg_paragraphe")%>
+<script type="text/javascript">
+ init_paragraphe(); 
+</script>
+
+<%end%>
+ <%content_for :style do%>
+<%=stylesheet_link_tag "themes/#{@skin}/articles_form/art_formulaire_generale" %>
+
+<%end%>
+<%end%>
+
+
+
+
+
+
+
+
+
+<div class="formulaire formulaire_cmp_paragraphe">
+<div class=" cmp_paragraphe cmp" id="<%=obj_cmp_paragraphe.reference%>">
+<%if !ref_langue.nil?%>
+  <input type="hidden" name="ref_langue" value="<%=ref_langue%>"/>
+  <h3><%=sys_cmp_photo_origine(@langue.sys_cmp_photo)%><%=t("CmpComposant.CmpParagraph.paragraphe_en") +" "+ @langue.nom%></h3>
+<%else%>
+<h2 class="titre">
+     <%=t("CmpComposant.CmpParagraph.paragraph")%>
+</h2>
+<%end%>
+
+
+
+  <table class="tformulaire">
+    <tr>
+      <td>
+ 
+  <textarea cols="45" rows="10"  id="<%=obj_cmp_paragraphe.reference%>_texte" name="<%=obj_cmp_paragraphe.reference%>[texte]" >
+  <%=obj_cmp_paragraphe.texte%>
+  </textarea>
+    </td>
+    </tr>
+  </table>
+
+
+
+</div>
+  
+<%if !ref_langue.nil?%>
+<div class="lg_principal">
+  <%@composant_traduit = obj_cmp_paragraphe.composant_traduit_principal%>
+  <h3><%=sys_cmp_photo_origine(@obj_langue_principale.sys_cmp_photo)%> <%=t("CmpComposant.CmpParagraph.paragraphe_en") +" "+ @obj_langue_principale.nom %></h3>
+  <%=cmp_paragraphe(@composant_traduit)%>
+</div>
+<%end%>
+</div>

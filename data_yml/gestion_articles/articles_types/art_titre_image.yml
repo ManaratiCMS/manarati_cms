@@ -1,0 +1,28 @@
+--- !ruby/object:ArticleType
+reference : art_titre_image
+nom : Titre - Image
+article_type : image1
+ref_image_capture : 7/titre_image.png
+fichier_css : art_generale.css
+fichier js :  js_generale.js
+cmp_composants:
+- !ruby/object:CmpText
+  attributes:
+    reference: titre1
+    nom : Titre
+    type: CmpTitre
+    label_form : Titre
+    texte : ""
+    texte_alt : ""
+- !ruby/object:CmpPhoto
+  attributes:
+    reference: photo1
+    nom : Photo
+    type: CmpPhoto
+    label_form : Source
+    texte : ""
+    text_alt : ""
+    width : 600
+    height: 400
+
+

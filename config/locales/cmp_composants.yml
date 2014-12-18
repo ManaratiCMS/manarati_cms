@@ -1,0 +1,44 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  CmpComposant :
+    CmpParagraph:
+      paragraphe_en : Paragraphe en
+      paragraph : Paragraphe
+    CmpTitre:
+      titre : Titre
+    CmpCodeSource:
+      titre : Code Source
+    CmpMessage:
+      titre : Message
+    CmpLienButton:
+      titre : Lien
+    CmpPhoto:
+      titre : Image
+    CmpLogo:
+      titre : Logo
+      logo : Logo
+      slogan : Slogan
+    CmpListeImages :
+      titre : Listes des images
+    Label:
+      font : Font
+    CmpDetailFormation :
+      reference_formation : Référence Formation
+      titre : Détail d'une formation
+    CmpSliderPresentation :
+      source : Source de Données
+      titre : Présentation
+    CmpMenuAccueil :
+      titre : Menu
+      texte : Le Menu à afficher
+
+    CmpYoutube :
+      titre : Video Youtube
+      nom :  Code Video
+      width : Largeur
+      height : Hauteur
+
+
+
+     

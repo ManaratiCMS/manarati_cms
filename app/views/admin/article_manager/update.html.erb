@@ -1,0 +1,90 @@
+<%content_for :style do %>
+<%#=stylesheet_link_tag "themes/#{@skin_admin}/admin/articles_manager/ajouter" %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/general/update_page" %>
+<%#=stylesheet_link_tag "themes/#{@skin_admin}/admin/gestion/ajouter" %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/articles/art_generales" %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/libs/jquery-ui/jquery.ui.all" %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/libs/plugin_jquery/cleeditor/jquery.cleditor" %>
+<%=stylesheet_link_tag "themes/public_sys/articles/cmp_menu_fixed_fade" %>
+ 
+
+<%end%>
+<%content_for :script do %>
+<%=javascript_include_tag "general/ajax_utils"  %>
+<%=javascript_include_tag "general/update_page"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.core"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.widget"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.mouse"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.draggable"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.position"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.resizable"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.dialog"  %>
+<%=cmp_composant_add_library("editeur_wysiwyg_paragraphe")%>
+<%=javascript_include_tag "articles/cmp_menu_fixed_fade"  %>
+<%end%>
+<div id="loading">Loging</div>
+
+
+
+
+
+<div id="nav">
+            <ul>
+              <li><a class="admin" href="/admin" title="Admin"><span></span></a></li>
+              <li>
+
+                <div class="action" >
+                     <% if @langues_active.length > 1   %>
+                                <% @langues_active.each { |langue| %>
+                                  <%if langue.reference == @langue_principale %>
+                                  <%= link_to "<span class='editer_#{langue.reference}'> </span>",{
+                                  :action => "update",
+
+                                  :controller=>"/admin/article_manager" ,
+                                  :id=>@article.id},:title=> t("Gestions.Pages.Index.editer_version_#{langue.reference}")
+                                  %>
+                             <%else%>
+                               <%= link_to "<span class='editer_#{langue.reference}'> </span>",{
+                                  :action => "traduir",
+                                  :controller=>(@article.cmp_page.nil?)?"/admin/page_detail_manager":"/admin/pages_manager" ,
+                                  :lg=>"#{langue.reference}",
+                                  :id=>(@article.cmp_page.nil?)?@article.cmp_page_detail.id : @article.cmp_page.id},:title=> t("Gestions.Pages.Index.editer_version_#{langue.reference}")
+                                  %>
+                             <%end%>
+                            <%}%>
+                    <%end%>
+              </div>
+
+
+              </li>
+                <li><a class="top" href="#top"><span></span></a></li>
+                <%-@cmp_pages.each_with_index  { |page,i|-%>
+                <li>
+                  
+                
+                    <%unless page.get_cmp_layout.nil?%>
+                    <a href="/admin/article_manager/update/<%=page.get_cmp_layout.id%>" title="<%=t("GestionPages.Action.editer_contenu")%>"><%=page.titre%></a>
+                    <%end%>
+                </li>
+
+                <%}%>
+            </ul>
+</div>   
+
+
+
+
+
+
+<div id="form_update_composant"></div>
+
+
+<div class="formulaire ajouter_article">
+<%form_tag("",:multipart=>true) do%>
+<%=render :partial=>"/admin/article_manager/partials/form_article" ,:locals=>{:article=>@article,:width=>0,:ref_langue=>@ref_langue}%>
+<%=hidden_field_tag "article[id]",@article.id%>
+  <div style="display: none" class="submit">
+<%=submit_tag t'ok'%>
+</div>
+<%end%>
+</div>

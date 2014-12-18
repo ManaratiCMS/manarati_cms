@@ -1,0 +1,55 @@
+<% content_for :style  do   %>
+    <%=stylesheet_link_tag "themes/public_sys/articles/cmp_formulaire_login" %>
+<% end %>
+<%content_for :script do%>
+<script>
+jQuery(document).ready(function(){
+			jQuery("#form_ajouter_utilisateur").validationEngine();
+		});
+</script>
+<%end%>
+
+<a name="<%=obj.id%>"></a>
+<div class="cmp_formulaire_login">
+
+ 
+  <form id="form_ajouter_utilisateur" action="/bureau/authentication/login" method="post">
+ 
+     <input type="hidden" value="<%=@page.reference%>" name="reference_page" ></input>
+<div id="login" class="formulaire">
+  <div class="maincol">
+
+   <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.login")%>:</strong></label>
+  
+  
+   <input type="text" value="<%=@login%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   id="user_login" name="user[login]" ></input>
+
+
+ </div>
+   <div class="form_row">
+   <label><strong><%=t("GestionUtilisateurs.Label.password")%>:</strong></label>
+   <input type="password" value="<%=@password%>"  class="validate[required] text-input" data-prompt-position="topRight:-50"   id="user_password" name="user[password]" ></input>
+ </div>
+
+
+
+  <div class="action">
+  <button class="abutton" type="submit"><%=t("connexion")%></button>
+  </div>
+  </div>
+  <div class="rightcol">
+      <ul>
+
+           <li><a href="/inscription"><%=t("inscrivez_vous")%></a></li>
+           <li><%= link_to 'forgot your password?', "/bureau/authentication/forgot_password" %></li>
+      </ul>
+  </div>
+</div>
+  </form> 
+
+</div>
+
+
+ 
+

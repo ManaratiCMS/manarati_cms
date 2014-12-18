@@ -1,0 +1,5 @@
+<div class="article" >
+<%-article.cmp_composants.each { |composant|  -%>
+  <%=eval(StringManager.nom_fichier_class(composant.type) + "(composant)")-%>
+<%-}-%>
+</div>

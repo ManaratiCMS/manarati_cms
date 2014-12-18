@@ -1,0 +1,32 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionLangues :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de la langue
+      erreur de suppression : Erreur lors de suppresion de la langue
+      supprimer_avec_succes : Langue supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer cette langue ?
+      ajouter_avec_succes : Langue ajoutée avec succés
+      editer_avec_succes : Langue éditée avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter une langue
+      Index :
+        titre : Gestion des langues
+        langue_principal : Langue Principal
+        activer_langue : Activer la langue
+        desactiver_langue : Désactiver la langue
+      Ajouter:
+        titre : Ajouter une langue
+      Update :
+        titre : Mise à jour
+    Label :
+      nom : Désignation
+      description : Description
+      photo : image
+      reference : reference
+ 
+     
+  

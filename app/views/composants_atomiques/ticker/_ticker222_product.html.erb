@@ -1,0 +1,115 @@
+
+
+<%content_for :script do %>
+   <%= javascript_include_tag 'libs/jquery/plugin/jquery.jcarousel.min' %>
+<%end%>
+<%content_for :style do %>
+   
+    <%= stylesheet_link_tag "skins/default/public/jquery_plugin/jcarousel/skins/omni/skin"  %>
+<%end%>
+
+
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+
+
+
+<div id="jqnews"  >
+ 
+<%@products.each do |product|%>
+  <div class="fiche fich_product_ticker" >
+
+
+    <a href="<%=product.url_detail%>"  title="<%=product.marque_expression%>" >
+      <span   class="photo" style="display: block">
+        <%=image_xys_tag(first_photo_by_owner(product.reference),{:format=>'medium'})%>
+     </span>
+     <span style="display: block">
+         <span class="classification" style="display: block">
+             <span class="titre_marque_niveau_1" style="display: block"> <%=product.marque_expression%></span>
+             <span class="titre_marque_niveau_2" style="display: block"> <%=product.modele_expression%></span>
+         </span>
+
+         <span class="prix" style="display: block">
+            <% if product.details_price[1]=="0" %>
+            <span class="produit_prix" style="display: block">
+              <span style="display: block"> <%=product.price%> :<%=product.details_price[0]%></span>
+              <span style="display: block"> <%=product.price*@product_config['taux_de_change_euro_>>_usd'].to_f  %> : <%=@text['price']['USD']%></span>
+           </span>
+           <%end%>
+         </span>
+     </span>
+     </a>
+
+
+    <!--
+    <a href="<%=product.url_detail%>" style="display: block" title="<%=product.marque_expression%>" >
+     <div class="photo">
+        <%=image_xys_tag(first_photo_by_owner(product.reference),{:format=>'medium'})%>
+     </div>
+     <div>
+         <div class="classification">
+             <p class="titre_marque_niveau_1"> <%=product.marque_expression%></p>
+             <p class="titre_marque_niveau_2"> <%=product.modele_expression%></p>
+         </div>
+
+         <div class="prix">
+            <% if product.details_price[1]=="0" %>
+            <div class="produit_prix">
+              <p> <%=product.price%> :<%=product.details_price[0]%></p>
+              <p> <%=product.price*@product_config['taux_de_change_euro_>>_usd'].to_f  %> : <%=@text['price']['USD']%></p>
+           </div>
+           <%end%>
+         </div>
+     </div>
+     </a>
+    -->
+  </div>
+<%end%>
+
+
+
+</div>
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+

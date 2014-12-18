@@ -1,0 +1,5 @@
+## YAML Template.
+---
+theme : theme1_admin
+theme_public : theme3
+langue : fr

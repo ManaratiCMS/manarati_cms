@@ -1,0 +1,50 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionArticles :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de composant du composant
+      erreur de suppression : Erreur lors de suppresion de composant
+      supprimer_avec_succes : Membre supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ?
+      ajouter_avec_succes : Composant de Page ajoutée avec succés
+      editer_avec_succes : Composant de Page édité avec succés
+    Ajouter :
+      titre : Ajouter une Composante
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    titre_de_gestion : Gestion des Composants de Page
+
+    
+  GestionArticlesType :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de l'article type
+      erreur de suppression : Erreur lors de suppresion de l'article type
+      supprimer_avec_succes : Article Type supprimé avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer cette article type ?
+      ajouter_avec_succes : Article Type ajouté avec succés
+      editer_avec_succes : Article Type édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter Article type
+      Index :
+        titre : Gestion des Articles Types
+      Ajouter:
+        titre : Ajouter un article type
+      Update :
+        titre : Mise à jour
+    Label :
+      nom : Titre
+      reference : Référence
+      fichier_css : Style
+      fichier_js : Script
+      libs_css : Bibliothèque CSS
+      libs_js : Bibliothèque Javascript
+      image : Caputre
+      type_composant : Type de Composant
+      have_form : Avoir un formulaire
+      role : Role
+      themes : Thèmes supportés
+      is_layout : Layout

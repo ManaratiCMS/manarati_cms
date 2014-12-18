@@ -1,0 +1,24 @@
+<a name="<%=obj.id%>"></a>
+<div class="<%=obj.reference%> layout1">
+<div class="zone1">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "zone1"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+</div>
+<div class="zone2">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "zone2"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+</div>
+<div class="zone3">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "zone3"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+</div>
+</div>

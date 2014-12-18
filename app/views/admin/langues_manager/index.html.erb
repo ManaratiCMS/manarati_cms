@@ -1,0 +1,82 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionLangues.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionLangues.Pages.Ajouter.titre"),"/admin/langues_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td style="width: 100px" ></td>
+          <td><%=t("GestionLangues.Label.nom")%></td>
+          <td style="width: 100px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@langues.each { |langue|%>
+      <tr>
+        <td><%=sys_cmp_photo_origine(langue.sys_cmp_photo)%></td>
+        <td><%=langue.nom%></td>
+        <td>
+          <div class="action">
+
+              <% if permitted_to? :setpublic and langue.protection == 0 %>
+              <%= link_to "<span class='private'></span>",{
+              :action =>"setpublic",
+              :controller=>"/admin/langues_manager" ,
+              :id=>langue.id},:title=> t("Gestions.msg.setpublic")
+              %>
+             <%-end-%>
+             <% if permitted_to? :setprivate and langue.protection == 1 %>
+               <%= link_to "<span class='public'> </span>",{
+              :action =>"setprivate",
+              :controller=>"/admin/langues_manager" ,
+              :id=>langue.id},:title=> t("Gestions.msg.setprivate")
+              %>
+             <%end%>
+
+            <% if permitted_to? :activer %>
+            <%- if langue.reference == @langue_active -%>
+            <a href="#" title="<%=t("GestionLangues.Pages.Index.langue_principal")%>"><span class="favorie"> </span></a>
+            <%-else-%>
+            <a href="/admin/langues_manager/activer/<%=langue.id%>" title="<%=t("activer")%>"><span class="activer"> </span></a>
+            <%-end-%>
+            <%end%>
+
+
+            <% if permitted_to? :activer_langue and permitted_to? :desactiver_langue %>
+              <%- if @langues_actives.include?(langue.reference) -%>
+              <a href="/admin/langues_manager/desactiver_langue/<%=langue.id%>" title="<%=t("GestionLangues.Pages.Index.desactiver_langue")%>">
+                <span class="application_delete"> </span>
+              </a>
+              <%-else-%>
+              <a href="/admin/langues_manager/activer_langue/<%=langue.id%>" title="<%=t("GestionLangues.Pages.Index.activer_langue")%>">
+                <span class="application_add"> </span>
+              </a>
+              <%-end-%>
+            <%end%>
+
+
+
+            
+            
+
+            <a href="/admin/langues_manager/edit/<%=langue.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/langues_manager" ,
+            :id=>langue.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionLangues.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

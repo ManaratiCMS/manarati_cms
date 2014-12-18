@@ -1,0 +1,20 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag_cmp_article(@skin_public,"cmp_layout1_colone")%>
+<%=stylesheet_link_tag "themes/#{@skin}/articles_form/art_layout_form"   %>
+<style>
+  .cmp_layout1_colone{
+    height: auto;
+    background: none;
+}
+</style>
+<%end %>
+
+<%-unless obj.nom.blank? -%><label class="titre"><%=obj.nom%></label ><%-end-%>
+<div class="formulaire cmp_layout1_colone">
+
+<div class="zone1 color_layout1" style="min-height: 200px">
+<%=layout_composants_zone_manager_tr(obj.traduction,obj.ref_langue, (obj.cmp_article.nil?)?0:obj.cmp_article.id,"zone1",config["zone1"]["width"],config["zone1"]["height"])%>
+</div>
+
+
+</div>

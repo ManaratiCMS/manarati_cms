@@ -1,0 +1,27 @@
+<div class="formulaire cmp_youtube" id="<%=obj.reference%>">
+<label class="titre">
+   <%=t("CmpComposant.CmpYoutube.titre")%>
+</label >
+<br></br>
+<table class="tformulaire">
+  <tr>
+    <td><label> <%=t("CmpComposant.CmpYoutube.nom")%> </label></td>
+    <td>
+      <input id="<%=obj.reference%>_nom" type="text" value="<%=obj.nom%>" name="<%=obj.reference%>[nom]"></input>
+    </td>
+  </tr>
+    <tr>
+    <td><label> <%=t("CmpComposant.CmpYoutube.width")%> </label></td>
+    <td>
+      <input id="<%=obj.reference%>_width" type="text" value="<%=obj.width%>" name="<%=obj.reference%>[width]"></input>
+    </td>
+    </tr>
+
+    <tr>
+    <td><label> <%=t("CmpComposant.CmpYoutube.height")%> </label></td>
+    <td>
+      <input id="<%=obj.reference%>_height" type="text" value="<%=obj.height%>" name="<%=obj.reference%>[height]"></input>
+    </td>
+  </tr>
+</table>
+</div>

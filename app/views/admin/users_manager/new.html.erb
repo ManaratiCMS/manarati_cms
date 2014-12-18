@@ -1,0 +1,25 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%end%>
+<div class="ajouter">
+<h1 class="titre"><%=t("GestionUsers.Ajouter.titre")%></h1>
+</div>
+<div class="formulaire">
+   <% form_for :user, @user, :url => { :action => "create" }, :html => {:class => "formulaire"} do |f| %>
+      <%if f.error_messages !="" %>
+      <div class="message_box">
+      <%= f.error_messages %>
+      </div>
+      <%end%>
+      <%=render :partial=>"admin/users_manager/partials/form_user" ,:locals=>{:f=>f}%>
+      <div class="submit">
+      <%= submit_tag t("ajouter") %>
+      </div>
+    <% end %>
+</div>
+
+
+
+
+
+ 

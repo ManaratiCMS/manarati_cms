@@ -1,0 +1,19 @@
+<%content_for :script do%>
+<%article.cmp_composants.each { |composant|%>
+  <%=cmp_composant_lib_js_form(composant)%>
+<%}%>
+<%end%>
+<%content_for :style do%>
+<%article.cmp_composants.each { |composant|%>
+  <%=cmp_composant_lib_css_form(composant)%>
+<%}%>
+<%end%>
+<%article.cmp_composants.each { |composant|%>
+  <%
+   if !ref_langue.nil?
+     composant.traduction = true
+     composant.ref_langue = ref_langue
+   end
+  %>
+  <%=cmp_article_charger_composant_par_element_article(composant)%>
+<%}%>

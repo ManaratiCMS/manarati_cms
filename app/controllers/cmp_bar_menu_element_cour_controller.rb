@@ -1,0 +1,2 @@
+class CmpBarMenuElementCourController < ApplicationController
+end

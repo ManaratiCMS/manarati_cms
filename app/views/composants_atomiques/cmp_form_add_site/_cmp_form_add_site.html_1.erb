@@ -1,0 +1,71 @@
+
+<%content_for :script do%>
+<script>
+jQuery(document).ready(function(){
+			// binds form submission and fields to the validation engine
+			jQuery("#formID").validationEngine();
+		});
+</script>
+<%end%>
+<a name="<%=obj.id%>"></a>
+<div class="cmp_form_add_site">
+<% if  false  %>
+<div class="message_box"  >
+</div>
+<%end%>
+ 
+  <form id="formID" action="/composants_atomiques/cmp_form_add_site/add" method="post">
+  
+    <input value="" class="validate[required] text-input" type="text" name="req" id="req" data-prompt-position="topRight:-70" />
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.login")%>:</strong></label>
+   <input type="text"   name="login"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.mo_de_passe")%>:</strong></label>
+   <input type="text" class="validate[required] text-input"  name="mo_de_passe"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.confirm_mot_de_pass")%>:</strong></label>
+   <input type="text" class="validate[required] text-input" name="confirm_mot_de_pass"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.nom_site")%>:</strong></label>
+   <input type="text" class="validate[required] text-input" name="nom_site"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.email")%>:</strong></label>
+   <input type="text" class="validate[required] text-input"   name="email"></input>
+ </div>
+ <div class="form_row">
+   <label><strong><%=t("CmpFormAddSite.Label.confirm_email")%>:</strong></label>
+   <input type="text" class="validate[required] text-input" name="confirm_email"></input>
+ </div>
+ <div class="right">
+   <input class="submit" type="submit" value="Validate &amp; Send the form!"/>
+ <!--  <button   class="submit" type="submit"><%=t("CmpFormAddSite.Label.cree_compte")%></button>-->
+ </div>
+</form>
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+ 

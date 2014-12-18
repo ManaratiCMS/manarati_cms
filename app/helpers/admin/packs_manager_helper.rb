@@ -1,0 +1,2 @@
+module Admin::PacksManagerHelper
+end

@@ -1,0 +1,29 @@
+<%if @appel_ajax%>
+  <script type="text/javascript">
+  chargement_css("<%="/stylesheets/themes/#{@skin}/general/formulaire_composant.css"%>");
+  chargement_css("<%="/stylesheets/themes/#{@skin}/articles/art_generales.css"%>");
+  </script>
+<% else %>
+  <%content_for :style do%>
+  <%=stylesheet_link_tag "themes/#{@skin}/articles/art_generales" %>
+ <%=stylesheet_link_tag "themes/#{@skin}/general/formulaire_composant.css" %>
+  <%end%>
+  <%content_for :script do%>
+  <%end%>
+<%end%>
+
+
+<div class="formulaire_cmp">
+<%form_tag("/admin/layout_composants_manager/update/",:multipart=>true,:id=>"form_cmp") do%>
+<%=render :partial=>"/admin/article_manager/partials/form_article" ,:locals=>{:ref_langue=>@ref_langue,:article=>@article}%>
+<%=hidden_field_tag "article[id]",@article.id%>
+<% if !@ref_langue.nil? %>
+<%=hidden_field_tag "ref_langue",@ref_langue%>
+<%end%>
+<div class="submit">
+  <div class="center">
+<%=submit_tag t'ok'%>
+    </div>
+</div>
+<%end%>
+</div>

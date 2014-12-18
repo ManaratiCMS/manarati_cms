@@ -1,0 +1,112 @@
+## YAML Template.
+---
+fr:
+  GestionPages :
+    msg:
+      erreur_ajouter_page: Erreur lors de l'ajout de la page
+      erreur de suppression : Erreur lors de suppresion de la page
+      page_editer_avec_succes : Page editée avec succés
+      page_supprimer_avec_succes : Page supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer la page ?
+      page_ajouter_avec_succes : Page ajoutée avec succés
+      ouvrir_la_page : Ouvrir la page
+    Ajouter :
+      titre : Ajouter une Page
+      msg_1 : Une Page Contient Plusieur Article
+    Editer :
+      titre : Edition de Page
+    Index :
+      editer_page_fr : Edtiter la page Français
+      editer_page_en : Edtiter la page Anglais
+      editer_page_es : Edtiter la page Espagnole
+      init_ordre : Initialiser l'ordre
+
+    Update :
+      titre : Mise à jour de la page
+      traudction : Traduction de la page
+      titre_button_ajouter_composant : Ajouter une composant à la page
+      titre_formulaire_ajouter_composant : Ajouter une composant à la page
+    infoGenerale : Informations Générales
+    contenu_page : Composants de la page
+    titre_de_gestion : Gestion des pages
+    Action :
+      editer_contenu : Edition de Contenu
+      editer : Editer Titre et Description de la page
+
+    Label:
+      layout : Template
+      titre : Titre
+      lien : Lien 
+
+
+    
+  PangesElementPlan :
+    manarati:
+      titre: Votre site Web
+      nom: >>
+    formations:
+      titre: Formations disponible
+      nom: Formations
+    creation_sites_web:
+      titre: Création de site web professionnel
+      nom: Sites Web
+    contact:
+      titre: Contacter Manarati
+      nom: Contacte
+
+    page_manager:
+      titre: Gestion des Pages
+      nom: Pages
+    gestion_sites :
+      titre: Gestion des Sites Web
+      nom: Sites Web
+    gestion_themes :
+      titre: Gestion des Thémes
+      nom: Thémes
+    gestion_formation:
+      titre: Gestion de formations
+      nom: Formations
+    gestion_membre:
+      titre: Gestion des membre
+      nom: Membres
+    mon_compte:
+      titre: Mon Compte
+      nom: Mon Compte
+    editer_mon_compte:
+      titre: Edition de Mon Compte
+      nom: Edition de Compte
+    admin :
+      titre : Administrateur de Site
+      nom : Administrateur
+    gestion_packs :
+      titre : Gestion de Packs
+      nom : Packs
+    gestion_menu :
+      titre : Gestion de Menu
+      nom : Menu
+    gestion_auteurs:
+      titre : Gestion des auteurs
+      nom : Auteurs
+    menu_system :
+      titre : Menu system
+      nom : System
+ 
+    edition_de_compte :
+      titre : Edition de Compte
+      nom : Edition de Compte
+    mes_sites_web :
+      titre : Mes Sites Web
+      nom : Mes Sites Web
+    gestion_partenaire :
+      titre : Gestion des Partenaires
+      nom : Partenaires
+
+    gestion_langues :
+      titre : Gestion des Langues
+      nom : Langues
+
+
+
+
+
+    

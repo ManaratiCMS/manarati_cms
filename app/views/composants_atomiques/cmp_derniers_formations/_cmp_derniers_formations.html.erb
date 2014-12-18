@@ -1,0 +1,30 @@
+<% content_for :style  do   %>
+    <%=stylesheet_link_tag "themes/public_sys/articles/cmp_derniers_formations" %>
+<% end %>
+<a name="<%=obj.id%>"></a>
+<div class="cmp_derniers_formations">
+  <%formations.each { |formation|%>
+
+
+  <div class="formation">
+	<a  href="/formation/<%=formation.reference%>">
+                <%=cmp_photo_sans_lien(formation.cmp_photo)%>
+                <h2><%=formation.titre%></h2>
+                <div class="description"><%formation.objectif%></div>
+		<span class="meta">
+			<span class="time">
+                          <% if !formation.tarif.nil? %>
+				<%=formation.tarif %> DH
+                          <%end%>
+                        </span>
+			<span class="comment">
+		            <%=formation.detail_duree %>
+			</span>
+		</span>
+	</a>
+</div>
+
+
+
+  <%}%>
+</div>

@@ -1,0 +1,18 @@
+<input type="hidden"  name="id"  value="<%=@menu.id%>"></input>
+<table class="formulaire">
+   <tr>
+    <td><label><%=t("GestionMenus.Label.nom")%></label></td>
+    <td><%= f.text_field :nom %></td>
+  </tr>
+   <tr>
+    <td><label><%=t("GestionMenus.Label.lien")%></label></td>
+
+     <td><input value="<%=(@menu.cmp_page.nil?)?"":@menu.cmp_page.lien%>"  disabled/></td>
+    
+  </tr>
+  <tr>
+    <td><label><%=t("GestionMenus.Label.titre")%> </label></td>
+    <td><%= f.text_field :titre %></td>
+  </tr>
+ 
+</table>

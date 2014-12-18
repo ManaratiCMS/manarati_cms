@@ -1,0 +1,8 @@
+<h1>Les Formations</h1>
+<ul>
+<%@formations.each { |formation|  %>
+  <li>
+    <a href="/formation/<%=formation.reference%>"><%=formation.designation%></a>
+<% } %>
+   </li>
+</ul>

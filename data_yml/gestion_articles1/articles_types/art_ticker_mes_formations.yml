@@ -1,0 +1,18 @@
+--- !ruby/object:ArticleType
+reference : art_ticker_mes_formations
+nom : Ticker Mes Formations
+ref_image_capture : 9/window.png
+fichier_js :  art_ticker_formation.js
+fichier_css : art_ticker_formation.css
+libs_js : libs/jcarousellite.min.js
+cmp_composants:
+- !ruby/object:CmpTickerMesFormations
+  attributes:
+    reference: art_ticker_mes_formation1
+    nom : TickerMesFormations
+    type: CmpTickerMesFormations
+    label_form : Formations
+    titre : ""
+
+
+

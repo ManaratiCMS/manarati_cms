@@ -1,0 +1,35 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<style type="text/css" >
+  .cmp_data_grid td{
+   padding: 0 0px !important;
+}
+</style>
+
+<%-end-%>
+<%content_for :script do -%>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.tabs"  %>
+<script type="text/javascript">
+    Bind_InputText_to_reference("page_titre", "page_reference");
+    Bind_InputText_to_Reference_With_Prefixe("page_titre", "page_lien","/");
+</script>
+<%-end-%>
+
+<div class="header_gestion">
+ 
+ 
+</div>
+
+
+
+
+<div class="ajouter">
+          <div class="formulaire">
+          <% form_for :element_cour, @element_cour, :url => { :action => "update" }, :html => {:class => "formulaire"} do |f| %>
+          <%=render :partial=>"/gestions/gestion_cours_videos/element_cours_manager/partials/form_element_cours" ,:locals=>{:f=>f}%>
+          <div class="submit">
+          <%= submit_tag t("update") %>
+          </div>
+          <% end %>
+          </div>
+</div>

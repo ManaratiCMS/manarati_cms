@@ -1,0 +1,18 @@
+<%if @appel_ajax %>
+<%=importation_css_composants(cmp_composants)-%>
+<%=importation_js_composants(cmp_composants)%>
+<%else%>
+<%content_for :style do -%>
+<%=importation_css_composants(cmp_composants)-%>
+<%end %>
+<%- content_for :script do -%>
+<%=importation_js_composants(cmp_composants)%>
+<%-end-%>
+<%end%>
+
+<a name="<%=obj.id%>"></a>
+<div class="cmp_element_cour_html">
+  <%cmp_composants.each_with_index  { |composant,i|%>
+    <%=cmp_affiche_composant(composant)%>
+  <%}%>
+</div>

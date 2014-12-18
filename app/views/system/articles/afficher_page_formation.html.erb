@@ -1,0 +1,35 @@
+<%- content_for :style do -%>
+<%=importation_css_article_page(@page)%>
+<%=stylesheet_link_tag "themes/#{@skin}/pages/formation/detail" %>
+<%-end-%>
+<%- content_for :script do -%>
+<%=importation_js_article_page(@page)%>
+<%-end-%>
+
+<%-@page.cmp_articles.each { |article|-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-} unless @page.cmp_articles.nil?-%>
+
+<div class="pagination">
+<div class="page_precedent">
+ <%-unless @page.page_precedent.nil? -%>
+ <a href="<%=@page.page_precedent.lien%>" style="clear: both;float: left" >
+ <img src="/images/prevpage.png" alt="<%=t("page_precedent")%>" title="<%=t("page_precedent")%>" />
+ </a>
+ <%-end-%>
+</div>
+<div class="page_suivant">
+ <%-unless @page.page_suivant.nil? -%>
+ <a href="<%=@page.page_suivant.lien%>" style="clear: both;float: left" >
+ <img src="/images/nextpage.png" alt="<%=t("page_suivant")%>" title="<%=t("page_suivant")%>" />
+ </a>
+ <%-end-%>
+</div>
+</div>
+
+<%- content_for :zone_droit do -%>
+<div class="box_droite">
+<%= render :partial=>"formation/partials/plan_formation"  , :locals=>{:truncate_size=>37,:id_page_active=>@page.id,:formation=>@page.formation} %>
+</div>
+
+<%-end-%>

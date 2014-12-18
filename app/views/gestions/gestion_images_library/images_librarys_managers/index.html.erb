@@ -1,0 +1,43 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionImagesLibrarys.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionImagesLibrarys.Pages.Ajouter.titre"),"/gestions/gestion_images_library/images_librarys_managers/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 100px" ></td>
+          <td ><%=t("titre")%></td>
+          <td ><%=t("GestionImagesLibrarys.Label.text_alt")%></td>
+          
+          <td style="width: 100px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@images.each { |image|%>
+      <tr>
+        <td><%=cmp_photo_capture(image)%></td>
+        <td><%=image.nom%> </td>
+        <td><%=image.text_alt%> </td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_images_library/images_librarys_managers/edit/<%=image.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_images_library/images_librarys_managers" ,
+            :id=>image.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionImagesLibrarys.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

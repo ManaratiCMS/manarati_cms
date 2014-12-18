@@ -1,0 +1,8 @@
+<div  class="<%=obj.type%> <%=obj.reference%>" >
+  <div class="titre"><%=obj.titre%></div>
+  <div class="formulaire">
+  <% form_for :membre, membre, :url => {:controller=>"/composants_atomiques/cmp_contact", :action => "ajouter" }, :html => {:class => "formulaire"} do |f| %>
+  <%=render :partial=>"admin/membre_manager/partials/form_membre" ,:locals=>{:f=>f,:membre=>membre}%>
+  <% end %>
+</div>
+</div>

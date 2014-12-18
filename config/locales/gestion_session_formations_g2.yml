@@ -1,0 +1,33 @@
+## YAML Template. Session.msg.editer_avec_succes
+---
+fr:
+  GestionSessionFormationG2 :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout du session
+      erreur de suppression : Erreur lors de suppresion du session
+      supprimer_avec_succes : Session supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer la session ?
+      ajouter_avec_succes : Session ajoutée avec succés
+      editer_avec_succes : Session édité avec succés
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter une session
+      Index :
+        titre : Gestion des sessions
+      Ajouter:
+        titre : Ajouter une session
+      Update :
+        titre : Mise à jour
+    Label :
+      Dates_Debut_Inscription : Début Inscription
+      Date_Fin_Inscription : Fin Inscription
+      formation : Formation
+      local : Local
+ 
+ 
+
+  
+     
+
+   

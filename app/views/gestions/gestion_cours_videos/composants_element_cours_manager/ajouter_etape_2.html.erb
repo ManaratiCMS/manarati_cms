@@ -1,0 +1,35 @@
+
+
+
+
+<%if @appel_ajax%>
+  <script type="text/javascript">
+  chargement_css("<%="/stylesheets/themes/#{@skin}/general/formulaire_composant.css"%>");
+  chargement_css("<%="/stylesheets/themes/#{@skin}/articles/art_generales.css"%>");
+  </script>
+<% else %>
+  <%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/articles_manager/ajouter" %>
+       <%=stylesheet_link_tag "themes/#{@skin}/articles/art_generales" %>
+  <%end%>
+<%end%>
+
+
+
+
+<%if !@titre.blank? %>
+<h2><%t("GestionArticles.Ajouter.titre")%></h2>
+<%end%>
+<div class="formulaire_cmp formulaire ajouter_article">
+ <%form_tag("/gestions/gestion_cours_videos/composants_element_cours_manager/ajouter_etape_3" ,:id=>"form_cmp", :multipart => true) do%>
+
+ <%=render :partial=>"/admin/article_manager/partials/form_article" ,:locals=>{:ref_langue=>@langue_active,:article=>@article_type}%>
+ <%=hidden_field_tag "ref_art" ,@ref_art%>
+  <%=hidden_field_tag "id_parent" ,@id_parent%>
+  <%=hidden_field_tag "nom_zone" ,@nom_zone%>
+   <%=hidden_field_tag "tc" ,@type_contenu%>
+<div class="submit">
+<%=submit_tag t'suivant'%>
+  </div>
+<%end%>
+</div>

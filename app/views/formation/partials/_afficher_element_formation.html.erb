@@ -1,0 +1,15 @@
+<% if numero_page == element_plan.numero_page  %> 
+<h<%=(niveau_dans_plan + 1)%> id="<%=element_plan.code%>">
+  <a href="<%=element_plan.lien%>" > <%=element_plan.nom%></a>
+</h<%=(niveau_dans_plan + 1)%>>
+<%if !element_plan.reference_article.blank? %>
+<%element_plan.reference_article.each { |ref_article| %>
+  <%=cmp_affiche_article_sans_meta_donnees(CmpArticle.find(ref_article.to_i))%>
+<%}%>
+<%end%>
+<%end%>
+<%if !element_plan.fils.nil?%>
+  <%element_plan.fils.each { |element_plan| %>
+     <%=render :partial=>"formation/partials/afficher_element_formation" , :locals=>{:niveau_dans_plan=>(niveau_dans_plan + 1),:element_plan=>element_plan,:reference_formation=>reference_formation,:numero_page=>numero_page}%>
+  <%}%>
+<%end%>

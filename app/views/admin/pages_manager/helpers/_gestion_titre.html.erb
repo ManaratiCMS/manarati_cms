@@ -1,0 +1,17 @@
+<h1 class="titre">
+  <%if @traduction%>
+  <span class="img_lg">
+    <%=sys_cmp_photo_origine(@langue.sys_cmp_photo)%>
+  </span>
+  <%end%>
+  <a href="/admin/pages_manager/"><%=t("GestionPages.titre_de_gestion")%></a>
+  <%if !@traduction%>
+  <span>:
+  <%=t("GestionPages.Update.titre")%>  <%=@cmp_page.titre%>
+  </span>
+  <%else%>
+    <span>:
+    <%=t("GestionPages.Update.traudction")%>  <%=@cmp_page.titre%>
+    </span>
+  <%end%>
+</h1>

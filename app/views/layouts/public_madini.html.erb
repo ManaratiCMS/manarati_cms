@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="copyright" content="http://madini.ma" />
+  <meta name="author" content="madini.ma" />
+  <meta name="language" content="fr" />
+  <meta http-equiv="content-language" content="fr" />
+  <meta name="description" content="<%=@page.description%>" />
+  <meta name="keywords" content="<%=@page.mots_cle%>" />
+  <title><%=@page.titre%></title> 
+  <%=stylesheet_link_tag "themes/#{@skin}/general/general"  %>
+  <%=yield :style -%>
+  <%=javascript_include_tag "jquery-1.6.min"  %>
+  <%= yield :script -%>
+</head>
+<body>
+<div id="root">
+    		<header class="header">
+    			<div class="wrap">
+    				 
+                                <%=menu_site_web%>
+    			</div>
+      		</header>
+      		<section class="subhead">
+      			<div class="wrap">
+                         <h1><%=@page.titre%></h1>
+                        <div class="subtitle">
+                          <%=@page.description%>
+                        </div>
+                    	</div>
+      		</section>
+                <section class="breadcrumb">
+                  <div class="wrap" >
+        	<nav class="breadcrumb">
+
+                      <%=chemin_page_dans_plan%>
+                     
+                      
+                  </nav>
+        	<nav class="navbar" id="menu_ajax">
+               
+                </nav>
+                    </div>
+                </section>
+
+<div class="wrap_page">
+<%= yield %>
+</div>
+</div>
+
+ 
+</body>
+</html>

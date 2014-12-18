@@ -1,0 +1,2 @@
+module Admin::SitesManagerHelper
+end

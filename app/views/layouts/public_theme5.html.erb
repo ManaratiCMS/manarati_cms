@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <title><%=@page.titre%></title>
+ <meta name="description" content="<%=@page.description%>" />
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+ <link rel="icon" type="image/png" href="/favicon.png" />
+ <meta name="keywords" content="<%=@page.mots_cle%>" />
+ <meta http-equiv="imagetoolbar" content="no" />
+ <%=stylesheet_link_tag "themes/#{@skin}/general/general"  %>
+<%=yield :style -%>
+ <%=javascript_include_tag "jquery-1.6.min"  %>
+<%= yield :script -%>
+</head>
+<body>
+     <%=render :partial=>"/layouts/partials/menu_top"%>
+<div id="head">
+ <div id="head_cen">
+   
+  <div id="head_sup" class="head_pad">
+    <!--
+   <p class="search">
+    <label>SEARCH</label>
+    <input name="search" type="text" class="txt" />
+    <input name="search-btn" type="submit" class="btn" value="SEARCH" />
+   </p>
+    -->
+
+    <h1 class="logo"><a href="/"></a></h1>
+    <div id="sous_menu">
+    <%=menu_site_web(5)%>
+    </div>
+  </div>
+ </div>
+</div>
+<div id="content">
+
+ <div id="content_cen">
+  <div id="content_sup" class="head_pad">
+
+ 
+
+
+<div id="content">
+     <%-if flash[:notice] -%>
+<div class="message_box">
+  <div class="message">
+<p><%= flash[:notice] %></p>
+</div>
+</div>
+<%-end-%>
+<%- if instance_variable_defined?('@content_for_left_area')   -%>
+<div class="left_area" >
+<%=yield :left_area%>
+</div>
+<%-end-%>
+
+<%= yield %>
+</div><!-- fin de content -->
+<%- if instance_variable_defined?('@content_for_zone_droit')   -%>
+<div id="zone_droit">
+<%= yield :zone_droit %>
+</div>
+<%-end-%>
+
+
+
+
+  </div>
+ </div>
+</div>
+<div id="foot">
+ <div id="foot_cen">
+ <h6><a href="/">Manarati</a></h6>
+ <%=menu_principale_avec_separator()%>
+ <p>© 2012. Designed by: <a href="http://www.manarati.net" target="_blank">Manarati.net</a></p>
+ </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

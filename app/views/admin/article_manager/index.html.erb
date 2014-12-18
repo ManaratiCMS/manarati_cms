@@ -1,0 +1,35 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/gestion"   %>
+<%end %>
+
+<h1><%=t("gestion_des_article")%></h1>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("titre_button_ajouter_objet"),"/admin/article_manager/ajouter","bt_ajouter"))%>
+
+<%if @articles.length > 0 -%>
+<div id="datagrid_article" class="cmp_data_grid" style="clear: both">
+<table>
+<thead>
+<tr >
+  <td><%=t("reference")%></td>
+  <td><%=t("description")%></td>
+  <td><%=t("action")%></td>
+</tr>
+</thead>
+<tbody>
+<%@articles.each { |article|%>
+ 
+<tr>
+  <td><%=article.id%></td>
+  <td><%=article.reference%></td>
+  <td class="action">
+    <ul class="action">
+      <li><%= link_to t("modifier"), :action =>"update" , :id => article  %></li>
+      <li><%= link_to t("supprimer"), :action =>"supprimer" , :id => article,:confirm=>"aa"  %></li>
+    </ul>
+    </td>
+</tr>
+<%}%>
+</tbody>
+</table>
+</div>
+<%end-%>

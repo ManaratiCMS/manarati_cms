@@ -1,0 +1,12 @@
+<%=default_zones%>
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/produit_manager/ajouter" %>
+<%end%>
+<h1><%=t("ajouter_un_element plan de formation")%></h1>
+<div style="float: left">
+<%=render :partial=>"admin/formation_manager/partials/form_element_plan"%>
+</div>
+<% if !@ref_element.blank? %>
+<%=module_gestion_articles("formation_#{@id_formation}_#{@ref_element}","#{@id_formation}_#{@ref_element}","/admin/formation_manager/ajouter_element_plan")%>
+<%end%>
+ 

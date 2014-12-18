@@ -1,0 +1,13 @@
+<%content_for :style do -%>
+<%=importation_css_composants(cmp_composants)-%>
+<%end %>
+
+<%- content_for :script do -%>
+<%=importation_js_composants(cmp_composants)%>
+<%-end-%>
+<a name="<%=obj.id%>"></a>
+<div class="cmp_video_element_cour">
+  <%cmp_composants.each_with_index  { |composant,i|%>
+    <%=cmp_affiche_composant(composant)%>
+  <%}%>
+</div>

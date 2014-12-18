@@ -1,0 +1,98 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  GestionMedias:
+    titre_index: Gestion de Media
+    titre_button_ajouter : Ajouter un Media
+    type_media : Type Media
+    Ajouter :
+      titre_ajouter : Ajouter un Media
+  prix : Prix
+  GestionMembre:
+    nom_gestion : Gestion de Membre
+    titre_button_ajouter_membre : Ajouter un Membre
+    Ajouter :
+      titre_ajouter_membre : Ajouter un Membre
+  GestionPages :
+    Ajouter :
+      titre_ajouter_une_page : Ajouter une Pages
+      msg_1 : Une Page Contient Plusieur Article
+
+  hello: "Hello world"
+  categorie: Categorie
+  sous_categorie : Sous Categorie
+  text_alt : Text Alternatif
+  width : Largeur
+  height : Hauteur
+  mot_de_passe : Mot de passe
+  accueil: Accueil
+  haut : haut
+  ajouter_un_element plan de formation : Ajouter un element dans le  plan de formation
+  ajouter_un_element_plan : Ajouter un element de plan
+  bas : bas
+  gauche : gauche
+  droit : droit
+  editer : editer
+  lien : Lien Http
+  parametre : Parametre
+  gestion_de_pages : Gestion de Pages
+  enregistrer : Enregistrer
+  pages : Pages
+  titre_lien_page_manager : Gestion de Pages
+  titre_button_ajouter_page : titre_button_ajouter_page
+  plan : plan
+  formation: Formation
+  contact: Contact
+  inscription : Inscription
+  nom : Nom
+  prenom : Prénom
+  email : E-Mail
+  ajouter : Ajouter
+  designation : Action
+  professeur : Professeur
+  description : Description
+  action : action
+  modifier : Modifier
+  supprimer : Supprimer
+  presentation: presentation
+  administration : administration
+  ok : OK
+  suivant : Suivant
+  gestion_des_article: Gestion des Article (Diapo)
+  information_generale : Information Générale
+  reference_article : Référence Article
+  reference : Reference
+  #Menu Principale
+  titre_accueil_menu_principale : titre_accueil_menu_principale
+  titre_formation_menu_principale : titre_formation_menu_principale
+  titre_contact_menu_principale : titre_contact_menu_principale
+  titre_inscription_menu_principale: titre_inscription_menu_principale
+  titre_presentation_menu_principale: titre_presentation_menu_principale
+  titre_page_admin: titre_page_admin
+  #Page Titre et Description des Page
+  titre_page_inscription_membre: Inscription Membre
+  description_page_inscription_membre: Inscription de Membre dans la Solution Manarati
+  description_page_accueil : La Page Accueil de Site Essarraj Fouad Pour La formation en ligne
+  titre_page_presentation : titre_page_presentation
+  description_page_presentation : description_page_presentation
+#  Menu Administration
+  bureau: bureau
+  titre_lien_bureau_admin: titre_lien_bureau_admin
+  gestion_de_formation: Gestion de Formation
+  titre_lien_gestion_produit: titre_lien_gestion_produit
+  gestion_des_articles: Gestion des articles
+  titre_lien_gestion_articles: titre_lien_gestion_articles
+  gestion_des_membres: Gestion des membres
+  titre_lien_gestion_membres: titre_lien_gestion_membres
+  
+# Gestion de Produit : Formation
+  gestion_de_roduit : Gestion de Formation
+  titre_button_ajouter_objet : Ajouter une Formation
+  modification_de_produit : Modification de la formation 
+  ajouter_un_produit : Ajouter Une Formation
+ # Composants_Atomique
+ #Cmpt Titre
+  titre : Titre
+  texte_alternatif : Texte Alternatif
+  valeur : Valeur

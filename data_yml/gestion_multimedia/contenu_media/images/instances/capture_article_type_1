@@ -1,0 +1,6 @@
+--- !ruby/object:Image 
+reference: capture_article_type1
+nom: capture_article_type1
+text_alt: Image Descriptiof de l'article Type 1
+reference_image: diapo1
+type_image: png

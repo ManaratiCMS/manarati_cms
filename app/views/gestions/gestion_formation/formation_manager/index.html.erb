@@ -1,0 +1,81 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionFormationsG2.Pages.Index.titre")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionFormationsG2.Pages.Ajouter.titre"),"/gestions/gestion_formation/formation_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 100px" ></td>
+          <td><%=t("GestionFormationsG2.Label.titre")%></td>
+          <td style="width: 100px"><%=t("GestionFormationsG2.Label.objectif")%></td>
+          <td style="width: 200px"><%=t("Gestions.Label.action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@formations.each_with_index  { |formation,i| %>
+      <tr>
+        <td><%=cmp_photo_capture(formation.cmp_photo)%></td>
+        <td><%=formation.titre%></td>
+        <td><%formation.objectif%> </td>
+        <td>
+          <div class="action">
+            <a href="/gestions/gestion_formation/formation_manager/edit/<%=formation.id%>" title="<%=t("Gestions.Action.editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_formation/formation_manager" ,
+            :id=>formation.id},:title=> t("Gestions.Action.supprimer"), :confirm => t("GestionFormationsG2.msg.confirmation_suppresion")
+            %>
+            <%end%>
+
+           <%if has_role?(:gestion_plan_formation)%>
+           <a href="/gestions/gestion_cours_videos/plan_formation_manager/index/<%=formation.id%>" title="Plan de Formation"><span class="plan_formation"> </span></a>
+           <%end%>
+           <%if has_role?(:gestion_element_cours)%>
+           <a href="/gestions/gestion_cours_videos/element_cours_manager/index/<%=formation.id%>" title="Contenu"><span class="contenu_formation"> </span></a>
+           <%end%>
+
+
+             <%- if i > 0-%>
+          <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/gestions/gestion_formation/formation_manager",
+          :id => formation.id},
+          :title=> t("Gestions.Action.deplacer_en_haut") %>
+          <%-end-%>
+          <%- if i < (@formations.size-1) -%>
+          <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/gestions/gestion_formation/formation_manager",
+          :id => formation.id},
+          :title=> t("Gestions.Action.deplacer_en_bas") %>
+          <%-end-%>
+
+            <% if permitted_to? :setpublic and formation.protection == 0 %>
+              <%= link_to "<span class='private'></span>",{
+              :action =>"setpublic",
+              :controller=>"/gestions/gestion_formation/formation_manager" ,
+              :id=>formation.id},:title=> t("Gestions.msg.setpublic")
+              %>
+             <%-end-%>
+             <% if permitted_to? :setprivate and formation.protection == 1 %>
+               <%= link_to "<span class='public'> </span>",{
+              :action =>"setprivate",
+              :controller=>"/gestions/gestion_formation/formation_manager" ,
+              :id=>formation.id},:title=> t("Gestions.msg.setprivate")
+              %>
+             <%end%>
+
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

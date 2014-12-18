@@ -1,0 +1,26 @@
+<tr>
+  <td>
+     <%=cmp_button(CmpButton.new(t("haut"), t("titre_button_ajouter_objet"),"/admin/formation_manager/ajouter","bt_ajouter"))%>
+  </td>
+  <td>
+        <%=cmp_button(CmpButton.new(t("bas"), t("titre_button_ajouter_objet"),"/admin/formation_manager/ajouter","bt_ajouter"))%>
+  </td>
+  <td>
+        <%=cmp_button(CmpButton.new(t("droit"), t("titre_button_ajouter_objet"),"/admin/formation_manager/ajouter","bt_ajouter"))%>
+  </td>
+  <td>
+        <%=cmp_button(CmpButton.new(t("gauche"), t("titre_button_ajouter_objet"),"/admin/formation_manager/ajouter","bt_ajouter"))%>
+  </td>
+  <td><a href="<%=element_plan.lien%>" > <%=element_plan.nom%></a></td>
+  <td>
+    <%=cmp_button(CmpButton.new(t("ajouter"), t("titre_button_ajouter_objet"),"/admin/formation_manager/ajouter","bt_ajouter"))%>
+  </td>
+  <td>
+    <%=cmp_button(CmpButton.new(t("editer"), t("titre_button_ajouter_objet"),"/admin/formation_manager/ajouter","bt_ajouter"))%>
+  </td>
+</tr>
+<%if !element_plan.fils.nil?%>
+  <%element_plan.fils.each { |element_plan| %>
+  <%=render :partial=>"admin/formation_manager/partials/edit_element_plan" , :locals=>{:element_plan=>element_plan}%>
+  <%}%>
+<%end%>

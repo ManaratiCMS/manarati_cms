@@ -1,0 +1,80 @@
+<%content_for :style do -%>
+ <%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/gestion"   %>
+ <%=importation_css_articles(articles)-%>
+<%end %>
+<%- content_for :script do -%>
+<%=importation_js_articles(articles)%>
+<%-end-%>
+
+<div class="liste-articles">
+<%- if permitted_to? :ajouter -%>
+<%=cmp_button(CmpButton.new(t("ajouter"),t("GestionArticles.Ajouter.titre"),"/admin/article_manager/ajouter?id_page=#{id_page}","bt_ajouter"))%>
+<%end%>
+<%if @articles.length > 0 -%>
+<div id="datagrid_article" class="cmp_data_grid" style="clear: both">
+<table>
+
+<tbody>
+<%@articles.each { |article|%>
+
+  <td class="action">
+    <div class="action">
+
+      <% if @articles.size > 1 %>
+      <%- if permitted_to? :move_up -%>
+      <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/admin/article_manager",
+          :id => article},
+          :title=> t("precedent") %>
+      <%end%>
+       <%- if permitted_to? :move_down -%>
+      <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/admin/article_manager",
+          :id => article},
+          :title=> t("suivant") %>
+      <%end%>
+      <%end%>
+      
+      <%- if permitted_to? :update -%>
+        <%  if !traduction %>
+        <%= link_to "<span class='editer'> </span>",{
+            :action =>"update" ,
+            :controller=>"/admin/article_manager",
+            :id => article,
+            :ref_pocesseur=>@ref_pocesseur}, :title=> t("editer") %>
+         <%else%>
+            <%= link_to "<span class='editer_#{ref_langue}'> </span>",{
+            :action =>"update" ,
+            :controller=>"/admin/article_manager",
+            :id => article,
+            :ref_langue => ref_langue,
+            :ref_pocesseur=>@ref_pocesseur}, :title=> t("editer") %>
+         <%end%>
+      <%end%>
+      <%- if permitted_to? :supprimer -%>
+      <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"supprimer",
+            :controller=>"/admin/article_manager" ,
+            :id => article,
+            :ref_pocesseur=>@ref_pocesseur},:title=> t("supprimer"), :confirm => t("confirmation_suppresion")
+           %>
+      <%end%>
+   
+    </div>
+    </td>
+    <tr>
+  <td>
+    <%=cmp_affiche_article_sans_meta_donnees(article)%>
+  </td>
+</tr>
+<tr>
+</tr>
+
+<%}%>
+</tbody>
+</table>
+</div>
+<%end-%>
+</div>

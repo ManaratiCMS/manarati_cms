@@ -1,0 +1,36 @@
+<%content_for :script do%>
+<script type="text/javascript">
+$(function() {
+    $(".<%=obj.id%>").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        visible : <%=(formations.size > 1)?2:1%>,
+        circular: true
+    });
+});
+</script>
+<%end%>
+ 
+<!-- <a class="prev" href="#">&nbsp;</a>-->
+<div  class="<%=obj.id%> <%=obj.type%> <%=obj.reference%>" >
+  <%-if !obj.titre.nil? and obj.titre != ""-%>
+  <h2><%=obj.titre%></h2>
+  <%-end-%>
+  <ul class="formations">
+    <%formations.each { |formation| %>
+      <li class="formation">
+       
+        <dl class="detail">
+          <dt>Formation</dt>
+          <dd><%=formation.titre%></dd>
+        </dl>
+        <div class="menu">
+          <a href="/formation/<%=formation.reference%>"><%=t("support_de_cours")%></a>
+        </div>
+      </li>
+    <%}%>
+  </ul><%-if formations.size > 2-%>
+<a class="next" href="#">&nbsp;</a>
+<%-end-%>
+
+</div>

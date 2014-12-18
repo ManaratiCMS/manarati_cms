@@ -1,0 +1,9 @@
+<% content_for :style  do   %>
+    <%=stylesheet_link_tag "themes/public_sys/articles/cmp_message" %>
+<% end %>
+<a name="<%=obj.id%>"></a>
+<div class="message_box">
+  <div class="message">
+<%=obj.texte%>
+    </div>
+</div>

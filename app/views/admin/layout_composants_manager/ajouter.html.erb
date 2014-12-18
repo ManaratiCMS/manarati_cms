@@ -1,0 +1,25 @@
+<%content_for :style do %>
+       <%=stylesheet_link_tag "themes/#{@skin}/admin/articles_manager/ajouter" %>
+<%end%>
+<div class="header_gestion">
+<h1 class="titre"><%=t("GestionArticles.Ajouter.titre")%></h1>
+</div>
+<div class="formulaire ajouter_article">
+<ul class="fichette">
+<%@liste_article_type.each { |article_type| %>
+<%if article_type.role.blank? or (!article_type.role.blank? and has_role?(article_type.role.to_sym) )  %>
+<li>
+  <div class="titre" >
+  <a href="/admin/layout_composants_manager/ajouter_etape_2?ref_art=<%=article_type.reference%>&id_parent=<%=@id_parent%>&nom_zone=<%=@nom_zone%>&w=<%=@width%>&h=<%=@height%>">
+     <%=article_type.nom%>
+    </a></div>
+  <div class="photo" >
+    <a href="/admin/layout_composants_manager/ajouter_etape_2?ref_art=<%=article_type.reference%>&id_parent=<%=@id_parent%>&nom_zone=<%=@nom_zone%>&w=<%=@width%>&h=<%=@height%>">
+      <%=sys_cmp_photo_capture(article_type.sys_cmp_photo)%>
+    </a>
+  </div>
+</li>
+<%end%>
+<%}%>
+</ul>
+</div>

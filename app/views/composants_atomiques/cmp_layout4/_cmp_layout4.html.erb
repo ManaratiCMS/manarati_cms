@@ -1,0 +1,62 @@
+<div class="<%=obj.reference%>">
+
+<div class="header_zone1">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "header_zone1"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+</div>
+<div class="header_zone2">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "header_zone2"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+</div>
+<!-- End Header -->
+<!-- Begin Left Column -->
+
+<div class="leftcolumn_zone">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "leftcolumn_zone"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+</div>
+<!-- End Left Column -->
+<!-- Begin Right Column -->
+<%
+artiles_right = Array.new
+articles.each { |article|
+if article.nom_zone == "rightcolumn_zone"
+artiles_right << article
+end
+} unless articles.nil?
+%>
+<% if  artiles_right.length > 0 %>
+<div class="rightcolumn_zone">
+
+
+<%-artiles_right.each { |article|-%>
+<%-if article.nom_zone == "rightcolumn_zone"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} -%>
+
+
+ </div>
+<%end%>
+<!-- End Right Column -->
+
+
+<div class="footer_zone">
+<%-articles.each { |article|-%>
+<%-if article.nom_zone == "footer_zone"-%>
+<%=cmp_affiche_article_sans_meta_donnees(article)%>
+<%-end-%>
+<%-} unless articles.nil?-%>
+</div>
+
+
+</div>

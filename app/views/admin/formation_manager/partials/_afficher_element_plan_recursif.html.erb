@@ -1,0 +1,20 @@
+<a href="/formation/<%=formation.reference%>/<%=formation.plan_formation.getPageParNumeroPage(element_plan.numero_page).reference%>#<%=element_plan.code%>" > <%=element_plan.nom%></a>
+<div class="action" style="float: right">
+  <a href="/admin/formation_manager/modier_niveau_element_plan?type_action=droit&ref_element_plan=<%=element_plan.code%>&id=<%=formation.id%>" >Droit</a>
+  <a href="/admin/formation_manager/modier_niveau_element_plan?type_action=gauche&ref_element_plan=<%=element_plan.code%>&id=<%=formation.id%>" >gauche</a>
+  <a href="/admin/formation_manager/modier_niveau_element_plan?type_action=haut&ref_element_plan=<%=element_plan.code%>&id=<%=formation.id%>" >haut</a>
+  <a href="/admin/formation_manager/modier_niveau_element_plan?type_action=bas&ref_element_plan=<%=element_plan.code%>&id=<%=formation.id%>" >bas</a>
+  <a href="/admin/formation_manager/ajouter_element_plan?ref_element_frere=<%=element_plan.code%>&id=<%=formation.id%>" >ajouter</a>
+  <a href="/admin/formation_manager/supprimer_element_plan?ref_element=<%=element_plan.code%>&id=<%=formation.id%>" >supprimer</a>
+  <a href="/admin/formation_manager/ajouter_element_plan?ref_element=<%=element_plan.code%>&id=<%=formation.id%>" >update</a>
+</div>
+<%if !element_plan.fils.nil?%>
+  <ul>
+  <%element_plan.fils.each { |element_plan| %>
+     <li>
+     <%#=render :partial=>"formation/partials/rubrique_plan" , :locals=>{:element_plan=>element_plan}%>
+        <%=render :partial=>"admin/formation_manager/partials/afficher_element_plan_recursif" , :locals=>{:element_plan=>element_plan,:formation=>formation}%>
+     </li>
+  <%}%>
+  </ul>
+<%end%>

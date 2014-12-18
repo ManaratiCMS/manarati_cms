@@ -1,0 +1,36 @@
+## YAML Template. GestionFormations.msg.editer_avec_succes
+---
+fr:
+  GestionMenus :
+    msg:
+      erreur_ajouter: Erreur lors de l'ajout de lien
+      erreur de suppression : Erreur lors de suppresion de lien
+      supprimer_avec_succes : Lien supprimée avec succés
+      confirmation_suppresion : Êtes-vous sûr de vouloir supprimer ce lien ?
+      ajouter_avec_succes : Lien ajouté avec succés
+      editer_avec_succes : Lien édité avec succés
+      page_en_cour_traduction : Page en attente de Traduction
+      erreur_edition : Erreur lors de la mise à jour
+    Ajouter :
+      titre : Ajouter un Lien
+    Update :
+      titre : Mise à jour 
+    infoGenerale : Informations Générales
+    Pages:
+      New :
+        titre : Ajouter un Lien
+      Index :
+        titre : Gestion de Menu
+      Ajouter:
+        titre : Ajouter un lien
+    Label :
+      lien : Lien
+      titre : Titre
+      page : Page
+      nom : Nom
+      role : Role
+ 
+
+     
+     
+  

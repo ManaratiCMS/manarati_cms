@@ -1,0 +1,41 @@
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/general/gestion" -%>
+<%-end -%>
+<div class="header_gestion">
+<h1><%=t("GestionFormations.titre_de_gestion")%></h1>
+<% if permitted_to? :new %>
+<%=cmp_button(CmpButton.new(t("ajouter"), t("GestionFormations.Ajouter.titre"),"/admin/formation_manager/new","bt_ajouter"))%>
+<%end%>
+</div>
+
+<div class="cmp_data_grid">
+  <table>
+    <thead>
+      <tr>
+          <td><%=t("nom")%></td>
+          <td><%=t("description")%></td>
+          <td><%=t("action")%></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%@formations.each { |formation|%>
+      <tr>
+        <td><%=formation.designation%></td>
+        <td><!-- ss --> <%=formation.description%> </td>
+        <td>
+          <div class="action">
+            <a href="/admin/formation_manager/edit/<%=formation.id%>" title="<%=t("editer")%>"><span class="editer"> </span></a>
+            <% if permitted_to? :delete %>
+            <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/admin/formation_manager" ,
+            :id=>formation.id},:title=> t("supprimer"), :confirm => t("GestionFormations.msg.confirmation_suppresion")
+            %>
+            <%end%>
+           </div>
+        </td>
+      </tr>
+      <%-}-%>
+    </tbody>
+  </table>
+</div>

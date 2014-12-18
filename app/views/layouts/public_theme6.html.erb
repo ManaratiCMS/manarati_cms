@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <title><%=@page.titre%></title>
+ <meta name="description" content="<%=@page.description%>" />
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+ <link rel="icon" type="image/png" href="/favicon.png" />
+ <meta name="keywords" content="<%=@page.mots_cle%>" />
+ <meta http-equiv="imagetoolbar" content="no" />
+ <%=stylesheet_link_tag "themes/#{@skin}/general/general"  %>
+<%=yield :style -%>
+ <%=javascript_include_tag "jquery-1.6.min"  %>
+<%= yield :script -%>
+</head>
+<body>
+  <%render :partial=>"/layouts/partials/menu_top"%>
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- header -->
+	<div id="header">
+		<!-- header_logo -->
+		<div id="header_logo">
+			<a id="logo" href="/">Manarati | Web <span class="description">Solution !</span></a>
+		</div>
+		<!-- /header_logo -->
+		<!-- menu -->
+		<div id="menu">
+			<!-- header_search -->
+			<div id="header_search">
+				<form action="#" method="get">
+					<fieldset>
+						<input type="text" value="Search..." name="s" id="main_search_val" onclick="this.value=''" onblur="if(this.value=='') this.value='Search...';" />
+                                                <input type="image" src="/stylesheets/themes/theme6/general/images/button_search.gif" alt="search" id="main_search_sub" />
+					</fieldset>
+				</form>
+			</div>
+			<!-- /header_search -->
+			<!-- mainmenu -->
+			<div id="mainmenu">
+                           <%=menu_site_web%>
+			</div>
+			<!-- /mainmenu -->
+		</div>
+		<!-- /menu -->
+	</div>
+	<!-- /header -->
+	<!-- body -->
+	<div id="body">
+		<!-- body_top -->
+		<div id="body_top">
+
+                 <%-if flash[:notice] -%>
+		
+                  <div class="message_box">
+                    <div class="message">
+                  <p><%= flash[:notice] %></p>
+                  </div>
+                  </div>
+	
+                <%-end-%>
+			<!-- body_end -->
+
+          <div id="body_end">	<!-- content -->
+	<div id="content" class="narrowcolumn">
+                <%- if instance_variable_defined?('@content_for_left_area')   -%>
+                <div class="left_area" >
+                <%=yield :left_area%>
+                </div>
+                <%-end-%>
+
+                <%= yield %>
+               
+                <%- if instance_variable_defined?('@content_for_zone_droit')   -%>
+                <div id="zone_droit">
+                <%= yield :zone_droit %>
+                </div>
+                <%-end-%>
+	</div>
+	<!-- /content -->
+
+
+
+
+			</div>
+			<!-- /body_end -->
+		</div>
+		<!-- /body_top -->
+	</div>
+	<!-- /body -->
+	<!-- footer_block -->
+       
+	<div id="footer_block">
+           <!--
+	<div id="footer_sidebar">
+		<div class="footer_sidebar_widgets">
+			<ul>
+
+				<li class="widget_archive">
+					<h2 class="widgettitle">Archives</h2>
+					<ul>
+	<li><a href='#' title='May 2009'>May 2009</a></li>
+	<li><a href='#' title='April 2009'>April 2009</a></li>
+	<li><a href='#' title='March 2009'>March 2009</a></li>
+					</ul>
+				</li>
+
+							</ul>
+		</div>
+
+		<div class="footer_sidebar_widgets">
+			<ul>
+
+				<li class="widget_links">
+					<h2 class="widgettitle">Blogrolls</h2>
+<ul>
+<li><a href="#">Development Blog</a></li>
+<li><a href="#">Documentation</a></li>
+<li><a href="#">Plugins</a></li>
+<li><a href="#">Suggest Ideas</a></li>
+<li><a href="#">Support Forum</a></li>
+<li><a href="#">Themes</a></li>
+<li><a href="#">WordPress Planet</a></li>
+</ul>
+				</li>
+
+							</ul>
+		</div>
+	
+	</div>
+
+	<div id="footer_about">
+		<h2>About Us</h2>
+		<p>
+                  <img src="/stylesheets/themes/theme6/images/pic_about.gif" alt="" /> <strong>Aenean laoreet tincidunt condimentum.</strong> Praesent eget mollis dolor. Aliquam erat volutpat. Nunc orci justo, tincidunt non pretium at, posuere feugiat ante. Morbi pellentesque porttitor enim aliquam tempus. Ut at nisl urna. Sed fermentum velit eu neque viverra vel cursus risus.</p>
+		<p class="more"><a href="#">Read More</a></p>
+	</div>
+      
+	
+
+	
+	 --></div>
+</div>
+<!-- /wrapper -->
+<!-- footer_wrapper -->
+<div id="footer_wrapper">
+	<!-- footer -->
+	<div id="footer">
+		<%=menu_site_web%>
+		<p class="copyrights">Copyright Information Goes Here. All Rights Reserved. <br />Theme Developed by: <a href="http://www.manarati.net">Manarati</a></p>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /footer_wrapper -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+
+<div id="content">
+
+
+
+
+
+
+
+  </div>
+ </div>
+</div>
+<div id="foot">
+ <div id="foot_cen">
+ <h6><a href="/">Manarati</a></h6>
+ <%=menu_principale_avec_separator()%>
+ <p>© 2012. Designed by: <a href="http://www.manarati.net" target="_blank">Manarati.net</a></p>
+ </div>
+</div>
+</body>
+</html>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

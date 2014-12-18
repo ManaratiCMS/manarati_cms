@@ -1,0 +1,55 @@
+
+
+<%content_for :script do %>
+   <%= javascript_include_tag 'libs/jquery/plugin/jquery.li-scroller.1.0' %>
+<%end%>
+<%content_for :style do %>
+    <%= stylesheet_link_tag "skins/default/home/helper/li-scroller"  %>
+    <%= stylesheet_link_tag "skins/default/home/ticker_product"  %>
+<%end%>
+
+
+<script type="text/javascript">
+  $(function(){ $("ul#ticker01").liScroll({travelocity: 0.03}); });
+ 
+</script>
+
+<ul class="liste_produit" id="ticker01">
+<%@products.each do |product|%>
+  <li class="main-box fich_product_ticker">
+   <a href="/products/detail/<%=product.reference%>" title="<%#=title%>" >
+
+     <div class="photo">
+     <%=image_xys_tag(first_photo_by_owner(product.reference),{:format=>'medium'})%>
+     </div>
+  <div>
+     <div class="classification">
+         <p class="titre_marque_niveau_2"> <%=product.marque_expression%></p>
+         <p class="titre_marque_niveau_1"> <%=product.modele_expression%></p>
+     </div>
+   
+     <div class="prix">
+        <% if product.details_price[1]=="0" %>
+        <div class="produit_prix">
+          <p> <%=product.price%> :<%=product.details_price[0]%></p>
+          <p> <%=product.price*@product_config['taux_de_change_euro_>>_usd'].to_f  %> : <%=@text['price']['USD']%></p>
+       </div>
+     </div>
+     </div>
+    
+   
+    
+     <%end%>
+
+   </a>
+       
+  </li>
+<%end%>
+
+
+</ul>
+
+
+
+
+

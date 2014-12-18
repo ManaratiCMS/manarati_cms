@@ -1,0 +1,2 @@
+class ImageLibrary < CmpPhoto
+end

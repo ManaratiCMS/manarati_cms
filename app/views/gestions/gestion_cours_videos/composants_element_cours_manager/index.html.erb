@@ -1,0 +1,168 @@
+<%content_for :style do %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/general/update_page" %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/articles/art_generales" %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/libs/jquery-ui/jquery.ui.all" %>
+<%=stylesheet_link_tag "themes/#{@skin_admin}/libs/plugin_jquery/cleeditor/jquery.cleditor" %>
+<%=stylesheet_link_tag "themes/public_sys/articles/cmp_menu_fixed_fade" %>
+<%end%>
+
+<%content_for :script do %>
+<%=javascript_include_tag "general/ajax_utils"  %>
+<%=javascript_include_tag "general/update_page"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.core"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.widget"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.mouse"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.draggable"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.position"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.resizable"  %>
+<%=javascript_include_tag "libs/jquery-ui/jquery.ui.dialog"  %>
+<%=cmp_composant_add_library("editeur_wysiwyg_paragraphe")%>
+<%=javascript_include_tag "articles/cmp_menu_fixed_fade"  %>
+<%end%>
+
+<div id="loading">Loging</div>
+
+<div id="nav">
+            <ul>
+              <li><a class="admin" href="/gestions/gestion_cours_videos/element_cours_manager/index/<%=@element_cour.formation_g2_id%>" title="Admin"><span></span></a></li>
+                <li><a class="top" href="#top"><span></span></a></li>
+                <li>
+                    <a href="/gestions/gestion_cours_videos/composants_element_cours_manager/index/<%=@element_cour.id%>?tc=video" title="">Contenu Video</a>
+                </li>
+                <li>
+                    <a href="/gestions/gestion_cours_videos/composants_element_cours_manager/index/<%=@element_cour.id%>?tc=html" title="">Contenu Html</a>
+                </li>
+            </ul>
+</div>
+<div id="boite_outils">
+<div class="formulaire ajouter_article">
+<ul class="fichette">
+<%@liste_article_type.each { |article_type| %>
+<%if article_type.role.blank? or (!article_type.role.blank? and has_role?(article_type.role.to_sym) )  %>
+<li>
+  
+  <div class="photo" >
+    <a title="<%=article_type.nom%>" class="add_cmp" href="/gestions/gestion_cours_videos/composants_element_cours_manager/ajouter_etape_2?tc=<%=@type_contenu%>&&ref_art=<%=article_type.reference%>&id_parent=<%=@id_parent%>">
+      <%=sys_cmp_photo_capture(article_type.sys_cmp_photo)%>
+    </a>
+  </div>
+</li>
+<%end%>
+<%}%>
+</ul>
+</div>
+</div>
+
+
+<div id="form_update_composant"></div>
+<div class="formulaire ajouter_article">
+<%content_for :style do -%>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/ajouter" %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion_layout_composant/ajouter" %>
+<%=stylesheet_link_tag "themes/#{@skin}/admin/gestion/gestion"   %>
+<%=importation_css_composants(@cmp_composants)-%>
+<%end %>
+
+<%- content_for :script do -%>
+<%=importation_js_composants(@cmp_composants)%>
+<%-end-%>
+
+
+
+<div class="liste-articles">
+
+
+<%
+if @cmp_composants.length > 0
+  class_composants = "composant"
+else
+  class_composants = "articles_vides"
+end
+%>
+
+<div id="composants" class="<%=class_composants%>" style="clear: both">
+
+    <%@cmp_composants.each_with_index  { |article,i|%>
+
+  <div class="article_conteneur" id="article_<%=article.id%>">
+    <div class="action" id="action_article_<%=article.id%>">
+     
+
+      <% if (i!= 0 and @cmp_composants.length > 1 ) %>
+      <%= link_to "<span class='move_up'> </span>",{
+          :action =>"move_up" ,
+          :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager",
+          :id => article
+           },
+          :title=> t("precedent") %>
+      <%end%>
+
+      <% if (i!= (@cmp_composants.length()  ) and @cmp_composants.length > 1  )%>
+      <%= link_to "<span class='move_down'> </span>",{
+          :action =>"move_down" ,
+          :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager",
+          :id => article},
+          :title=> t("suivant") %>
+      <%end%>
+
+      <% if article.cmp_article_type.have_form == 1  %>
+      <%= link_to "<span class='editer'> </span>",{
+          :action =>"update" ,
+          :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager",
+          :id => article},
+          :rel =>article.id,
+            :class=>"editer", :title=> t("editer") %>
+      <%end%>
+
+
+      <%= link_to "<span class='supprimer'> </span>",{
+            :action =>"delete",
+            :controller=>"/gestions/gestion_cours_videos/composants_element_cours_manager" ,
+            :id => article,
+             :id_element =>@element_cour.id,
+            :tc=> @type_contenu },
+            :class=>"supprimer",
+            :rel =>article.id,
+            :title=> t("supprimer"), :confirm => t("confirmation_suppresion")
+           %>
+      
+    </div>
+    <div id="contenu_article_<%=article.id%>">
+
+
+    <%=cmp_affiche_composant(article)%>
+
+    </div>
+    </div>
+<%}%>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<%=hidden_field_tag "article[id]",@element_cour.id%>
+  <div style="display: none" class="submit">
+<%=submit_tag t'ok'%>
+</div>
+ 
+</div>
+
