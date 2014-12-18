@@ -1,0 +1,87 @@
+/* 
+    Document   : detail
+    Created on : 22 nov. 2010, 22:21:52
+    Author     : fouad
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#content{
+    width: 700px !important;
+}
+.formation {
+       float: left;
+    margin-bottom: 10px;
+}
+  
+.box_droite .plan_formation{
+/*    position: fixed;*/
+    width: 220px;
+}
+.formation .description, .plan_formation {
+    float: left;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -moz-box-shadow: 0 1px 3px #888888;
+    background: none repeat scroll 0 0 #CBCACA;
+    border: 1px solid #B3B3B6;
+    clear: both;
+    color: #444656;
+    font-size: 13px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    padding: 10px;
+}
+h3 , .formateur{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+    text-shadow: 0 1px 0 white;
+}
+
+.formation .formateur {
+    clear: both;
+    float: left;
+    padding: 7px;
+}
+
+
+.formation h2{
+
+}
+.formation h3{
+
+}
+.formation h4{
+
+}
+.formation h5{
+
+}
+.formation h6{
+
+}
+
+.pagination .page_suivant{
+    float: right;
+}
+.pagination .page_precedent{
+    float: left;
+
+}
+
+.plan_formation ul{
+
+}
+.plan_formation ul li{
+  margin: 10px 0px;
+}
+.plan_formation a.page_formation_active{
+ color: #eee;
+}
+.plan_formation a{
+ color: #000;
+}

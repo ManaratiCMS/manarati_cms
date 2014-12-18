@@ -1,0 +1,15 @@
+.article .data_creation{
+    float: right;
+    float:right;
+margin:13px 0;
+}
+.article .titre1{
+   float:left;
+margin:10px 0;
+
+}
+.article .paraphraphe1{
+       float: left;
+       clear: both;
+
+}

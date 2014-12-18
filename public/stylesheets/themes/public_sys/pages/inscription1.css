@@ -1,0 +1,32 @@
+/* 
+    Document   : inscription
+    Created on : 7 nov. 2010, 00:39:02
+    Author     : fouad
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.form_inscription{
+    list-style: none;
+}
+.form_inscription li{
+padding:4px;
+}
+.form_inscription label{
+float:left;
+width:70px;
+}
+.form_inscription input {
+    width:180px;
+}
+
+.form_inscription input.submit{
+    width:100px;
+}
+
+

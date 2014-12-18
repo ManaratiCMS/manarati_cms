@@ -1,0 +1,30 @@
+/*v900w*/
+.cmp_layout2_colone_egaux{
+ float: left;
+ width: 900px;
+margin-top: 10px;
+}
+
+
+.cmp_layout2_colone_egaux .zone1 {
+margin: 0px 10px 0px 10px;
+ width:  400px;
+ float: left;
+ border-right: dotted 1px #ABC;
+ 
+ 
+
+}
+.cmp_layout2_colone_egaux .zone1 .article{
+    margin:  11px 20px 0px 20px;
+
+}
+
+
+
+.cmp_layout2_colone_egaux .zone2 {
+ float: left;
+ margin: 1px 0px 0px 0px;
+ width:  450px;
+}
+ 

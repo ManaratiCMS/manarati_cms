@@ -1,0 +1,150 @@
+/* Article */
+
+.article {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+/* Paragraphe */
+
+.art_paragraphe p {
+    margin-bottom: 5px;
+    text-align:justify;
+    padding:5px 0 5px 0;
+    float: left;
+    margin:0px;
+    font-size: 14px;
+    clear: both;
+
+    
+}
+
+
+.art_paragraphe ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+        clear: both;
+        margin: 0px;
+}
+
+.art_paragraphe ul li {
+    list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding: 0 0 10px;
+}
+
+.art_paragraphe p img{
+	border: none;
+	padding: 5px ;
+	}
+.art_paragraphe ol {
+	list-style-type: decimal;
+	line-height: 18px;
+	margin: 0px;
+	padding: 0px 0px 10px 35px;
+}
+
+/* art_image */
+
+.art_image img{
+ border: 1px solid #AAA;
+}
+/* art_titre */
+h2.art_titre {
+    clear: both;
+    font-family: 'FertigoProRegular', Georgia, Arial, sans-serif;
+    margin: 7px 0px;
+    text-shadow: 0px 1px 1px #666;
+    font-size: 20px;
+}
+.art_titre h1, h3, h4 {
+    clear: both;
+    font-family: 'FertigoProRegular', Georgia, Arial, sans-serif;
+    margin: 7px 0px;
+    text-shadow: 0px 1px 1px #666;
+}
+.art_titre h1 {
+    font-size: 22px;
+  
+}
+.art_titre h2 {
+    margin: 0px 0px 10px;
+}
+
+/*
+.art_paragraphe h1, h2, h3, h4 {
+padding:0px;
+float:left;
+margin:10px 0 10px 0;
+}
+
+.article h1 {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.article h2 {
+    font-size: 20px;
+    clear: both;
+}
+
+.article h3, h4 {
+    font-size: 16px;
+}
+.article h1 a, h3 a, h1 a:visited, h3 a:visited  {
+text-decoration: none;
+}
+.article h1 a:hover, h3 a:hover {
+text-decoration: underline;
+}
+
+.article h2 a, h2 a:visited  {
+text-decoration: underline;
+}
+.article h2 a:hover {
+text-decoration: none;
+}
+.article h3 a, h3 a:visited {
+text-decoration: none;
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lien Button */
+.lien_button{
+    width: 100%;
+}
+.lien_button .button{
+  border: 1px solid #eee;
+  text-align: center;
+  font-size: 20px;
+}
+ .lien_button .button:hover  {
+}
+ .lien_button .button:hover a  {
+}
+.lien_button .button a{
+    text-decoration: none;
+}
+
+/* Editeur Mathématique */
+.img_math{
+    vertical-align: middle;
+    -moz-box-shadow: none !important;
+}

@@ -1,0 +1,22 @@
+/* 
+    Document   : cmp_layout1_colone
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_layout1_colone
+      
+*/
+
+.cmp_layout1_colone{
+ float: left;
+ width: 100%;
+
+ 
+}
+
+
+.cmp_layout1_colone .zone1 {
+ width:  100%;
+ float: left;
+}
+
+

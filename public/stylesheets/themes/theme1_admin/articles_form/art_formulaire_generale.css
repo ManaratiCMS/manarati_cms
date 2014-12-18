@@ -1,0 +1,37 @@
+.lg_principal .art_paragraphe{
+margin-top: 23px;
+}
+.lg_principal {
+   width: 200px;
+   float: right;
+   width: 390px;
+}
+.cmp{
+   width: 555px;
+   float: left
+}
+.ajouter_article h3 img{
+   height: 10px
+}
+.ajouter_article h3 {
+  margin-left: 10px;
+}
+
+.ajouter_article ul {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+h3 {
+    font-size: 15px;
+     margin: 10px !important;
+}
+h3 img {
+   width: 20px;
+  
+}
+
+.cmp_paragraphe textarea{
+    width: 500px;
+}

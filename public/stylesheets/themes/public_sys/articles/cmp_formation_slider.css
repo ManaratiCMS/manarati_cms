@@ -1,0 +1,72 @@
+/* 
+    Document   : cmp_formation_slider
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_formation_slider
+      
+*/
+
+
+
+.cmp_formation_slider  {
+ float: left;
+height: 210px;
+border: solid 1px;
+}
+
+.cmp_formation_slider #formation_slider{
+   width: 520px;
+   height: 150px;
+   margin-left: 7px;
+}
+.cmp_formation_slider li {
+
+    cursor: pointer;
+}
+
+.cmp_formation_slider h2.titre{
+ font-size: 14px;
+color: black;
+margin-top: 10px;
+    
+}
+.cmp_formation_slider img{
+margin-top: 10px;
+margin-right: 10px;
+border: solid 1px #AAA;
+float: left;
+}
+.cmp_formation_slider .tarif{
+    float: left;
+    margin-top: 10px;
+}
+.cmp_formation_slider .session{
+float: left;
+clear: both;
+margin-top: 10px;
+
+
+}
+.cmp_formation_slider .detail{
+ float: left;
+
+}
+.cmp_formation_slider .detail p{
+ margin-bottom: 1px;
+
+}
+.cmp_formation_slider .local{
+float: left;
+clear: both;
+margin-top: 10px;
+
+
+}
+.cmp_formation_slider .local p{
+ float: left;
+}
+
+
+
+ 
+

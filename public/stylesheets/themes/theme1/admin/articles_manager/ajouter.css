@@ -1,0 +1,51 @@
+.ajouter_article .cmp{
+float:left;
+}
+.ajouter_article ul.fichette{
+    float:left;
+}
+
+.ajouter_article ul.fichette li{
+    float: left;
+    margin:10px;
+}
+.ajouter_article ul.fichette li a{
+    text-decoration: none
+}
+
+.ajouter_article ul.fichette li .photo{
+
+}
+
+.ajouter_article .information_generale {
+float: left
+}
+.ajouter_article  label.titre {
+color:red;
+float:left;
+font-size:17px;
+font-weight:bold;
+}
+.ajouter_article  ul.form {
+float:left;
+clear: both;
+list-style: none;
+margin:9px;
+}
+.ajouter_article  ul.form li {
+margin:10px 0;
+}
+.ajouter_article  ul.form li label {
+float:left;
+font-weight:bold;
+margin-right:13px;
+width:140px;
+}
+
+
+
+.ajouter_article  .submit {
+float:left;
+margin-left: 180px;
+clear: both;
+}

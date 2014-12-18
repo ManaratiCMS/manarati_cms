@@ -1,0 +1,13 @@
+# V900w
+header_zone :
+  width : 876
+  height : 200
+leftcolumn_zone :
+  width : 500
+  height : 0
+rightcolumn_zone:
+  width : 315
+  height : 0
+footer_zone:
+  width : 876
+  height : 150

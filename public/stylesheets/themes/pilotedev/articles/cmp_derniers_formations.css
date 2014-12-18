@@ -1,0 +1,92 @@
+/* 
+    Document   : cmp_derniers_formations
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_derniers_formations
+      
+*/
+
+.cmp_derniers_formations{
+    float: left;
+}
+
+.cmp_derniers_formations .formation {
+
+
+
+}
+.cmp_derniers_formations .formation:hover {
+    
+        -webkit-box-shadow: 0px 0px 5px #40AAD8;
+-moz-box-shadow: 0px 0px 5px #40AAD8;
+box-shadow: 0px 0px 5px #40AAD8;
+}
+.cmp_derniers_formations .formation {
+width: 190px;
+height: 300px;
+float: left;
+margin: 15px;
+position: relative;
+background: white;
+    border-bottom-color: #19AEA5;
+-webkit-box-shadow: 0px 0px 5px #cecece;
+-moz-box-shadow: 0px 0px 5px #cecece;
+box-shadow: 0px 0px 5px #cecece;
+}
+.cmp_derniers_formations .formation a {
+display: block;
+
+text-decoration: none;
+}
+
+.cmp_derniers_formations .formation img {
+margin-left: 1px;
+margin-top: 1px;
+width: 190px;
+height: 150px;
+border-bottom : 1px dashed #E7E7E7;
+}
+
+.cmp_derniers_formations .formation h2 {
+margin-top: 5px;
+text-align: center;
+font-size: 1.2em;
+color: black;
+}
+.cmp_derniers_formations .formation .description {
+color: #909090;
+margin: 1em 22px;
+margin-top: 0.5em;
+height: 55px;
+overflow: hidden;
+}
+.cmp_derniers_formations .formation .meta {
+display: block;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: white;
+height: 23px;
+border-top: 1px dashed #E7E7E7;
+font-size: 12px;
+width: 190px;
+}
+.cmp_derniers_formations .formation .time {
+line-height: 23px;
+position: absolute;
+bottom: 0;
+left: 10px;
+color: #909090;
+border-right: 1px dashed #E7E7E7;
+width: 65px;
+}
+.cmp_derniers_formations .formation .comment {
+text-align: right;
+line-height: 23px;
+position: absolute;
+bottom: 0;
+left: 75px;
+right: 10px;
+color: #909090;
+}

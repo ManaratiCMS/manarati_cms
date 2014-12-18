@@ -1,0 +1,18 @@
+.cmp_data_grid td{
+   padding: 0px !important;
+}
+  .cmp_data_grid table{
+   border : 1px !important;
+}
+
+.cmp_data_grid {
+   padding: 0px !important;
+  
+}
+
+.articles_vides{
+   min-height: 100px;
+   border: solid 1px #ABC;
+   padding: 5px;
+   clear: both;
+}

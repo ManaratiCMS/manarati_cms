@@ -1,0 +1,71 @@
+/*V900w*/
+.layout2c{
+    float: left;
+float: left;
+width: 876px;
+margin-left: 20px;
+margin-top: 22px;
+}
+
+.header_zone {
+width: 874px;
+float: left;
+margin: 0px 0px 8px 48px;
+display: none;
+ 
+}
+.leftcolumn_zone {
+margin: 3px 1px 61px 20px;
+width: 500px;
+float: left;
+}
+.leftcolumn_zone .article{
+margin-right: 15px;
+    
+}
+
+.rightcolumn_zone {
+ float: right;
+ margin: 1px 20px 0px 0px;
+width: 319px;
+ display: inline;
+ 
+}
+
+.rightcolumn_zone .p1 {
+    background: url(img_layout2_colone/box_p1.png) no-repeat;
+height: 4px;
+float: left;
+width: 331px;
+}
+.rightcolumn_zone .p2 {
+     background: url(img_layout2_colone/box_p2.png)  repeat-y;
+     float: left;
+    width: 331px;
+     padding: 6px;
+}
+.rightcolumn_zone .p3 {
+     background: url(img_layout2_colone/box_p3.png) no-repeat;
+     height: 20px;
+      float: left;
+    width: 331px;
+
+}
+
+.footer_zone {
+ width: 825px;
+ clear: both;
+ margin: 1px 0px 0px 0px;
+ float: left;
+ display: none;
+}
+/* --- Composant */
+.leftcolumn_zone .art_paragraphe{
+ 
+ 
+margin-top: 10px;
+
+}
+.cmp_image_titre{
+    margin-top: 10px;
+}

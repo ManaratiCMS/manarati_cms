@@ -1,0 +1,113 @@
+/* 
+    Document   : cmp_detail_formation
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_detail_formation
+      
+*/
+
+
+
+
+.cmp_detail_formation{
+    float: left;
+    color: #000;
+    font-size: 14px;
+    text-align: justify;
+}
+.cmp_detail_formation  li {
+ font-family: Arial, sans-serif;
+ font-size: 100%;
+ color: black;
+ display : list-item;
+ list-style: circle;
+ margin-left: 18px;
+ margin-top: 5px;
+ 
+}
+ 
+.cmp_detail_formation h3{
+    font-size: 17px;
+    color: #000;
+    margin-right: 10px;
+    margin-top: 10px;
+margin-bottom: 5px;
+
+}
+.cmp_detail_formation .titre{
+ float: left;
+}
+.cmp_detail_formation .titre h2{
+font-size: 23px
+}
+
+.cmp_detail_formation .photo{
+clear: both;
+float: left;
+}
+.cmp_detail_formation .photo img{
+   width: 220px;
+}
+
+.cmp_detail_formation .sous_detail{
+    float: left;
+    width: 280px;
+    clear: both;
+    border: 1px solid #AAA;
+}
+
+.cmp_detail_formation .sous_detail .tarif{
+    float: left;
+    margin-left: 10px;
+    width: 230px;
+    margin-top: 10px;
+
+}
+.cmp_detail_formation .sous_detail .titre_detail{
+    color: #000;
+
+}
+.cmp_detail_formation .sous_detail .tarif h3{
+    float: left;
+}
+.cmp_detail_formation .sous_detail .duree{
+ float: left;
+    margin-left: 10px;
+    width: 230px;
+      margin-top: 10px;
+}
+.cmp_detail_formation .sous_detail .duree h3{
+    float: left;
+}
+.cmp_detail_formation .sous_detail .public_cible{
+ float: left;
+    margin-left: 10px;
+    width: 265px;
+    margin-top: 10px;
+}
+.cmp_detail_formation .sous_detail .public_cible .titre{
+      margin-bottom: 4px;
+}
+.cmp_detail_formation .sous_detail .public_cible .contenue{
+      clear: both;
+}
+.cmp_detail_formation .objectif{
+ float: left;
+  clear: both;
+}
+.cmp_detail_formation .prerequis{
+ float: left;
+  clear: both;
+}
+.cmp_detail_formation .travaux_pratiques{
+ float: left;
+  clear: both;
+}
+.cmp_detail_formation .plan_formation{
+ float: left;
+ clear: both;
+}
+
+
+
+

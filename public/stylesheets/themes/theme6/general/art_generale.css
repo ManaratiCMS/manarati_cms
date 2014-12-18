@@ -1,0 +1,25 @@
+
+
+
+/* Lien Button */
+.lien_button{
+    width: 100%;
+}
+.lien_button .button{
+  border: 1px solid #eee;
+  text-align: center;
+  font-size: 20px;
+}
+ .lien_button .button:hover  {
+}
+ .lien_button .button:hover a  {
+}
+.lien_button .button a{
+    text-decoration: none;
+}
+
+/* Editeur Mathématique */
+.img_math{
+    vertical-align: middle;
+    -moz-box-shadow: none !important;
+}

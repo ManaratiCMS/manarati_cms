@@ -1,0 +1,12 @@
+header_zone :
+  width : 945
+  heigth : 200
+leftcolumn_zone :
+  width : 644
+  heigth : 0
+rightcolumn_zone:
+  width : 275
+  heigth : 0
+footer_zone:
+  width : 945
+  heigth : 150

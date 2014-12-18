@@ -1,0 +1,10 @@
+# v900 w
+zone1 :
+  width : 390
+  height : 0
+zone2:
+  width : 260
+  height : 0
+zone3:
+  width : 222
+  height : 45

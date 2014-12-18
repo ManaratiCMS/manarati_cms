@@ -1,0 +1,68 @@
+/* calendar.js stylesheet */
+
+table#calendar_control {
+  z-index: 50;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  position: absolute;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid silver;
+  cursor: default;
+}
+
+table#calendar_control td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+td#calendar_prev_month,  td#calendar_next_month,
+td#calendar_prev_year,  td#calendar_next_year {
+  cursor: pointer;
+}
+table#calendar_control td#calendar_prev_month {
+  text-align: left;
+}
+table#calendar_control td#calendar_next_month {
+  text-align: right;
+}
+
+td#calendar_header {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+table#calendar_control td.day_letter {
+  font-size: 10px;
+  color:#564610;
+  background-image:url(/images/libs/calendar/-289580856.jpg);
+}
+
+table#calendar_control td.day_number {
+  width: 22px;
+  height: 20px;
+  font-size: 12px;
+  color: #333333;
+  text-align: center;
+  border: 1px solid #b9a456;
+  cursor: pointer;
+}
+table#calendar_control td.normal {
+  background: #eee;
+}
+table#calendar_control td.blank {
+  background: aliceblue;
+  background: #fcf7e6;
+}
+table#calendar_control td.hover {
+  background: #fff799;
+}
+table#calendar_control td.selected {
+  background: #fcf7e6;
+}
+table#calendar_control td.weekend {
+  color: #860e0b;
+}
+table#calendar_control td.today {
+  color: red;
+}

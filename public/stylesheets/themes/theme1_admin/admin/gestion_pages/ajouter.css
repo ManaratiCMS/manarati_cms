@@ -1,0 +1,13 @@
+.formulaire .fichette {
+ margin-left: 3px;
+ width: 374px
+}
+.formulaire .fichette li {
+    width: 150px;
+ 
+    padding: 5px;
+    float: left;
+}
+.formulaire .fichette .nom_layout {
+   clear: both;
+}

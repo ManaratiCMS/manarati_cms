@@ -1,0 +1,106 @@
+/* Lien Button */
+.lien_button{
+    width: 100%;
+}
+.lien_button .button{
+  border: 1px solid #eee;
+  text-align: center;
+  font-size: 20px;
+}
+ .lien_button .button:hover  {
+}
+ .lien_button .button:hover a  {
+}
+.lien_button .button a{
+    text-decoration: none;
+}
+
+/* Editeur Mathématique */
+.img_math{
+    vertical-align: middle;
+    -moz-box-shadow: none !important;
+}
+
+.article{
+    float: left;
+    width: 100%;
+    clear: both;
+}
+
+.art_image img{
+border: 1px solid #ccc;
+}
+/* art_titre */
+/*.art_titre h2,h2.art_titre{
+color: #37728E;
+font-size: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+}*/
+.art_titre {
+font-family: "Open Sans", serif;
+height: 25px;
+display: block;
+line-height: 25px;
+margin: 7px 0px 10px 0;
+color: black;
+background: url(../general/images/dashed.png) right center repeat-x;
+}
+
+.art_titre  span {
+    display: block;
+float: left;
+height: 25px;
+padding-right: 10px;
+background-color: #F1F1F1;
+color: #333;
+font-size: 18px;
+font-weight: bold;
+margin-left: 10px;
+}
+
+
+
+
+/* Paragraphe */
+
+.art_paragraphe p {
+    margin-bottom: 5px;
+    text-align:justify;
+    padding:5px 0 5px 0;
+    float: left;
+    margin:0px;
+  font-size: 17px;
+    clear: both;
+}
+
+.art_paragraphe p label {
+  float: left;
+  width: 80px;
+}
+
+.art_paragraphe ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+        clear: both;
+        margin: 0px;
+}
+
+.art_paragraphe ul li {
+    list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding: 0 0 10px;
+}
+
+.art_paragraphe p img{
+	border: none;
+	padding: 5px ;
+	}
+.art_paragraphe ol {
+	list-style-type: decimal;
+	line-height: 18px;
+	margin: 0px;
+	padding: 0px 0px 10px 35px;
+        clear: both;
+}

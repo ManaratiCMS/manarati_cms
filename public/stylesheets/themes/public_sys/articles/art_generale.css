@@ -1,0 +1,79 @@
+/* Lien Button */
+.lien_button{
+    width: 100%;
+}
+.lien_button .button{
+  border: 1px solid #eee;
+  text-align: center;
+  font-size: 20px;
+}
+ .lien_button .button:hover  {
+}
+ .lien_button .button:hover a  {
+}
+.lien_button .button a{
+    text-decoration: none;
+}
+
+/* Editeur Mathématique */
+.img_math{
+    vertical-align: middle;
+    -moz-box-shadow: none !important;
+}
+
+.article{
+    float: left;
+}
+
+.art_image img{
+border: 1px solid #ccc;
+}
+/* art_titre */
+.art_titre h2{
+   color: #37728E;
+}
+
+
+
+
+/* Paragraphe */
+
+.art_paragraphe p {
+    margin-bottom: 5px;
+    text-align:justify;
+    padding:5px 0 5px 0;
+    float: left;
+    margin:0px;
+    font-size: 13px;
+    clear: both;
+}
+
+.art_paragraphe p label {
+  float: left;
+  width: 80px;
+}
+
+.art_paragraphe ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+        clear: both;
+        margin: 0px;
+}
+
+.art_paragraphe ul li {
+    list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding: 0 0 10px;
+}
+
+.art_paragraphe p img{
+	border: none;
+	padding: 5px ;
+	}
+.art_paragraphe ol {
+	list-style-type: decimal;
+	line-height: 18px;
+	margin: 0px;
+	padding: 0px 0px 10px 35px;
+}

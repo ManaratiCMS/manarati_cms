@@ -1,0 +1,58 @@
+.tree{
+    height:185px;
+    overflow:auto;
+}
+.load{
+     background:transparent url('/images/common/icons/loader.gif') no-repeat center;
+}
+.tree .node{
+    float:left;
+    width:100%;
+    background:transparent url('/images/libs/treeview/ftv2vertline.gif') repeat-y;
+    height:22px;
+}
+.tree .node-last{
+    background:none;
+}
+.tree .img{
+    vertical-align:top;
+    cursor:pointer;
+    background:transparent url('/images/libs/treeview/ftv2pnode.gif') repeat-y;
+    float:left;
+    width:16px;
+    height:22px;
+}
+.tree .img-last{
+    height:15px;
+}
+.tree .active{
+    background-image: url('/images/libs/treeview/ftv2mnode.gif');
+}
+
+.tree .childs{
+    background:transparent url('/images/libs/treeview/ftv2vertline.gif') repeat-y;
+    padding-left:20px;
+    display:none;
+    float:left;
+}
+
+.tree .childs-last{
+    background:none;
+}
+
+.tree .child{
+    background:transparent url('/images/libs/treeview/ftv2node.gif') repeat-y;
+    padding-left:15px;
+    display:block;
+}
+
+.tree .child-last{
+    background-image:url('/images/libs/treeview/ftv2lastnode.gif');
+}
+
+.tree select{
+    background-color:#FFFFFF;
+    border:1px solid #008CCE;
+    font-size:10px;
+    width:auto;
+}

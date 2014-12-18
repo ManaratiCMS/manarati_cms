@@ -1,0 +1,78 @@
+/*************************************
+	Article
+**************************************/
+
+.article {
+    float: left;
+    clear: both;
+    text-align: justify;
+    width: 100%;
+}
+
+
+
+
+.img_math{
+    vertical-align: middle;
+    -moz-box-shadow: none !important;
+}
+
+/*************************************
+	Article Texte - Image Gauche
+**************************************/
+
+.art_texte_image_gauche img{
+     float: left;
+    margin-bottom: 6px;
+    margin-right: 12px;
+
+}
+
+/*************************************
+	Article Texte - Image Droit
+**************************************/
+
+
+.art_texte_image_droite img{
+     float: right;
+    margin-bottom: 6px;
+    margin-left: 12px;
+}
+
+/*************************************
+	Article Texte - Image
+**************************************/
+
+.art_image{
+    text-align: center;
+}
+
+
+/* Lien Button */
+
+.lien_button{
+    width: 100%;
+}
+.lien_button .button{
+  background:   repeat-x scroll 0 0 #CCEDFD;
+    color: #37728E;
+    border: 1px solid #abc;
+  text-align: center;
+  font-size: 20px;
+}
+ .lien_button .button:hover  {
+ background:   repeat-x scroll 0 0 #CCEDFD;
+    color: #37728E;
+    border: 1px solid #abc
+    
+ 
+
+}
+ .lien_button .button:hover a  {
+ color: #37728E;
+  
+
+}
+.lien_button .button a{
+    text-decoration: none;
+}

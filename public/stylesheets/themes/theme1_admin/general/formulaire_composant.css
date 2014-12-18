@@ -1,0 +1,93 @@
+/* Traduction */
+
+
+/*--- Formulaire  ---*/
+.formulaire_cmp {
+}
+.formulaire_cmp h2 {
+    font-size: 14px;
+    margin: 10px 1px 14px 0px;
+}
+.formulaire_cmp .tformulaire {
+    clear: both;
+}
+.formulaire_cmp  td {
+    vertical-align: top;
+}
+
+
+.formulaire_cmp {
+float: left;
+clear: both;
+}
+
+.formulaire_cmp .capture{
+margin: 0px 0px 10px 0px;
+border: solid 1px #AAA;
+}
+
+.formulaire_cmp  input ,select,textarea {
+    vertical-align: middle;
+    padding: 4px 5px;
+    background-color: #eee;
+    border: 1px solid #abc;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.formulaire_cmp  input  {
+    width: 305px;
+    height: 1.5em;
+}
+.formulaire_cmp  select {
+   
+    width: 305px;
+   
+}
+.formulaire_cmp  textarea {
+  
+    width: 305px;
+   
+}
+.formulaire_cmp  input[type="submit"] {
+ margin-top:  10px;
+ width:  200px;
+}
+.formulaire_cmp  input[type="submit"]:hover {
+ margin-top:  10px;
+ width:  200px;
+ border:  solid 1px #aaa;
+}
+.formulaire_cmp  input:focus {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+
+
+.formulaire_cmp  label{
+float:left;
+font-size:14px;
+font-weight:bold;
+margin:10px;
+width: 120px;
+}
+
+/* Composant Atomiques */
+.formulaire_cmp .cmp_text {
+    margin-top: 68px;
+}
+.formulaire_cmp .cmp_text input {
+    width: 466px;
+}
+
+.formulaire_cmp .cmp_text input[type="submit"]{
+    margin-top: 60px !important;
+}

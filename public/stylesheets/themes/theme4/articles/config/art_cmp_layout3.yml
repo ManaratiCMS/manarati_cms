@@ -1,0 +1,11 @@
+headerleft :
+  width : 240
+  height : 215
+headerright :
+  width : 526
+  height : 215
+leftZone:
+  width : 240
+rightZone:
+  width : 522
+  height : 0

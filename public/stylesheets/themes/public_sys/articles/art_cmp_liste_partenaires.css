@@ -1,0 +1,66 @@
+.liste_partenaires{
+    float: left;
+    margin-top: 20px;
+}
+.liste_partenaires ul
+{
+ margin: 0px;
+ padding: 0px;
+}
+.liste_partenaires ul li
+{
+list-style: none;
+float: left;
+margin: 5px;
+padding: 2px;
+border-bottom: solid 1px #CCC;
+
+min-width: 222px;
+
+}
+.liste_partenaires ul li .photo
+{
+width: 141px;
+height: 94px;
+ background: url(cmp_liste_partenaires/bg_capture.png) no-repeat;
+padding: 3px 3px;
+ float: left;
+
+}
+.liste_partenaires .detail{
+    float: left;
+}
+.liste_partenaires .description{
+    float: left;
+    margin-top: 8px;
+}
+.liste_partenaires .description p{
+    float: left;
+    padding: 0px;
+    margin: 0px 3px;
+    clear: both;
+}
+.liste_partenaires .nom{
+    float: left;
+    margin: 3px;
+    clear: both;
+}
+.liste_partenaires .pays{
+float: left;
+clear: both;
+margin: 2px;
+}
+.liste_partenaires .description{
+    float: left;
+}
+
+
+
+.liste_partenaires ul li img
+{
+border: none;
+width: 136px;
+height: 87px;
+ 
+}
+

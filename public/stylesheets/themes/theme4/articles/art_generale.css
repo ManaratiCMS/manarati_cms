@@ -1,0 +1,66 @@
+/*Article*/
+.article {
+    float: left;
+    clear: both;
+    text-align: justify;
+    width: 100%;
+}
+/*---- Image ----- */
+.article img {
+    -moz-box-shadow: 1px 1px 3px #999999;
+    border: 2px solid #ddd;
+}
+.img_math{
+    vertical-align: middle;
+    -moz-box-shadow: none !important;
+}
+.article p img{
+	border: none;
+	padding: 5px ;
+	}
+/*----  Paragraphe ----- */
+.article p {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    font-size: 15px;
+    clear: both;
+}
+/*----  Liste ----- */
+.article ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+}
+.article ul li {
+   list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding: 0 0 10px;
+}
+.article ol {
+	list-style-type: decimal;
+	line-height: 18px;
+	margin: 0px;
+	padding: 0px 0px 10px 35px;
+	}
+/*----  Lien Button ----- */
+.lien_button{
+    width: 100%;
+}
+.lien_button .button{
+  background:   repeat-x scroll 0 0 #CCEDFD;
+    color: #37728E;
+    border: 1px solid #abc;
+  text-align: center;
+  font-size: 20px;
+}
+ .lien_button .button:hover  {
+ background:   repeat-x scroll 0 0 #CCEDFD;
+    color: #37728E;
+    border: 1px solid #abc
+}
+ .lien_button .button:hover a  {
+ color: #37728E;
+}
+.lien_button .button a{
+    text-decoration: none;
+}

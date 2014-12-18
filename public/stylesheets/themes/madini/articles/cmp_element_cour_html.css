@@ -1,0 +1,82 @@
+/* 
+    Document   : cmp_element_cour_html
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_element_cour_html
+      
+*/
+
+
+/* Element de Cour */
+.cmp_element_cour_html{
+width: 80%;
+
+margin-left: 30px;
+}
+/* Video*/
+.cmp_animation_flash{
+    
+text-align: center;
+}
+/* Menu*/
+.cmp_element_cour_html{
+    
+}
+.cmp_bar_menu_element_cour{
+
+}
+
+.cmp_bar_menu_element_cour nav.tabs {
+position: relative;
+height: 47px;
+line-height: 47px;
+background-color: white;
+border-bottom: 1px solid #E7E7E7;
+border-top:  1px solid #E7E7E7;
+font-size: 16px;
+float: left;
+width: 100%;
+
+}
+
+.cmp_bar_menu_element_cour nav.tabs .wrap {
+ width: 100%;
+}
+.cmp_bar_menu_element_cour nav.tabs a:hover, nav.tabs a.active {
+color: #333;
+}
+.cmp_bar_menu_element_cour nav.tabs a:first-child {
+border-left: 1px solid #E7E7E7;
+padding-left: 10px;
+}
+.cmp_bar_menu_element_cour nav.tabs a {
+display: inline-block;
+height: 47px;
+line-height: 47px;
+padding: 0 20px;
+border-right: 1px solid #E7E7E7;
+color: inherit;
+text-decoration: none;
+font-weight: bold;
+}
+.cmp_bar_menu_element_cour nav.tabs a.active_ajax {
+background-color: #40aad8;
+}
+nav.tabs .wrap div.right {
+float: right;
+}
+nav.tabs .wrap div.right {
+float: right;
+}
+nav.tabs .wrap div {
+display: inline-block;
+height: 47px;
+line-height: 47px;
+padding: 0 20px;
+border-right: 1px solid #E7E7E7;
+color: inherit;
+text-decoration: none;
+font-weight: bold;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+ 
+}

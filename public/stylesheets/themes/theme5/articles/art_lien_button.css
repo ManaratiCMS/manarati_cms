@@ -1,0 +1,38 @@
+
+
+.cmp_lien_button a{
+font-family:Arial,sans-serif;
+ 
+height:43px;
+margin:100px auto;
+padding-top:7px;
+text-align:center;
+background:#444;
+background:-moz-linear-gradient(top,#555,#2C2C2C);
+background:-webkit-gradient(linear,left top,left bottom,from(#555),to(#2C2C2C));
+-webkit-border-radius:8px;
+-moz-border-radius:8px;
+border-radius:8px;
+-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5),0 -1px 0 rgba(255,255,255,0.4);
+-moz-box-shadow:0 0 5px rgba(0,0,0,0.5),0 -1px 0 rgba(255,255,255,0.4);
+box-shadow:0 0 5px rgba(0,0,0,0.5),0 -1px 0 rgba(255,255,255,0.4);
+color:#ffd;
+text-shadow:0 1px 0 rgba(255,255,255,0.2);
+padding : 10px;
+}
+.cmp_lien_button a:hover{
+cursor:pointer;
+color:#ffd;
+background:#555;
+background:-moz-linear-gradient(top,#777,#333);
+background:-webkit-gradient(linear,left top,left bottom,from(#777),to(#333));
+}
+.cmp_lien_button a:active{
+color:#000;
+background:#444;
+-webkit-box-shadow:1px 1px 10px black inset,0 1px 0 rgba(255,255,255,0.4);
+-moz-box-shadow:1px 1px 10px black inset,0 1px 0 rgba(255,255,255,0.4);
+box-shadow:1px 1px 10px black inset,0 1px 0 rgba(255,255,255,0.4);
+background:-moz-linear-gradient(top,#555,#2C2C2C);
+background:-webkit-gradient(linear,left top,left bottom,from(#555),to(#2C2C2C));
+}

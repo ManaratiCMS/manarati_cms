@@ -1,0 +1,19 @@
+.liste_partenaires dl.gallery
+{
+border: 1px solid #000;
+ 
+}
+.liste_partenaires dl:hover
+{
+background-color: #CCEDFD;
+}
+.liste_partenaires .gallery dt img
+{
+border: 1px solid #000;
+}
+
+.liste_partenaires .gallery dd
+{
+margin: 0;
+padding: 0;
+}

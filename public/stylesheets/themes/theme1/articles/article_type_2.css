@@ -1,0 +1,16 @@
+.article_type_2 .data_creation{
+border:1px solid;
+float:right;
+margin:13px 0;
+padding:3px;
+}
+.article_type_2 .titre1{
+   float:left;
+margin:10px 0;
+
+}
+.article_type_2 .paragraphe1{
+       float: left;
+       clear: both;
+
+}

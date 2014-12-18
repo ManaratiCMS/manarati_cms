@@ -1,0 +1,77 @@
+.accueil_formation {
+    float: left;
+    margin-top: 9px;
+    width: 700px;
+}
+.accueil_formation .data_creation{
+display: none
+}
+.accueil_formation .ticker_formation1{
+/*  border: medium solid;*/
+    float: left;
+    margin: 10px 0;
+    width: 540px;
+}
+.accueil_formation .ticker_formation1 .titre{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+ul.formations{
+       float: left;
+       clear: both;
+       list-style: none;
+
+}
+ul.formations li.formation{
+         background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid brown;
+    float: left;
+    height: 131px;
+    margin: 5px;
+    width: 320px;
+  
+
+}
+
+ul.formations li.formation .cmp_photo{
+
+    float: left;
+    margin: 7px;
+
+}
+ul.formations li.formation  .detail{
+    float: left;
+    margin: 10px;
+}
+
+ul.formations li.formation .detail dt{
+     color: #AAAAAA;
+}
+ul.formations li.formation .detail dd{
+      margin: 4px 0 15px;
+}
+ul.formations ul.menu{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.formations .menu li{
+    float: left;
+    margin: 0 15px 0;
+    padding: 0;
+    width: 52px;
+}
+
+
+
+
+.accueil_formation .paragraphe1{
+       float: left;
+       clear: both;
+
+}

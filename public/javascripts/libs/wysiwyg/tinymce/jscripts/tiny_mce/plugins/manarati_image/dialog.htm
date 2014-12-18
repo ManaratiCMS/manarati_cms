@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Manarati.net" />
+	<title>Manarati - {#manarati_image_dlg.title}</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+</head>
+<body>
+
+  <form action="/system/image/upload_wysiswyg"
+      enctype="multipart/form-data" id="binary-edit-form"
+      method="post">
+        <p><label for="binary">Image :</label><br/>
+          <input id="binary_uploaded_data"
+            name="photo" size="30"
+            type="file" /></p>
+
+        <p><label for="binary_title">
+          Titre </label><br/>
+        <input id="title" name="titre"
+          size="30" type="text" value="" /></p>
+
+       <p>
+        <label for="width">Largeur </label><br/>
+        <input name="width" size="30" type="text" value="" />
+       </p>
+
+      <p>
+        <label for="height">Hauteur </label><br/>
+        <input name="height" size="30" type="text" value="" />
+       </p>
+        
+       
+        <div class="mceActionPanel">
+    
+		<input type="submit" id="insert" name="insert" value="{#insert}"   />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+
+
+  </form>
+
+<script type="text/javascript">
+    function saveImage(){
+	Manarati_Image_Dialog.insert();
+	}
+</script>
+
+</body>
+</html>
+
+

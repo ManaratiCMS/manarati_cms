@@ -1,0 +1,71 @@
+/*
+    Document   : cmp_menu_principale
+    Created on :
+    Author     : Fouad
+    Description: Composant Atomique cmp_menu_principale
+
+*/
+
+#menucontainer {
+background:none repeat scroll 0 0 #143D55;
+color:#E0E0E0;
+font-family:Helvetica,Arial,Verdana,sans-serif;
+height:56px;
+position:relative;
+width:100%;
+}
+.cmp_menu {
+background:url("images/dolphin_bg.gif") repeat-x scroll left bottom #FFFFFF;
+font-size:12px;
+font-weight:bold;
+height:33px;
+padding:0 0 0 20px;
+position:relative;
+text-transform:uppercase;
+}
+.cmp_menu ul {
+float:left;
+list-style-type:none;
+margin:0;
+padding:0;
+width:auto;
+}
+.cmp_menu ul li {
+display:block;
+float:left;
+margin:0 1px;
+}
+.cmp_menu ul li a {
+color:#EAF3F8;
+display:block;
+float:left;
+height:33px;
+padding:0 0 0 20px;
+text-decoration:none;
+}
+.cmp_menu ul li a span {
+float:left;
+height:21px;
+padding:12px 20px 0 0;
+}
+.cmp_menu ul li a:hover {
+background:url("images/dolphin_bg-OVER.gif") repeat-x scroll left bottom transparent;
+color:#FFFFFF;
+}
+.cmp_menu ul li a:hover span {
+cursor:pointer;
+display:block;
+width:auto;
+}
+.cmp_menu ul li.current_page_item, #menu ul li a.current:hover {
+background:url("images/dolphin_left-ON.gif") no-repeat scroll left top #1D6893;
+color:#FFFFFF;
+line-height:275%;
+}
+.cmp_menu ul li.current_page_item span {
+background:url("images/dolphin_right-ON.gif") no-repeat scroll right top #1D6893;
+display:block;
+height:33px;
+padding:0 20px 0 0;
+width:auto;
+}

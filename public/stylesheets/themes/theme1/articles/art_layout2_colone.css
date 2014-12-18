@@ -1,0 +1,32 @@
+.layout2c{
+    float: left;
+     min-height: 100px;
+}
+
+.header_zone {
+ width: 950px;
+ float: left;
+ margin: 0px 0px 0px 0px;
+ 
+}
+.leftcolumn_zone {
+ margin: 1px 1px 0px 0px;
+ width: 665px;
+ float: left;
+}
+.leftcolumn_zone .article{
+margin-right: 15px;
+    
+}
+.rightcolumn_zone {
+ float: right;
+ margin: 1px 0px 0px 0px;
+ width: 280px;
+ display: inline;
+}
+.footer_zone {
+ width: 950px;
+ clear: both;
+ margin: 1px 0px 0px 0px;
+ float: left;
+}

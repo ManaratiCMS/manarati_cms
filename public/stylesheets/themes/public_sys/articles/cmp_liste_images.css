@@ -1,0 +1,43 @@
+.liste_images {
+min-height: 50px;
+}
+.liste_images ul {
+    margin: 0px;
+    padding: 0px;
+}
+.liste_images li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: url(img_cmp_liste_images/bg_capture.png) no-repeat;
+    margin: 5px;
+    padding: 3px;
+    width: 136px;
+height: 87px;
+}
+
+.liste_images li span{
+height: 14px;
+width: 136px;
+float: left;
+position: relative;
+top: -20px;
+color: white;
+display: none;
+text-align: center;
+padding-top: 1px;
+padding-bottom: 2px;
+font-size: 12px;
+
+}
+
+.liste_images li:hover span {
+    display: block;
+background: url(img_cmp_liste_images/bg_detail_capture.png) repeat-x ;
+}
+
+
+.liste_images img {
+border: none;
+}

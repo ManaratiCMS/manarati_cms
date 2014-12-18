@@ -1,0 +1,161 @@
+/* 
+    Document   : popup
+    Created on : Dec 20, 2009, 9:37:48 AM
+    Author     : root
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.popup_mask{
+    background-color:#444; /*#85BBEF;*/
+    filter:alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:1;
+    width:100%;
+}
+.popup{    
+    position:absolute;
+    z-index:2;
+}
+.popup .popup_table{
+    font:inherit;
+    font-size:100%;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0px;
+    padding:0px;
+}
+.popup popup_table td , .popup popup_table th {
+    padding: 0;
+}
+.popup .close_button{
+    position:absolute;
+    top:11px;
+    right:25px;
+    background:transparent url(/images/libs/popup/close.gif) no-repeat;
+    width:12px;
+    height:16px;
+    cursor:pointer;
+}
+.popup .popup_title{
+    font-size:12px;
+    font-weight:bold;
+    margin-top:7px;
+}
+.popup .popup_content{
+    background:#fff;
+    text-align:center;
+    overflow:auto;
+    position: relative;
+}
+.popup .popup_content iframe{
+    width:100%;
+    height:100%;
+}
+.popup .popup_content_loader{
+    position:relative;
+    font-weight:bold;
+}
+.popup .popup_content_loader img{
+    margin-right:5px;
+    vertical-align:middle;
+}
+.popup .l_head,.popup .c_head,.popup .r_head{
+    height:30px;
+
+}
+.popup .l_head{
+    background:transparent url(/images/libs/popup/L_Head.png) no-repeat;
+    width:24px;
+}
+.popup .c_head{
+    background:transparent url(/images/libs/popup/C_Head.png) repeat-x;
+    text-align:center;   
+    vertical-align:middle;
+}
+.popup .r_head{
+    background:transparent url(/images/libs/popup/R_Head.png) no-repeat;
+    width:31px;
+}
+
+.popup .l_body{
+    background:transparent url(/images/libs/popup/L_Body.png) repeat-y left top;
+    width:16px;
+}
+.popup .c_body{
+    overflow:auto;
+}
+.popup .r_body{
+    background:transparent url(/images/libs/popup/R_Body.png) repeat-y right top;
+    width:16px;
+}
+
+.popup .l_foot,.popup .c_foot,.popup .r_foot{
+    height:40px;
+}
+.popup .l_foot{
+    background:transparent url(/images/libs/popup/L_Foot.png) no-repeat;
+    width:31px;
+}
+.popup .c_foot{
+    background:transparent url(/images/libs/popup/C_Foot.png) repeat-x;
+}
+.popup .r_foot{
+    background:transparent url(/images/libs/popup/R_Foot.png) no-repeat right bottom;
+    width:31px;
+}
+/* FOR IE */
+* html .popup .l_head{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/L_Head.png", sizingMethod="crop");
+}
+* html .popup .c_head{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/C_Head.png", sizingMethod="scale");
+}
+
+* html .popup .r_head{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/R_Head.png", sizingMethod="crop");
+}
+
+* html .popup .l_body{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/L_Body.png", sizingMethod="scale");
+}
+
+* html .popup .r_body{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/R_Body.png", sizingMethod="scale");
+}
+
+* html .popup .l_foot{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/L_Foot.png", sizingMethod="crop");
+}
+* html .popup .c_foot{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/C_Foot.png", sizingMethod="scale");
+}
+* html .popup .r_foot{
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/libs/popup/R_Foot.png", sizingMethod="crop");
+}
+

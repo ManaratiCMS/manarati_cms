@@ -1,0 +1,5 @@
+font_color : 31a1ff
+font : lib/fonts/FASHIONV.TTF
+font_size :  36
+type : texte
+view : /composants_atomiques/cmp_titre/cmp_titre_div

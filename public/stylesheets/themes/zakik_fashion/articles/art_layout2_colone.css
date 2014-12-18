@@ -1,0 +1,65 @@
+.layout2c{
+    float: left;
+float: left;
+width: 880px;
+margin-left: 20px;
+margin-top: 22px;
+}
+
+.header_zone {
+ width: 825px;
+ float: left;
+ margin: 0px 0px 0px 0px;
+ 
+}
+.leftcolumn_zone {
+ margin: 1px 1px 0px 0px;
+width: 590px;
+ float: left;
+}
+.leftcolumn_zone .article{
+margin-right: 15px;
+    
+}
+
+.rightcolumn_zone {
+ float: right;
+ margin: 1px 0px 0px 0px;
+ width: 280px;
+ display: inline;
+ 
+}
+
+.rightcolumn_zone .p1 {
+    background: url(img_layout2_colone/box_p1.png) no-repeat;
+    height: 20px;
+    float: left;
+    width: 285px;
+}
+.rightcolumn_zone .p2 {
+     background: url(img_layout2_colone/box_p2.png)  repeat-y;
+     float: left;
+     width: 285px;
+     padding: 6px;
+}
+.rightcolumn_zone .p3 {
+     background: url(img_layout2_colone/box_p3.png) no-repeat;
+     height: 20px;
+      float: left;
+      width: 285px;
+
+}
+
+.footer_zone {
+ width: 825px;
+ clear: both;
+ margin: 1px 0px 0px 0px;
+ float: left;
+}
+/* --- Composant */
+.leftcolumn_zone .art_paragraphe{
+ 
+ 
+margin-top: 10px;
+min-height: 200px;
+}

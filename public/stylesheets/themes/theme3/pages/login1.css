@@ -1,0 +1,70 @@
+#login{
+    background-image: url("../images/loginbox.png");
+    background-repeat: no-repeat;
+    height: 270px;
+    margin: 50px auto 60px;
+    width: 470px;
+}
+#login .maincol{
+       float: left;
+    padding: 28px 16px 10px 23px;
+    width: 262px;
+}
+#login .maincol h1{
+   color: #FFFFFF;
+    font-size: 16px;
+/*    margin-bottom: 30px;*/
+    padding-left: 5px;
+}
+#login .maincol form{
+ width: 265px;
+}
+
+#login .maincol label{
+       float: left;
+    font-weight: bold;
+    line-height: 30px;
+    width: 260px;
+}
+#login .maincol input[type="text"], #login .maincol input[type="password"] {
+        clear: both;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    padding: 2px 5px;
+    width: 255px;
+}
+#login label.nostyle{
+     float: none;
+    font-weight: normal;
+    line-height: 20px;
+    width: 0;
+}
+#login .rest_connected{
+    line-height: 23px;
+    margin: 8px 0;
+    float: left;
+}
+
+
+
+
+#login .rightcol{
+ color: #FFFFFF;
+    float: left;
+    padding: 20px 10px 0 0;
+    text-align: center;
+    width: 150px;
+}
+#login .rightcol ul{
+ padding: 65px 0 0;
+}
+#login .rightcol ul li{
+    height: 60px;
+    list-style-type: none;
+}
+#login .rightcol ul li a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+

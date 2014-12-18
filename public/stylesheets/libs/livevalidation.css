@@ -1,0 +1,45 @@
+/* 
+    Document   : livevalidation
+    Created on : Oct 2, 2009, 8:44:03 AM
+    Author     : root
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.LV_validation_message{
+    font-weight:bold;
+    font-size:11px;
+    margin:0 0 0 5px;
+    white-space:nowrap;
+    display: block;
+    float:left;
+    padding-left:20px;
+    margin-top:3px;
+    background:url(/images/common/icons/error_data.gif) no-repeat;   
+}
+
+.LV_invalid {
+    color:#CC0000;
+}
+
+input.LV_invalid_field,
+input.LV_invalid_field:hover,
+input.LV_invalid_field:active,
+select.LV_invalid_field,
+select.LV_invalid_field:hover,
+select.LV_invalid_field:active,
+textarea.LV_invalid_field,
+textarea.LV_invalid_field:hover,
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+    background:#fde3e3;
+}
+
+.LV_validation_message,.LV_invalid{
+    display:none;
+  }

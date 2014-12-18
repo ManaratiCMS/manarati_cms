@@ -1,0 +1,104 @@
+.accueil_formation {
+    float: left;
+    margin-top: 9px;
+    width: 700px;
+}
+.accueil_formation .data_creation{
+display: none
+}
+.accueil_formation .ticker_formation1{
+/*  border: medium solid;*/
+    float: left;
+    margin: 10px 0;
+    width: 500px;
+}
+.accueil_formation .ticker_formation1 .titre{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+ul.formations{
+       float: left;
+       clear: both;
+       list-style: none;
+
+}
+ul.formations li.formation{
+         background: none repeat scroll 0 0  ;
+    border: 1px solid #abc;
+    float: left;
+    height: 130px;
+    margin: 5px;
+    width: 300px;
+  
+
+}
+
+ul.formations li.formation .cmp_photo{
+
+    float: left;
+    margin: 7px;
+
+}
+ul.formations li.formation  .detail{
+    float: left;
+    margin: 8px   ;
+     height: 95px;
+}
+
+ul.formations li.formation .detail dt{
+     color: #AAAAAA;
+}
+ul.formations li.formation .detail dd{
+      margin: 4px 0 5px;
+}
+.menu{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+}
+
+.menu a{
+    float: left;
+    margin: 0 15px 0;
+    padding: 0;
+    width: 120px;
+    color : #AAA
+}
+
+
+
+
+.accueil_formation .paragraphe1{
+       float: left;
+       clear: both;
+
+}
+
+.CmpTickerFormation{
+    float: left
+}
+
+
+
+.art_ticker_formation .prev{
+        background: url("images_ticker_formation/arrow_left.png") no-repeat scroll left transparent;
+    display: block;
+    float: left;
+    height: 143px;
+    text-decoration: none;
+    width: 17px;
+
+}
+.art_ticker_formation .next{
+    background: url("images_ticker_formation/arrow_right.png") no-repeat scroll left transparent;
+    display: block;
+float: right;
+height: 15px;
+    text-decoration: none;
+    width: 17px;
+}

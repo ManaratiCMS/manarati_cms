@@ -1,0 +1,48 @@
+.inscription {
+    float: left;
+    margin-top: 9px;
+    width: 567px;
+}
+.inscription .data_creation{
+display: none
+}
+.inscription .contact11{
+/*  border: medium solid;*/
+    float: left;
+    margin: 10px 0;
+    width: 540px;
+}
+.inscription .contact1 .titre{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+.inscription ul.formation{
+       float: left;
+       clear: both;
+       list-style: none;
+
+}
+.inscription ul.formation li{
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid brown;
+    float: left;
+    height: 131px;
+    margin: 5px;
+    width: 180px;
+  
+
+}
+.inscription .paragraphe1{
+       float: left;
+       clear: both;
+
+}
+.inscription .formulaire{
+       float: left;
+       clear: both;
+
+}

@@ -1,0 +1,32 @@
+.cmp_layout2_colone_egaux{
+ float: left;
+ width: 100%;
+margin-top: 0px;
+min-width: 400px;
+}
+
+
+.cmp_layout2_colone_egaux .zone1 {
+ width:  50%;
+ min-width: 200px;
+ float: left;
+ padding-left: 10px;
+}
+.cmp_layout2_colone_egaux .zone1 .article{
+    margin:  0px;
+   
+}
+
+.cmp_layout2_colone_egaux  .article{
+   
+    float: left;
+}
+
+.cmp_layout2_colone_egaux .zone2 {
+ float: left;
+ width:  45%;
+ min-width: 200px;
+ padding-left: 15px;
+
+}
+ 

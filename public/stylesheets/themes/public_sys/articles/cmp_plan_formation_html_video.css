@@ -1,0 +1,38 @@
+/* 
+    Document   : cmp_plan_formation_html_video
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_plan_formation_html_video
+      
+*/
+
+.cmp_plan_formation_html_video{
+    width: 200px;
+}
+
+/* Menu DEROULANT */
+#cadre-menu {
+position: fixed;
+right: 40px;
+overflow: hidden;
+top: 25%;
+width: 215px;
+height: 500px;
+border: 1px solid;
+ 
+}
+#bordure-menu { 
+border: 5px solid #999;
+background: #AAA;
+border: 1px solid;
+height: 300px;
+width: 180px;
+}
+
+#bouton-menu {
+border: 5px solid #999;
+background: #AAA;
+float: left;
+width: 186px;
+height: 40px;
+}

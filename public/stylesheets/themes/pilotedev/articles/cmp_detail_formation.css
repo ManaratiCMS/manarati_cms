@@ -1,0 +1,134 @@
+/* 
+    Document   : cmp_detail_formation
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_detail_formation
+      
+*/
+
+.cmp_presentation_video_formation{
+    text-align: center;
+}
+.cmp_presentation_video_formation embed{
+    border: solid 1px #E7E7E7;
+}
+
+
+/* - Menu ---*/
+.bar_menu_detail_formation{
+
+}
+.bar_menu_detail_formation nav.tabs {
+position: relative;
+height: 47px;
+line-height: 47px;
+background-color: white;
+border-bottom:  1px solid #E7E7E7;
+border-top : 1px solid #E7E7E7;
+font-size: 16px;
+float: left;
+width: 100%;
+}
+
+.bar_menu_detail_formation nav.tabs .wrap {
+width: 100%;
+}
+.bar_menu_detail_formation nav.tabs a:hover, nav.tabs a.active {
+color: #333;
+}
+.bar_menu_detail_formation nav.tabs a:first-child {
+border-left: 1px solid #E7E7E7;
+padding-left: 10px;
+}
+.bar_menu_detail_formation nav.tabs a {
+display: inline-block;
+height: 47px;
+line-height: 47px;
+padding: 0 20px;
+border-right: 1px solid #E7E7E7;
+color: inherit;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* Détail Formation  */
+.cmp_detail_formation{
+    float: left;
+    color: #000;
+    font-size: 14px;
+    text-align: justify;
+width: 90%;
+margin-left: 20px;
+}
+
+/* Pan Formation */
+.cmp_detail_formation .plan_formation{
+ float: left;
+ clear: both;
+ width: 90%;
+}
+
+.cmp_detail_formation .objectif{
+float: left;
+}
+.cmp_detail_formation .plan_formation ul{
+margin: 0px;
+padding: 0px;
+list-style: none;
+float: left;
+clear: both;
+width: 100%;
+}
+.cmp_detail_formation .plan_formation ul li {
+height: 32px;
+line-height: 32px;
+padding-left: 20px;
+ 
+}
+.cmp_detail_formation .plan_formation ul li span {
+float: left;
+border-bottom: solid 1px #AAA;
+width: 100%;
+}
+
+.cmp_detail_formation .plan_formation ul li a {
+color: #40AAD8;
+text-decoration: none;
+}
+
+
+/* Composant DataGrid */
+.cmp_detail_formation .cmp_data_grid table{
+border:0px solid #AAAAAA;
+width: 100%
+}
+.cmp_detail_formation .cmp_data_grid thead{
+   background: none repeat scroll 0 0 #EEEEEE;
+   font-size: 15px;
+   font-weight: bold;
+
+}
+.cmp_detail_formation .cmp_data_grid thead tr{
+ text-align: center;
+
+}
+
+.cmp_detail_formation .cmp_data_grid td.action{
+  background: #eee;
+        vertical-align: top;
+}
+.cmp_detail_formation .cmp_data_grid  tr{
+    border-bottom:1px solid #AAAAAA;
+
+}
+.cmp_detail_formation .cmp_data_grid  td{
+   padding:6px;
+border: 1px solid #AAAAAA;
+/*text-align: center;*/
+vertical-align: middle;
+}
+.cmp_detail_formation .cmp_data_grid  div.action{
+   float: left;
+
+
+}

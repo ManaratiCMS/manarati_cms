@@ -1,0 +1,35 @@
+.layout2c{
+    float: left;
+min-height: 440px;
+     width: 825px;
+}
+
+.header_zone {
+ width: 825px;
+ float: left;
+ margin: 0px 0px 0px 0px;
+ 
+}
+.leftcolumn_zone {
+ margin: 1px 1px 0px 0px;
+width: 540px;
+ float: left;
+  background:url(img_layout2_colone/bgr_body_end.gif) repeat-y 534px
+}
+.leftcolumn_zone .article{
+margin-right: 15px;
+    
+}
+.rightcolumn_zone {
+ float: right;
+ margin: 1px 0px 0px 0px;
+ width: 280px;
+ display: inline;
+
+}
+.footer_zone {
+ width: 825px;
+ clear: both;
+ margin: 1px 0px 0px 0px;
+ float: left;
+}

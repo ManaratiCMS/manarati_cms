@@ -1,0 +1,72 @@
+
+/* Header  */
+.header_gestion{
+    float: right;
+    float: left;
+width: 400px;
+margin-left: 25px;
+margin-bottom: 19px;
+
+}
+.header_gestion h1{
+    float: left
+}
+.header_gestion #bt_ajouter{
+    float: right;
+      margin-top: 6px;
+        margin-bottom: 6px;
+}
+
+.cmp_data_grid{
+  float: right;
+    margin-bottom: 5px;
+    width: 540px;
+            margin-bottom: 5px;
+}
+.pagination{
+    float: left;
+    clear: both;
+}
+
+/* Composant DataGrid */
+
+.cmp_data_grid table{
+border:2px solid #AAAAAA;
+width: 100%
+}
+.cmp_data_grid thead{
+   background: none repeat scroll 0 0 #EEEEEE;
+   font-size: 15px;
+   font-weight: bold;
+
+}
+.cmp_data_grid thead tr{
+ text-align: center;
+
+}
+
+.cmp_data_grid td.action{
+  background: #eee;
+        vertical-align: top;
+}
+.cmp_data_grid  tr{
+    border-bottom:1px solid #AAAAAA;
+
+}
+.cmp_data_grid  td{
+   padding:6px;
+border: 1px solid #AAAAAA;
+/*text-align: center;*/
+vertical-align: middle;
+}
+.cmp_data_grid  div.action{
+   float: left;
+
+
+}
+.cmp_data_grid  div.action span{
+  float: left;
+    height: 17px;
+    margin: 1px;
+    width: 17px;
+}

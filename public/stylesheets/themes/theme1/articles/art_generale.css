@@ -1,0 +1,73 @@
+
+.article {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+/* Paragraphe */
+
+.art_paragraphe p {
+    margin-bottom: 5px;
+    text-align:justify;
+    padding:5px 0 5px 0;
+    float: left;
+    margin:0px;
+    font-size: 14px;
+    clear: both;
+
+
+}
+
+
+.art_paragraphe ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+        clear: both;
+        margin: 0px;
+}
+
+.art_paragraphe ul li {
+    list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding: 0 0 10px;
+}
+
+.art_paragraphe p img{
+	border: none;
+	padding: 5px ;
+	}
+.art_paragraphe ol {
+	list-style-type: decimal;
+	line-height: 18px;
+	margin: 0px;
+	padding: 0px 0px 10px 35px;
+}
+
+/* art_image */
+
+.art_image img{
+ border: 1px solid #AAA;
+}
+/* art_titre */
+h2.art_titre {
+    clear: both;
+    font-family: 'FertigoProRegular', Georgia, Arial, sans-serif;
+    margin: 7px 0px;
+    text-shadow: 0px 1px 1px #666;
+    font-size: 20px;
+}
+.art_titre h1, h3, h4 {
+    clear: both;
+    font-family: 'FertigoProRegular', Georgia, Arial, sans-serif;
+    margin: 7px 0px;
+    text-shadow: 0px 1px 1px #666;
+}
+.art_titre h1 {
+    font-size: 22px;
+
+}
+.art_titre h2 {
+    margin: 0px 0px 10px;
+}

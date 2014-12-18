@@ -1,0 +1,24 @@
+/* 
+    Document   : cmp_commentaire_face_book
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_commentaire_face_book
+      
+*/
+
+.cmp_commentaire_face_book{
+    margin-left: 20px;
+    
+}
+
+.cmp_commentaire_face_book .like{
+    width: 90%;
+ 
+
+}
+.cmp_commentaire_face_book .fb-comments{
+clear: both;
+
+}
+
+

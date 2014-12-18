@@ -1,0 +1,39 @@
+
+
+
+/***/
+/*
+/* Submenu
+/*
+/***/
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+/* Pages */
+.edit_user{
+    width: 423px;
+}
+
+/* Erreur Formulaire */
+.fieldWithErrors input{
+    border: 1px solid #860e0b;
+}
+.center{
+    width: 500px;
+    margin: 0px auto;
+}

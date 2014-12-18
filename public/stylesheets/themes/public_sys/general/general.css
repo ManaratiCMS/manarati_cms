@@ -1,0 +1,338 @@
+/* Global */
+
+/* ----------------- CmpComposants Generale ---------------------*/
+/* Article */
+.article {
+    float: left;
+    clear: both;
+}
+/* Paragraphe */
+.art_paragraphe p {
+    margin-bottom: 5px;
+    text-align:justify;
+    padding:5px 0 5px 0;
+    float: left;
+    margin:0px;
+    font-size: 14px;
+    clear: both;
+
+
+}
+.art_paragraphe ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+        clear: both;
+        margin: 0px;
+}
+.art_paragraphe ul li {
+    list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding: 0 0 10px;
+}
+.art_paragraphe p img{
+	border: none;
+	padding: 5px ;
+	}
+.art_paragraphe ol {
+	list-style-type: decimal;
+	line-height: 18px;
+	margin: 0px;
+	padding: 0px 0px 10px 35px;
+}
+/* art_image */
+.art_image img{
+ border: 1px solid #AAA;
+}
+/* art_titre */
+h2.art_titre {
+    clear: both;
+    font-family: 'FertigoProRegular', Georgia, Arial, sans-serif;
+    margin: 7px 0px;
+    text-shadow: 0px 1px 1px #666;
+    font-size: 20px;
+}
+.art_titre h1, h3, h4 {
+    clear: both;
+    font-family: 'FertigoProRegular', Georgia, Arial, sans-serif;
+    margin: 7px 0px;
+    text-shadow: 0px 1px 1px #666;
+}
+.art_titre h1 {
+    font-size: 22px;
+
+}
+.art_titre h2 {
+    margin: 0px 0px 10px;
+}
+
+
+/*-----------------------------Menu TOP-------------------*/
+#menu_top{
+    float: right;
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-bottomright: 3px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+   margin-right: 20px;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    position: absolute;
+}
+#menu_top ul li{
+    float: left;
+}
+
+#menu_top ul li:hover{
+    background:   repeat-x scroll 0 0 #CCEDFD;
+    color: #37728E;
+
+}
+#menu_top ul li:hover a{
+color: #37728E;
+}
+#menu_top ul li  a{
+    color: #303030;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    font-size: 11px;
+    padding: 5px 10px;
+}
+ 
+/*-----------------------------Layout-------------------*/
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#page{
+height: auto;
+margin:auto;
+width: 950px;
+}
+#header{
+float: left;
+}
+
+#global{
+clear: both;
+float: left;
+min-height: 500px;
+}
+.left_area{
+  float: left;
+}
+
+#content{
+ float: left;
+ margin-left: 30px;
+ margin-top: 25px;
+}
+.colone2_large{
+ float: left;
+ margin: 0px 0px 0px 20px;
+}
+
+#zone_droit{
+float:right;
+margin-right: 15px;
+margin-top: 30px;
+}
+/*-----------------------------Menu Principale-------------------*/
+#menu_principale{
+width:628px;
+height:30px;
+float:left;
+padding:3px 0 0 10px;
+}
+#menu_principale ul{
+display:block;
+list-style:none;
+padding:9px 0 0 10px;
+margin:0px;
+}
+#menu_principale ul li{
+display:inline;
+padding:0px;
+margin:0px;
+height:20px;
+}
+#menu_principale ul li a{
+height:27px;
+display:block;
+padding:0px 10px 0 10px;
+margin:0 4px 0 4px;
+margin:0 2px 0 2px;
+float:left;
+text-decoration:none;
+text-align:center;
+}
+#menu_principale ul li.selected a{
+height:27px;
+display:block;
+padding:0px 10px 0 10px;
+margin:0 5px 0 5px;
+float:left;
+text-align:center;
+line-height:25px;
+}
+#menu_principale ul li a:hover{
+text-decoration:underline;
+}
+/*-----------------------------Messages Box-------------------*/
+.message_box{
+    margin-left: auto;
+    margin-right: auto;
+}
+.message_box .message{
+    float: left;
+    padding: 0px 8px;
+    width: 700px;
+    margin-top: 6px;
+    text-align: center;
+}
+.message_box h2{
+}
+.message_box p {
+   padding: 6px !important;
+   margin: 0px !important;
+}
+.errorExplanation ul{
+    float: left;
+}
+.errorExplanation ul li{
+    margin-bottom: 4px;
+    margin-left: 8px;
+    margin-right: 0;
+    margin-top: 4px;
+}
+/*-----------------------------Login Form-------------------*/
+.login .maincol{
+    float: left;
+    width: 362px;
+    clear: both;
+}
+.login .rightcol{
+    float: right;
+    width: 100px;
+    margin-top: 8px;
+}
+.login,.content_dev{
+   margin:20px auto;
+   width:470px;
+}
+
+/*-----------------------------Inscription-------------------*/
+.inscription{
+    width: 422px !important;
+}
+.new_user_session,.inscription{
+float: left;
+padding:25px;
+width:470px;
+position:relative;
+}
+.new_user_session h1,.inscription h1{
+font-size: 18px;
+height: 30px;
+line-height: 20px;
+margin-left: 104px;
+}
+
+/*----------------------------Formulaire-------------------*/
+.formulaire .form_row {
+    clear: both;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    width: 420px;
+}
+
+.formulaire label{
+width:100px;
+float:left;
+font-size:12px;
+text-align:right;
+padding:4px 5px 0 0;
+}
+.formulaire input{
+width:253px;
+height:18px;
+float:left;
+}
+.formulaire textarea{
+width:253px;
+height:120px;
+float:left;
+}
+.formulaire button.abutton ,.inscription input[type="submit"],.formulaire input[type="submit"] {
+width:76px;
+height:25px;
+float:right;
+margin-top: 10px;
+}
+
+/* ----------------- Menu Membre ---------------------*/
+ #submenu {
+    list-style-type:none;
+    padding:0;
+    margin-top: 0;
+    width: 236px;
+}
+
+ #submenu li {
+    height: 43px;
+    list-style-type: none;
+    background-color:#FFFFFF;
+    border-top:1px solid #DFDFDF;
+    margin:0 !important;
+    padding:0;
+}
+ #submenu li a {
+    color:#777777;
+    display:block;
+    font-size:12px;
+    height:43px;
+    line-height:45px;
+    padding:0 12px;
+    white-space:nowrap;
+    text-decoration: none;
+}
+
+ #submenu li.last {
+    background-position:0 -92px;
+}
+
+ #submenu li a:hover,
+ #submenu li.selected a {
+    background-color:transparent;
+    color:#A72277;
+}
+
+ #submenu li.selected a {
+    font-size: 13px;
+}
+
+ #submenu li.selected {
+    /* font-family: 'FertigoProRegular', Georgia, Arial, sans-serif; */
+    background:url("images/submenu_bg.png") repeat scroll 0 0 transparent;
+    border:0 none;
+    color:#333333;
+    font-weight:bold;
+    height: 44px;
+    margin: 0 0 -1px 0;
+    position: relative;
+    text-shadow: 0 1px 0 #FFFFFF;
+    z-index: 1;
+}
+
+
+.leftmenu{
+ float: left;
+ clear: both;
+}

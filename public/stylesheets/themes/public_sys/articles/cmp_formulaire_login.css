@@ -1,0 +1,56 @@
+/* 
+    Document   : cmp_formulaire_login
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_formulaire_login
+      
+*/
+
+.cmp_formulaire_login{
+    float: left;
+}
+.cmp_formulaire_login .maincol{
+    float: left;
+width: 286px;
+
+}
+.cmp_formulaire_login .rightcol{
+    float: left;
+}
+.cmp_formulaire_login .rightcol ul{
+   
+}
+.cmp_formulaire_login .form_row{
+    float: left;
+}
+
+.cmp_formulaire_login label{
+font-size:12px;
+text-align:right;
+width: 100px;
+float: left;
+}
+.cmp_formulaire_login input{
+background-color:#fff;
+border:1px #DFDFDF solid;
+
+}
+.cmp_formulaire_login textarea{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color: #999999;
+background-color:#fff;
+border:1px #DFDFDF solid;
+}
+.cmp_formulaire_login .action{
+ clear: both;
+ float: left;
+ margin-left: 100px;
+
+}
+.cmp_formulaire_login .action button.abutton ,.cmp_formulaire_login input[type="submit"],.cmp_formulaire_login input[type="submit"] {
+font-size: 12px;
+cursor:pointer;
+text-align:center;
+margin-top: 10px;
+}

@@ -1,0 +1,27 @@
+
+/* Header  */
+.header_gestion{
+  float: left;
+    width: 100%;
+}
+.header_gestion h1{
+    float: left;
+    margin-bottom: 20px;
+}
+.header_gestion #bt_ajouter{
+    float: right;
+      margin-top: 6px;
+        margin-bottom: 6px;
+       
+}
+
+.cmp_data_grid{
+    clear: both;
+    float: left;
+    width: 100%;
+            margin-bottom: 5px;
+}
+.pagination{
+    float: left;
+    clear: both;
+}

@@ -1,0 +1,87 @@
+
+#nom_site_a_cree{
+    color: #178;
+    font-size: 20px;
+    margin-left: 238px;
+}
+
+.add_membre{
+    width: 600px;
+    margin: 0px auto;
+}
+
+.formulaire_larg input {
+    vertical-align: middle;
+    width: 305px;
+    height: 1.5em;
+    padding: 4px 5px;
+    background-color: #eee;
+    border: 1px solid #abc;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.formulaire_larg input:focus {
+/*    box-shadow: 1px 1px 10px #ffcc66;*/
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.formulaire_larg label{
+ width: 105px;
+float: left;
+font-size: 15px;
+margin-top: 7px;
+text-align: left;
+margin-right: 7px;
+}
+.formulaire_larg .form_row {
+    clear: both;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    width: 450px;
+   height: 25px;
+}
+.form_row .input_zone{
+    float: left;
+    width: 315px;
+
+    padding: 0px 0px;
+    background-color: #eee;
+    border: 1px solid #abc;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+
+
+}
+.form_row textarea{
+   width: 300px;
+}
+
+
+.formulaire_larg .right {
+clear: both;
+float: left;
+margin-left: 112px;
+margin-top: 11px;
+
+}
+.formulaire_larg .right input {
+  width: 200px;
+  margin-right: 48px;
+
+}

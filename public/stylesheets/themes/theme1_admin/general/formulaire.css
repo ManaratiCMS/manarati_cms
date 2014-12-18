@@ -1,0 +1,71 @@
+/* titre */
+h1.titre {
+margin: 10px;
+}
+
+
+
+/* Fichette */
+.formulaire ul.fichette{
+    float:left;
+}
+
+.formulaire ul.fichette li{
+    float: left;
+    margin:10px;
+}
+.formulaire ul.fichette li a{
+    text-decoration: none
+}
+
+.formulaire ul.fichette li .photo{
+
+}
+
+
+.formulaire .information_generale {
+float: left
+}
+
+
+
+/* Formulaore Table */
+.formulaire   table {
+ clear: both;
+}
+.formulaire  label.titre {
+color:#A22;
+float:left;
+font-size:17px;
+font-weight:bold;
+margin-bottom: 30px;
+border-bottom: 1px solid;
+width: auto;
+}
+
+/* Fomulaore Liste */
+.formulaire  ul.form {
+float:left;
+clear: both;
+list-style: none;
+margin:9px;
+}
+.formulaire  ul.form li {
+margin:10px 0;
+}
+.formulaire  ul.form li label {
+float:left;
+font-weight:bold;
+margin-right:13px;
+width:140px;
+}
+
+
+.formulaire  .submit {
+float:left;
+margin-left: 180px;
+clear: both;
+}
+
+
+ 

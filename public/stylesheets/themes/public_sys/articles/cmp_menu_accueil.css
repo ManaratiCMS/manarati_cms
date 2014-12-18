@@ -1,0 +1,42 @@
+/* 
+    Document   : cmp_menu_accueil
+    Created on : 
+    Author     : Fouad
+    Description: Composant Atomique cmp_menu_accueil
+      
+*/
+
+.cmp_menu_accueil{
+    
+}
+.cmp_menu_accueil .element_menu {
+float: left;
+width: 210px;
+margin: 10px;
+}
+
+.cmp_menu_accueil .element_menu div.title {
+font-family: "Open Sans", serif;
+height: 25px;
+display: block;
+line-height: 25px;
+margin: 7px 0px 10px 0;
+color: black;
+background: url(img_cmp_menu_accueil/dashed.png) right center repeat-x;
+}
+
+.cmp_menu_accueil .element_menu div.title span {
+display: block;
+float: left;
+height: 25px;
+padding-right: 10px;
+background-color: #F1F1F1;
+color: #333;
+font-size: 18px;
+font-weight: bold;
+}
+
+.cmp_menu_accueil .element_menu img {
+float: left;
+margin: 5px 20px 20px 0;
+}

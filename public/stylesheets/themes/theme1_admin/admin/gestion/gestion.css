@@ -1,0 +1,13 @@
+h1{
+    float: left
+}
+#bt_ajouter{
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 2px;
+}
+#datagrid_produit{
+   float:left;
+margin-top:10px;
+
+}

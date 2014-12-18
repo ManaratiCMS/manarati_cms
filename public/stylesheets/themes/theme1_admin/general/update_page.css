@@ -1,0 +1,150 @@
+.articles_vides{
+    border: solid 1px #abc;
+    min-height: 100px;
+    clear: both;
+
+}
+
+/* Traduction */
+ .warning_traduction{
+    border: solid 1px red;
+    float: left;
+}
+/*  Ajax   */
+#loading{
+   position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 20px;
+    background: red;
+    z-index: 100;
+}
+
+.article_conteneur{
+    float: left;
+    clear: both;
+min-height: 23px;
+min-width: 140px;
+}
+.article_conteneur .action{
+  position: absolute;
+  margin-top: -20px;
+}
+.article_conteneur .action{
+  border: solid 1px #aaa;
+  background: white;
+}
+
+/* Button ajouter */
+.bt_ajouter{
+    float: right;
+     border: 1px solid #AAAAAA;
+}
+
+
+.bt_ajouter:hover{
+    background: #ccc;
+    color: #FFFFFF;
+
+
+}
+.bt_ajouter a{
+/*    background:url("cmp_button/images/green.png") no-repeat scroll right top transparent;*/
+color: #303030;
+font-weight: bold;
+text-decoration: none;
+text-transform: capitalize;
+display: block;
+font-size: 11px;
+padding: 0px 10px;
+
+}
+
+.bt_ajouter a span{
+/*    background:url("cmp_button/images/green.png") no-repeat scroll left top transparent;*/
+   float:left;
+padding: 5px;
+font-size:16px;
+}
+
+
+
+
+
+div.action span{
+  float: left;
+    height: 17px;
+    margin: 1px;
+    width: 17px;
+}
+div.action span.editer{
+  background: url(images/editer.png) no-repeat
+}
+div.action span.editer_contenu{
+  background: url(images/editer_contenu.png) no-repeat
+}
+div.action span.browser{
+  background: url(images/browser.png) no-repeat
+}
+
+div.action span.supprimer{
+ background: url(images/supprimer.png) no-repeat
+}
+div.action span.move_up{
+ background: url(images/move_up.png) no-repeat
+}
+div.action span.move_down{
+ background: url(images/move_down.png) no-repeat
+}
+div.action span.add_site{
+  background: url(images/add_site.png) no-repeat
+}
+ div.action span.activer{
+  background: url(images/activer.png) no-repeat
+}
+  div.action span.favorie{
+  background: url(images/favorie.png) no-repeat
+}
+  div.action span.send_email{
+  background: url(images/email.png) no-repeat
+}
+  div.action span.public{
+  background: url(images/public.png) no-repeat
+}
+  div.action span.private{
+  background: url(images/private.png) no-repeat
+}
+ div.action span.application_delete{
+  background: url(images/application_delete.png) no-repeat
+}
+ div.action span.application_add{
+  background: url(images/application_add.png) no-repeat
+}
+
+ span.editer_fr{
+  background: url(images/flag_fr_p.png) no-repeat;
+
+}
+  div.action span.editer_en{
+  background: url(images/flag_en_p.png) no-repeat;
+}
+
+ div.action span.editer_es{
+  background: url(images/flag_es_p.png) no-repeat;
+}
+
+.header_gestion .action{
+    float: right;
+  margin:10px 165px 0px 0px;
+}
+
+.header_gestion .titre{
+
+   float: left;
+}
+#bt_ajouter{
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 2px;
+}

@@ -1,0 +1,417 @@
+/* Version w900*/
+/*-----------------------------Global-------------------*/
+h1, h2, h3, h4 {
+    clear: both;
+    font-family: 'FertigoProRegular', Georgia, Arial, sans-serif;
+    margin: 7px 0px;
+    text-shadow: 0px 1px 1px #666;
+}
+h1 {
+    font-size: 22px;
+}
+h2 {
+    font-size: 20px;
+}
+h3, h4 {
+    font-size: 16px;
+}
+
+/*-----------------------------Menu TOP-------------------*/
+#menu_top{
+   float: right;
+   height: 28px;
+   right: 0;
+   top: 0;
+   z-index: 10;
+   margin-right: 10px;
+   -moz-border-radius-bottomleft: 3px;
+   -moz-border-radius-bottomright: 3px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    position: absolute;
+}
+#menu_top ul{
+    padding: 0px;
+    margin: 0px;
+}
+#menu_top ul li{
+    float: left;
+    list-style: none;
+}
+#menu_top ul li:hover{
+    padding-bottom: 5px;
+        background:   repeat-x scroll 0 0 #CCEDFD;
+    color: #37728E;
+}
+#menu_top ul li  a{
+    display: block;
+    padding: 5px 10px;
+        color: #303030;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 11px;
+}
+#menu_top ul li:hover a{
+color: #37728E;
+}
+/*-----------------------------Layout-------------------*/
+body{
+margin: 0px;
+padding: 0px;
+background-color: #c9d4da;
+font-family: "verdana", "geneva";
+font-size: 13px;
+}
+#page{
+height: auto;
+margin:auto;
+width: 900px;
+}
+#header{
+float: left;
+width: 900px;
+}
+#header-inside{
+width: 194px;
+float: left;
+margin-top: 6px;
+}
+#global{
+clear: both;
+float: left;
+min-height: 500px;
+ width: 900px;
+}
+.left_area{
+  float: left;
+}
+#content{
+ float: left;
+    margin-left: 2px;
+    margin-top: 0px;
+}
+.colone2_large{
+ float: left;
+ margin: 0px 0px 0px 20px;
+}
+#zone_droit{
+float:right;
+margin-right: 15px;
+margin-top: 30px;
+}
+#logo{
+height: 71px;
+/*background: url(images/logo.png) no-repeat;*/
+margin: 0px 11px;
+width: 258px;
+margin-top: 0.9px;
+}
+#border_page{
+ float: left;
+ background: url(images/cdr_p2.jpg) repeat-y;
+ width: 900px;
+}
+#bg_page_p1{
+    background: url(images/cdr_p1.png);
+    width: 900px;
+    height: 12px;
+    margin-top: 20px;
+    clear: both;
+}
+#bg_page_p3{
+ background: url(images/cdr_p3.jpg);
+ width: 900px;
+ height: 11px;
+ float: left
+}
+/*-----------------------------Menu Principale-------------------*/
+#menu_principale{
+padding:3px 0 0 10px;
+height: 53px;
+width: 535px;
+float: left;
+margin-left: 17px;
+margin-top: 25px;
+}
+#menu_principale ul{
+display:block;
+list-style:none;
+padding:9px 0 0 10px;
+margin:0px;
+}
+#menu_principale ul li{
+display:inline;
+padding:0px;
+margin:0px;
+height:20px;
+}
+#menu_principale ul li a{
+height:27px;
+display:block;
+padding:0px 10px 0 10px;
+margin:0 4px 0 4px;
+margin:0 2px 0 2px;
+float:left;
+text-decoration:none;
+text-align:center;
+color:#fff;
+font-size:13px;
+line-height:25px;
+}
+#menu_principale ul li.selected a{
+height:27px;
+display:block;
+padding:0px 10px 0 10px;
+margin:0 5px 0 5px;
+float:left;
+line-height:25px;
+text-decoration:underline;
+text-align:center;
+color:#37728e;
+font-size:13px;
+line-height:25px;
+}
+#menu_principale ul li a:hover{
+text-decoration:underline;
+color:#ffefb6;
+}
+#menu_principale .bg_p1{
+background: url(images/bg_menu_p1.png);
+width: 3px;
+height: 48px;
+float: left;
+}
+#menu_principale .bg_p2{
+background: url(images/bg_menu_p2.png);
+float: left;
+height: 48px;
+}
+#menu_principale .bg_p3{
+background: url(images/bg_menu_p3.png);
+float: left;
+width: 3px;
+height: 48px;
+ 
+}
+/*-------------------- Menu Langues ---------------------------*/
+.menu_langue{
+float: right;
+height: 17px;
+width: 100px;
+margin-top: 62px;
+}
+.menu_langue ul{
+    margin: 0px;
+    padding: 0px;
+}
+.menu_langue ul li{
+list-style: none;
+width: 28px;
+float: left;
+ 
+height: 25px;
+}
+.menu_langue li span{
+width: 27px;
+height: 20px;
+float: left;
+}
+.menu_langue li.fr span{
+    background: url(images/flag_p_fr.png);
+}
+.menu_langue li.es span{
+    background: url(images/flag_p_es.png);
+}
+.menu_langue li.en span{
+    background: url(images/flag_p_en.png);
+}
+.menu_langue li.fr span:hover{
+    background: url(images/flag_p_fr_hover.png);
+}
+.menu_langue li.es span:hover{
+    background: url(images/flag_p_es_hover.png);
+}
+.menu_langue li.en span:hover{
+    background: url(images/flag_p_en_hover.png);
+}
+/*-----------------------------Messages Box-------------------*/
+.message_box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+.message_box .message{
+    float: left;
+    padding: 0px 8px;
+    width: 700px;
+    margin-top: 6px;
+        -moz-border-radius: 5px 5px 5px 5px;
+    border: 1px solid #999;;
+    color: #000;
+    text-align: center;
+    background: #C9D4DA;
+}
+.message_box p {
+   padding: 6px !important;
+   margin: 0px !important;
+   font-size: 15px;
+}
+.errorExplanation ul{
+    float: left;
+}
+.errorExplanation ul li{
+    margin-bottom: 4px;
+    margin-left: 8px;
+    margin-right: 0;
+    margin-top: 4px;
+}
+.message_box h2{
+    font-size: 16px;
+}
+/*-----------------------------Inscription Form-------------------*/
+.formulaire label{
+font-size:12px;
+text-align:right;
+}
+.formulaire input{
+background-color:#fff;
+border:1px #DFDFDF solid;
+
+}
+.formulaire textarea{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color: #999999;
+background-color:#fff;
+border:1px #DFDFDF solid;
+}
+.formulaire button.abutton ,.inscription input[type="submit"],.formulaire input[type="submit"] {
+font-size: 12px;
+cursor:pointer;
+text-align:center;
+margin-top: 10px;
+}
+/* ----------------- Menu Membre ---------------------*/
+ #submenu li {
+ border: 1px solid #CCCCCC;
+ margin-bottom: 5px;
+}
+ #submenu li a {
+}
+ #submenu li.last {
+}
+ #submenu li a:hover,
+ #submenu li.selected {
+}
+/*-----------------------------Login Form-------------------*/
+.login .maincol{
+    float: left;
+    width: 362px;
+    clear: both;
+}
+.login .rightcol{
+    float: right;
+    width: 100px;
+    margin-top: 8px;
+}
+.login,.content_dev{
+   margin:20px auto;
+   width:470px;
+}
+/*-----------------------------Inscription-------------------*/
+.inscription{
+    width: 422px !important;
+}
+.new_user_session,.inscription{
+float: left;
+padding:25px;
+width:470px;
+position:relative;
+}
+.new_user_session h1,.inscription h1{
+font-size: 18px;
+height: 30px;
+line-height: 20px;
+margin-left: 104px;
+}
+
+/*----------------------------Formulaire-------------------*/
+.formulaire .form_row {
+    clear: both;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    width: 420px;
+}
+.formulaire label{
+width:100px;
+float:left;
+font-size:12px;
+text-align:right;
+padding:4px 5px 0 0;
+}
+.formulaire input{
+width:253px;
+height:18px;
+float:left;
+}
+.formulaire textarea{
+width:253px;
+height:120px;
+float:left;
+}
+.formulaire button.abutton ,.inscription input[type="submit"],.formulaire input[type="submit"] {
+width:76px;
+height:25px;
+float:right;
+margin-top: 10px;
+}
+
+/* ----------------- Menu Membre ---------------------*/
+ #submenu {
+    list-style-type:none;
+    padding:0;
+    margin-top: 0;
+    width: 236px;
+}
+
+ #submenu li {
+    height: 43px;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+ #submenu li a {
+    display:block;
+    font-size:12px;
+    height:43px;
+    line-height:45px;
+    padding:0 12px;
+    white-space:nowrap;
+    text-decoration: none;
+}
+ #submenu li.last {
+    background-position:0 -92px;
+}
+ #submenu li a:hover, #submenu li.selected a {
+    background-color:transparent;
+}
+ #submenu li.selected a {
+    font-size: 13px;
+}
+ #submenu li.selected {
+    border:0 none;
+    font-weight:bold;
+    height: 44px;
+    margin: 0 0 -1px 0;
+    position: relative;
+    z-index: 1;
+}
+.leftmenu{
+ float: left;
+ clear: both;
+}

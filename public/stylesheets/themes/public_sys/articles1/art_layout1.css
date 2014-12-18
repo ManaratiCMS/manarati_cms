@@ -1,0 +1,38 @@
+/* 
+    Document   : art_layout1
+    Created on : 12 févr. 2012, 11:22:50
+    Author     : fouad
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+.layout1{
+      float: left;
+    width: 930px;
+}
+.layout1 .zone1 {
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 0;
+    width: 501px;
+}
+.layout1 .zone2 {
+    float: right;
+    width: 400px;
+}
+.layout1 .zone3 {
+  clear: right;
+    float: right;
+    width: 400px;
+       margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+}
+

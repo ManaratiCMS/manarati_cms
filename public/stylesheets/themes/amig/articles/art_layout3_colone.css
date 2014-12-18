@@ -1,0 +1,87 @@
+/* Version w900 */
+.layout3c{
+ float: left;
+ background: url(img_layout3_colone/bg_zone_page.jpg);
+width: 896px;
+ margin-top: 20px;
+ height: 396px;
+ margin-bottom: 75px;
+}
+
+.layout3c .zones{
+     background: url(img_layout3_colone/zakik_fashion.png) no-repeat  402px 109px; ;
+      height: 400px
+          
+}
+.zone1 {
+ margin: 20px 1px 0px 20px;
+width: 390px;
+ float: left;
+ 
+
+}
+.zone1 .article{
+    margin:  11px 20px 0px 20px;
+
+}
+
+.zone1 .txt_bg_p1{
+ background: url(img_layout3_colone/bg_zone_txt_p1.gif);
+ height: 4px;
+ float: left;
+ clear: both;
+margin-left: 1px;
+width: 384px;
+}
+.zone1 .txt_bg_p2{
+background: url(img_layout3_colone/bg_zone_txt_p2.png) 1px;
+ float: left;
+ clear: both;
+ width: 385px;
+ min-height: 350px;
+}
+.zone1 .style_bg{
+   background: url(img_layout3_colone/style1.jpg) no-repeat 327px bottom;
+   margin: 2px;
+   float: left;
+   min-height: 350px;
+}
+.zone1 .txt_bg_p3{
+background: url(img_layout3_colone/bg_zone_txt_p3.png) no-repeat;
+ float: left;
+ clear: both;
+margin-left: 1px;
+width: 384px;
+height: 4px;
+height: 84px;
+}
+
+.zone1 .article{
+margin-right: 15px;
+    
+}
+
+.zone2 {
+ float: left;
+ margin: 1px 0px 0px 0px;
+ 
+ width: 260px;
+height: 400px;
+}
+.zone3 {
+float: left;
+margin: 1px 0px 0px 0px;
+height: 45px;
+width: 222px;
+display: none;
+}
+.footer_zone {
+ width: 950px;
+ margin: 1px 0px 0px 0px;
+ float: left;
+ clear: both;
+
+}
+.menu_langue{
+    display: none;
+}

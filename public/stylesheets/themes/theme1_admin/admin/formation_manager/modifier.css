@@ -1,0 +1,20 @@
+.plan_formation ul li{
+margin-left:20px;
+}
+#bt_ajouter{
+    float: right;
+}
+.plan_formation h2 {
+    float: left;
+    margin-top: 0px
+}
+.plan_formation{
+    float: left;
+    width:100%;
+    margin-top:5px;
+}
+.gride_plan_formation{
+clear:both;
+float:left;
+width:100%;
+}

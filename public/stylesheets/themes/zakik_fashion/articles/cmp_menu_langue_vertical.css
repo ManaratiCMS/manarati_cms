@@ -1,0 +1,30 @@
+.cmp_menu_langue_vertical {
+margin-top: 50px;
+}
+.cmp_menu_langue_vertical ul{
+margin: 0px;
+padding: 0px;
+}
+.cmp_menu_langue_vertical  ul img{
+border: none;
+}
+.cmp_menu_langue_vertical li{
+    list-style: none;
+    margin: 10px 0px 0px 0px;
+ 
+}
+.cmp_menu_langue_vertical li.fr:hover{
+  background: url(img_cmp_menu_langue_vertical/Changer-la-langue.png) no-repeat 55px;
+  width:  260px;
+ 
+}
+.cmp_menu_langue_vertical li.es:hover{
+  background: url(img_cmp_menu_langue_vertical/cambiar-el-lenguaje.png) no-repeat 55px;
+  width:  260px;
+ 
+}
+.cmp_menu_langue_vertical li.en:hover{
+  background: url(img_cmp_menu_langue_vertical/change-the-language.png) no-repeat 55px;
+  width:  260px;
+
+}

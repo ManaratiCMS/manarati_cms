@@ -1,0 +1,28 @@
+.color_layout1{
+ background: #FFF;
+  border: 1px solid #ccc;
+}
+.color_layout2{
+ border: 1px solid #ccc;
+ background: #FFF;
+}
+.color_layout3{
+ border: 1px solid #ccc;
+ background: #FFF;
+}
+.color_layout4{
+border: 1px solid #ccc;
+ background: #FFF;
+}
+.color_layout5{
+  background: #FFF;
+  border: 1px solid #ccc;
+}
+.layout{
+    width: 952px;
+}
+
+.warning_traduction{
+    border: 1px solid red;
+    float: left;
+}
